@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
             CampusMarketTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "dPsk",
+                        name = "dPsk2",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
