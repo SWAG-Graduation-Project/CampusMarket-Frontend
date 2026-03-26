@@ -24,6 +24,7 @@ id tvLockerLabel
 id tvLockerSelector
 id tvNicknameLabel
 id tvSkip
+layout activity_market
 layout activity_start
 layout activity_start_get_info
 mipmap ic_launcher

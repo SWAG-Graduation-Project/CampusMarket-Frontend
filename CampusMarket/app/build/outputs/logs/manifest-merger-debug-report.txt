@@ -142,28 +142,34 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gi
 		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:10:9-65
 	android:name
 		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:8:9-42
+activity#com.example.campusmarket.MarketActivity
+ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:17:9-19:40
+	android:exported
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:18:13-43
 activity#com.example.campusmarket.StartActivity
-ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:19:9-27:20
+ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported
-		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:20:13-42
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:21:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:26:27-74
 activity#com.example.campusmarket.StartGetInfo
-ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:29:9-30:39
+ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:29:9-31:40
 	android:exported
-		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml:30:13-41
 uses-sdk
 INJECTED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\AndroidManifest.xml
