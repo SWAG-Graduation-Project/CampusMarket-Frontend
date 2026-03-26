@@ -8,13 +8,20 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="36" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.example.campusmarket.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.example.campusmarket.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
+    <meta-data
+        android:name="com.kakao.vectormap.version.code"
+        android:value="1" />
+
     <application
+        android:name="com.example.campusmarket.GlobalApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,10 +35,8 @@
         android:testOnly="true"
         android:theme="@style/Theme.CampusMarket" >
         <activity
-            android:name="com.example.campusmarket.MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.CampusMarket" >
+            android:name="com.example.campusmarket.StartActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,10 +44,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="androidx.compose.ui.tooling.PreviewActivity"
-            android:exported="true" />
+            android:name="com.example.campusmarket.StartGetInfo"
+            android:exported="false" />
         <activity
             android:name="androidx.activity.ComponentActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />
 
         <provider

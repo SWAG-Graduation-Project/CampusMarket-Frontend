@@ -5,14 +5,152 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:elevation="0dp"
     tools:context=".StartGetInfo">
 
-    <TextView
-        android:id="@+id/textView2"
+
+    <!-- 상단 입력 영역 -->
+
+    <!-- 지도 영역 -->
+
+    <LinearLayout
+        android:id="@+id/topFormLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSkip">
+
+        <TextView
+            android:id="@+id/tvNicknameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="닉네임"
+            android:textColor="#2F2F2F"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/nicknameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etNickname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background"
+                android:hint="랜덤 닉네임 나오는 곳"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#222222"
+                android:textColorHint="#A5A5A5"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnRandom"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#000000"
+                android:text="랜덤"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLockerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="사물함 정보"
+            android:textColor="#2F2F2F"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvLockerSelector"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:text="지도에서 사물함 위치를 선택하세요!"
+            android:textColor="#4D4D4D"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvLockerGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="사물함이 없을 경우 입력하지 않아도 됩니다."
+            android:textColor="#C98A46"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tvSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="정보받는 페이지"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:text="SKIP"
+        android:textColor="#2F2F2F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="#EDEDED"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topFormLayout">
+
+        <!-- 나중에 여기 WebView 넣으면 됨 -->
+        <!--
+        <WebView
+            android:id="@+id/webViewMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        -->
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_box"
+        android:backgroundTint="#D9D9D9"
+        android:text="다음으로"
+        android:textAllCaps="false"
+        android:textColor="#222222"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 package com.example.campusmarket
 
 import android.app.Application
-import com.kakao.vectormap.KakaoMapSdk
+//import com.kakao.vectormap.KakaoMapSdk
 
 class GlobalApplication : Application() {
     override fun onCreate() {
