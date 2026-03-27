@@ -35,6 +35,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.CampusMarket" >
         <activity
+            android:name="com.example.campusmarket.MyTimeTableActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.campusmarket.MypageListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.campusmarket.MypageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.campusmarket.ProductDetailActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.campusmarket.MarketActivity"
             android:exported="false" />
         <activity
@@ -44,7 +56,7 @@
             android:name="com.example.campusmarket.MarketListActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.ProductDetailActivity"
+            android:name="com.example.campusmarket.LockerMapActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
