@@ -14,14 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CampusMarket">
+
+
         <activity
-            android:name=".UserMarketActivity"
+            android:name=".MarketListActivity"
             android:exported="false" />
         <activity
             android:name=".MarketActivity"
             android:exported="false" />
         <activity
-            android:name=".MarketListActivity"
+            android:name=".UserMarketActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

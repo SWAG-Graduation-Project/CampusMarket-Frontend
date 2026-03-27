@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_bg_store_info_card.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\bg_store_info_card.xml"
+    },
+    {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_bg_search_box.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\bg_search_box.xml"
     },
@@ -40,6 +44,10 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\icmymarket.png"
     },
     {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_bg_profile_circle.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\bg_profile_circle.xml"
+    },
+    {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -72,12 +80,20 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-50:/layout_item_market_post.xml.flat",
-        "source": "com.example.campusmarket.app-main-52:/layout/item_market_post.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\layout_item_user_market_post.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\layout\\item_user_market_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_icback.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\icback.png"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_tableimg.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\tableimg.png"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -94,6 +110,10 @@
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_bg_item_thumb.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\bg_item_thumb.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\layout_item_market_post.xml.flat",
@@ -114,6 +134,10 @@
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\drawable_bg_chip_white.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-52:\\drawable\\bg_chip_white.xml"
+    },
+    {
+        "merged": "com.example.campusmarket.app-debug-50:/drawable_detailbackgruound.png.flat",
+        "source": "com.example.campusmarket.app-main-52:/drawable/detailbackgruound.png"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-50:\\layout_activity_user_market.xml.flat",
