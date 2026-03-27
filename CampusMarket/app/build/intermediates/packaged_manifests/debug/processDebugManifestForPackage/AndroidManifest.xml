@@ -36,9 +36,6 @@
         android:theme="@style/Theme.CampusMarket" >
         <activity
             android:name="com.example.campusmarket.MarketActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.campusmarket.StartActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,6 +43,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.campusmarket.StartActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.campusmarket.StartGetInfo"
             android:exported="false" />
