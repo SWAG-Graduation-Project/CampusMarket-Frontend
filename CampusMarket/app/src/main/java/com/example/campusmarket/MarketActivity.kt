@@ -1,7 +1,10 @@
 package com.example.campusmarket
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.PopupMenu
 import androidx.activity.enableEdgeToEdge
@@ -41,10 +44,36 @@ class MarketActivity : AppCompatActivity() {
         }
 
         val btnList = findViewById<Button>(R.id.btnList)
+        val btnAll = findViewById<Button>(R.id.btnAll)
 
-        btnList.setOnClickListener {
-            val intent = Intent(this, MarketListActivity::class.java)
+        btnAll.setOnClickListener {
+            val intent = Intent(this, ProductDetailActivity::class.java)
             startActivity(intent)
         }
     }
+    private fun showMarketPopup() {
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_market_detail)
+
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        dialog.show()
+
+        val window = dialog.window!!
+
+        // 👉 너비 설정
+        val width = (resources.displayMetrics.widthPixels * 0.9).toInt()
+        window.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT)
+
+        // 👉 중앙 정렬 + 위치 보정
+        val params = window.attributes
+        params.gravity = Gravity.CENTER
+        params.y = 0   // 👉 중요 (위치 보정)
+        window.attributes = params
+
+        // 👉 배경 어둡게 (이미 잘됨)
+        window.setDimAmount(0.6f)
+    }
+
+
 }
