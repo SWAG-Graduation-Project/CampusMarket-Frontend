@@ -15,6 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CampusMarket">
         <activity
+            android:name=".MyTimeTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MypageListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MypageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".MarketActivity"
             android:exported="false" />
         <activity
@@ -24,7 +36,7 @@
             android:name=".MarketListActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductDetailActivity"
+            android:name=".LockerMapActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
