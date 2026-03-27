@@ -15,22 +15,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CampusMarket">
         <activity
+            android:name=".UserMarketActivity"
+            android:exported="false" />
+        <activity
             android:name=".MarketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarketListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".StartActivity"
             android:exported="false" />
-
         <activity
             android:name=".StartGetInfo"
             android:exported="false" />
-
     </application>
 
 </manifest>

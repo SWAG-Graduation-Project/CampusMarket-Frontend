@@ -3240,6 +3240,8 @@ int id btnOuter 0x7f080076
 int id btnRandom 0x7f080077
 int id btnSort 0x7f080078
 int id btnTop 0x7f080079
+int id btnTop2 0x7f080227
+int id btnmarket 0x7f080226
 int id buttonPanel 0x7f08007a
 int id cache_measures 0x7f08007b
 int id callMeasure 0x7f08007c
@@ -3379,6 +3381,8 @@ int id inward 0x7f080101
 int id is_pooling_container_tag 0x7f080102
 int id italic 0x7f080103
 int id item_touch_helper_previous_elevation 0x7f080104
+int id ivHeart 0x7f080228
+int id ivProduct 0x7f080229
 int id ivSearch 0x7f080105
 int id jumpToEnd 0x7f080106
 int id jumpToStart 0x7f080107
@@ -3515,6 +3519,7 @@ int id progress_horizontal 0x7f080189
 int id radio 0x7f08018a
 int id ratio 0x7f08018b
 int id rectangles 0x7f08018c
+int id recyclerMarketList 0x7f08022a
 int id report_drawn 0x7f08018d
 int id reverseSawtooth 0x7f08018e
 int id right 0x7f08018f
@@ -3637,11 +3642,15 @@ int id transition_position 0x7f080203
 int id transition_scene_layoutid_cache 0x7f080204
 int id transition_transform 0x7f080205
 int id triangle 0x7f080206
+int id tvDate 0x7f08022b
+int id tvLikeCount 0x7f08022c
 int id tvLockerGuide 0x7f080207
 int id tvLockerLabel 0x7f080208
 int id tvLockerSelector 0x7f080209
 int id tvNicknameLabel 0x7f08020a
+int id tvPrice 0x7f08022d
 int id tvSkip 0x7f08020b
+int id tvTitle 0x7f08022e
 int id unchecked 0x7f08020c
 int id uniform 0x7f08020d
 int id unlabeled 0x7f08020e
@@ -3784,8 +3793,10 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_market 0x7f0b001c
+int layout activity_market_list 0x7f0b006e
 int layout activity_start 0x7f0b001d
 int layout activity_start_get_info 0x7f0b001e
+int layout activity_user_market 0x7f0b0070
 int layout custom_dialog 0x7f0b001f
 int layout design_bottom_navigation_item 0x7f0b0020
 int layout design_bottom_sheet_dialog 0x7f0b0021
@@ -3804,6 +3815,7 @@ int layout design_text_input_end_icon 0x7f0b002d
 int layout design_text_input_start_icon 0x7f0b002e
 int layout ime_base_split_test_activity 0x7f0b002f
 int layout ime_secondary_split_test_activity 0x7f0b0030
+int layout item_market_post 0x7f0b006f
 int layout m3_alert_dialog 0x7f0b0031
 int layout m3_alert_dialog_actions 0x7f0b0032
 int layout m3_alert_dialog_title 0x7f0b0033

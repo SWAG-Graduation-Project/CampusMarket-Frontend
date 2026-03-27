@@ -35,7 +35,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.CampusMarket" >
         <activity
+            android:name="com.example.campusmarket.UserMarketActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.campusmarket.MarketActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.campusmarket.MarketListActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

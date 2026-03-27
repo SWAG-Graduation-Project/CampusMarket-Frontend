@@ -1,5 +1,6 @@
 package com.example.campusmarket
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.PopupMenu
@@ -37,6 +38,13 @@ class MarketActivity : AppCompatActivity() {
             }
 
             popup.show()
+        }
+
+        val btnList = findViewById<Button>(R.id.btnList)
+
+        btnList.setOnClickListener {
+            val intent = Intent(this, MarketListActivity::class.java)
+            startActivity(intent)
         }
     }
 }
