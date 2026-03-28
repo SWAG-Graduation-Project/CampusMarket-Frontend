@@ -43,6 +43,8 @@ int drawable bg_tag_brown 0x0
 int drawable bg_tag_gray 0x0
 int drawable bg_tag_green 0x0
 int drawable bg_wood_button 0x0
+int drawable binheart 0x0
+int drawable blackheart 0x0
 int drawable detailbackgruound 0x0
 int drawable ic_launcher_background 0x0
 int drawable ic_launcher_foreground 0x0
@@ -57,6 +59,7 @@ int drawable marketimg 0x0
 int drawable rounded_box 0x0
 int drawable start 0x0
 int drawable tableimg 0x0
+int drawable whiteheart 0x0
 int id NavBar 0x0
 int id Rewrite 0x0
 int id backbutton 0x0
@@ -152,6 +155,7 @@ int id tvSkip 0x0
 int id tvStoreTitle 0x0
 int id tvTitle 0x0
 int id tvTradeCount 0x0
+int id webViewMap 0x0
 int layout activity_finish_sell 0x0
 int layout activity_locker_map 0x0
 int layout activity_market 0x0

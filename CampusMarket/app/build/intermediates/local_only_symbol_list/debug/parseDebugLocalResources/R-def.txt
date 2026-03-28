@@ -45,6 +45,8 @@ drawable bg_tag_brown
 drawable bg_tag_gray
 drawable bg_tag_green
 drawable bg_wood_button
+drawable binheart
+drawable blackheart
 drawable detailbackgruound
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -59,6 +61,7 @@ drawable marketimg
 drawable rounded_box
 drawable start
 drawable tableimg
+drawable whiteheart
 id NavBar
 id Rewrite
 id backbutton
@@ -154,6 +157,7 @@ id tvSkip
 id tvStoreTitle
 id tvTitle
 id tvTradeCount
+id webViewMap
 layout activity_finish_sell
 layout activity_locker_map
 layout activity_market

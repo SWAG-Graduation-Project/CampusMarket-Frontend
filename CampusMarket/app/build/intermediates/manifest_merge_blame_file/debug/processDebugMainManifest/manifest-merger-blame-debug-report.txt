@@ -34,7 +34,7 @@
 21-->[com.kakao.maps.open:android:2.13.1] C:\Users\DS\.gradle\caches\9.3.1\transforms\7aa0b10574c04e4e4b3b27cedc2ce54b\workspace\transformed\android-2.13.1\AndroidManifest.xml:9:9-26
 22
 23    <application
-23-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:7:5-71:19
+23-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:7:5-75:19
 24        android:name="com.example.campusmarket.GlobalApplication"
 24-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:8:9-42
 25        android:allowBackup="true"
@@ -60,112 +60,112 @@
 36        android:theme="@style/Theme.CampusMarket" >
 36-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:16:9-50
 37        <activity
-37-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:17:9-19:40
-38            android:name="com.example.campusmarket.FinishSellActivity"
-38-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:18:13-47
-39            android:exported="false" />
-39-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:19:13-37
-40        <activity
-40-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:20:9-22:40
-41            android:name="com.example.campusmarket.MyMarketDetail"
-41-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:21:13-43
-42            android:exported="false" />
-42-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:22:13-37
-43        <activity
-43-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:9-25:40
-44            android:name="com.example.campusmarket.SellDetailActivity"
-44-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:24:13-47
-45            android:exported="false" />
-45-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-37
+37-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:19:9-27:20
+38            android:name="com.example.campusmarket.StartActivity"
+38-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:20:13-42
+39            android:exported="true" >
+39-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:21:13-36
+40            <intent-filter>
+40-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:22:13-26:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:17-69
+41-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:17-77
+43-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:27-74
+44            </intent-filter>
+45        </activity>
 46        <activity
-46-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:26:9-28:40
-47            android:name="com.example.campusmarket.SellActivity"
-47-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:27:13-41
+46-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:28:9-30:40
+47            android:name="com.example.campusmarket.RewriteProductAcitivity"
+47-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:29:13-52
 48            android:exported="false" />
-48-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:28:13-37
+48-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:30:13-37
 49        <activity
-49-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:29:9-31:40
-50            android:name="com.example.campusmarket.MyMarketActivity"
-50-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:30:13-45
+49-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:31:9-33:40
+50            android:name="com.example.campusmarket.StartGetInfo"
+50-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:32:13-41
 51            android:exported="false" />
-51-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:31:13-37
+51-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:33:13-37
 52        <activity
-52-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:32:9-34:40
-53            android:name="com.example.campusmarket.LockerMapActivity"
-53-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:33:13-46
+52-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:34:9-36:40
+53            android:name="com.example.campusmarket.FinishSellActivity"
+53-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:35:13-47
 54            android:exported="false" />
-54-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:34:13-37
+54-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:36:13-37
 55        <activity
-55-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:35:9-37:40
-56            android:name="com.example.campusmarket.MyTimeTableActivity"
-56-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:36:13-48
+55-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:9-39:40
+56            android:name="com.example.campusmarket.MyMarketDetail"
+56-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:38:13-43
 57            android:exported="false" />
-57-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:13-37
+57-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:39:13-37
 58        <activity
-58-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:38:9-40:40
-59            android:name="com.example.campusmarket.MypageListActivity"
-59-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:39:13-47
+58-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:40:9-42:40
+59            android:name="com.example.campusmarket.SellDetailActivity"
+59-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:41:13-47
 60            android:exported="false" />
-60-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:40:13-37
+60-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:42:13-37
 61        <activity
-61-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:41:9-43:40
-62            android:name="com.example.campusmarket.MypageActivity"
-62-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:42:13-43
+61-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:43:9-45:40
+62            android:name="com.example.campusmarket.SellActivity"
+62-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:44:13-41
 63            android:exported="false" />
-63-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:43:13-37
+63-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:45:13-37
 64        <activity
-64-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:44:9-46:40
-65            android:name="com.example.campusmarket.ProductDetailActivity"
-65-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:45:13-50
+64-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:46:9-48:40
+65            android:name="com.example.campusmarket.MyMarketActivity"
+65-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:47:13-45
 66            android:exported="false" />
-66-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:46:13-37
+66-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:48:13-37
 67        <activity
-67-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:47:9-49:40
-68            android:name="com.example.campusmarket.MarketActivity"
-68-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:48:13-43
+67-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:49:9-51:40
+68            android:name="com.example.campusmarket.LockerMapActivity"
+68-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:50:13-46
 69            android:exported="false" />
-69-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:49:13-37
+69-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:51:13-37
 70        <activity
-70-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:50:9-52:40
-71            android:name="com.example.campusmarket.UserMarketActivity"
-71-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:51:13-47
+70-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:52:9-54:40
+71            android:name="com.example.campusmarket.MyTimeTableActivity"
+71-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:53:13-48
 72            android:exported="false" />
-72-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:52:13-37
+72-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:54:13-37
 73        <activity
-73-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:53:9-55:40
-74            android:name="com.example.campusmarket.MarketListActivity"
-74-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:54:13-47
+73-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:55:9-57:40
+74            android:name="com.example.campusmarket.MypageListActivity"
+74-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:56:13-47
 75            android:exported="false" />
-75-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:55:13-37
+75-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:57:13-37
 76        <activity
-76-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:56:9-64:20
-77            android:name="com.example.campusmarket.RewriteProductAcitivity"
-77-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:57:13-52
-78            android:exported="true" >
-78-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:58:13-36
-79            <intent-filter>
-79-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:59:13-63:29
-80                <action android:name="android.intent.action.MAIN" />
-80-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:60:17-69
-80-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:60:25-66
-81
-82                <category android:name="android.intent.category.LAUNCHER" />
-82-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:62:17-77
-82-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:62:27-74
-83            </intent-filter>
-84        </activity>
+76-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:58:9-60:40
+77            android:name="com.example.campusmarket.MypageActivity"
+77-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:59:13-43
+78            android:exported="false" />
+78-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:60:13-37
+79        <activity
+79-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:61:9-63:40
+80            android:name="com.example.campusmarket.ProductDetailActivity"
+80-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:62:13-50
+81            android:exported="false" />
+81-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:63:13-37
+82        <activity
+82-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:64:9-66:40
+83            android:name="com.example.campusmarket.MarketActivity"
+83-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:65:13-43
+84            android:exported="false" />
+84-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:66:13-37
 85        <activity
-85-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:65:9-67:40
-86            android:name="com.example.campusmarket.StartActivity"
-86-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:66:13-42
+85-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:67:9-69:40
+86            android:name="com.example.campusmarket.UserMarketActivity"
+86-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:68:13-47
 87            android:exported="false" />
-87-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:67:13-37
+87-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:69:13-37
 88        <activity
-88-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:68:9-70:40
-89            android:name="com.example.campusmarket.StartGetInfo"
-89-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:69:13-41
+88-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:70:9-72:40
+89            android:name="com.example.campusmarket.MarketListActivity"
+89-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:71:13-47
 90            android:exported="false" />
-90-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:70:13-37
+90-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:72:13-37
 91        <activity
 91-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\DS\.gradle\caches\9.3.1\transforms\2cb065a89f07a6116c89a6d1ea5563c4\workspace\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:23:9-26:79
 92            android:name="androidx.activity.ComponentActivity"
