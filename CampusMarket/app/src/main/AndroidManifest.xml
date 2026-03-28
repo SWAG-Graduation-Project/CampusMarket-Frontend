@@ -14,6 +14,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CampusMarket">
+
+
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RewriteProductAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartGetInfo"
+            android:exported="false" />
         <activity
             android:name=".FinishSellActivity"
             android:exported="false" />
@@ -53,21 +70,8 @@
         <activity
             android:name=".MarketListActivity"
             android:exported="false" />
-        <activity
-            android:name=".RewriteProductAcitivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".StartActivity"
-            android:exported="false" />
-        <activity
-            android:name=".StartGetInfo"
-            android:exported="false" />
+
     </application>
 
 </manifest>
