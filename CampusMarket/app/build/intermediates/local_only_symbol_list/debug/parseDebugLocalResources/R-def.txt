@@ -60,6 +60,8 @@ drawable rounded_box
 drawable start
 drawable tableimg
 id NavBar
+id Rewrite
+id backbutton
 id bgImage
 id bottomButtonContainer
 id boxTimetableImage
@@ -68,6 +70,7 @@ id btnAll
 id btnBack
 id btnBag
 id btnBefore
+id btnCancel
 id btnCategoryClothes
 id btnCategoryEtc
 id btnCategoryLocker
@@ -93,6 +96,7 @@ id btn_sell
 id btn_selling
 id btnmarket
 id buttonGroup
+id change_finish
 id checkRemoveBg
 id etDescription
 id etNickname
@@ -150,14 +154,17 @@ id tvSkip
 id tvStoreTitle
 id tvTitle
 id tvTradeCount
+layout activity_finish_sell
 layout activity_locker_map
 layout activity_market
 layout activity_market_list
 layout activity_my_market
+layout activity_my_market_detail
 layout activity_my_time_table
 layout activity_mypage
 layout activity_mypage_list
 layout activity_product_detail
+layout activity_rewrite_product_acitivity
 layout activity_sell
 layout activity_sell_detail
 layout activity_start

@@ -3171,6 +3171,7 @@ int id Linear 0x7f08000d
 int id META 0x7f08000e
 int id NO_DEBUG 0x7f08000f
 int id NavBar 0x7f080010
+int id Rewrite 0x7f080268
 int id Right 0x7f080011
 int id SHIFT 0x7f080012
 int id SHOW_ALL 0x7f080013
@@ -3255,6 +3256,7 @@ int id auto 0x7f080061
 int id autoComplete 0x7f080062
 int id autoCompleteToEnd 0x7f080063
 int id autoCompleteToStart 0x7f080064
+int id backbutton 0x7f080267
 int id barrier 0x7f080065
 int id baseline 0x7f080066
 int id beginOnFirstDraw 0x7f080067
@@ -3274,6 +3276,7 @@ int id btnAll 0x7f080073
 int id btnBack 0x7f080074
 int id btnBag 0x7f080075
 int id btnBefore 0x7f080076
+int id btnCancel 0x7f08026a
 int id btnCategoryClothes 0x7f08025e
 int id btnCategoryEtc 0x7f08025f
 int id btnCategoryLocker 0x7f080260
@@ -3312,6 +3315,7 @@ int id center_vertical 0x7f080094
 int id chain 0x7f080095
 int id chain2 0x7f080096
 int id chains 0x7f080097
+int id change_finish 0x7f080269
 int id checkRemoveBg 0x7f080098
 int id checkbox 0x7f080099
 int id checked 0x7f08009a
@@ -3881,14 +3885,17 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_finish_sell 0x7f0b007e
 int layout activity_locker_map 0x7f0b001c
 int layout activity_market 0x7f0b001d
 int layout activity_market_list 0x7f0b001e
 int layout activity_my_market 0x7f0b001f
+int layout activity_my_market_detail 0x7f0b007d
 int layout activity_my_time_table 0x7f0b0020
 int layout activity_mypage 0x7f0b0021
 int layout activity_mypage_list 0x7f0b0022
 int layout activity_product_detail 0x7f0b0023
+int layout activity_rewrite_product_acitivity 0x7f0b007f
 int layout activity_sell 0x7f0b0024
 int layout activity_sell_detail 0x7f0b007c
 int layout activity_start 0x7f0b0025

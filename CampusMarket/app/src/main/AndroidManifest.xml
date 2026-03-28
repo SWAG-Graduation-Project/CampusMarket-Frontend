@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CampusMarket">
         <activity
+            android:name=".FinishSellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyMarketDetail"
+            android:exported="false" />
+        <activity
+            android:name=".SellDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".SellActivity"
             android:exported="false" />
         <activity
@@ -45,7 +54,7 @@
             android:name=".MarketListActivity"
             android:exported="false" />
         <activity
-            android:name=".SellDetailActivity"
+            android:name=".RewriteProductAcitivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -58,6 +58,8 @@ int drawable rounded_box 0x0
 int drawable start 0x0
 int drawable tableimg 0x0
 int id NavBar 0x0
+int id Rewrite 0x0
+int id backbutton 0x0
 int id bgImage 0x0
 int id bottomButtonContainer 0x0
 int id boxTimetableImage 0x0
@@ -66,6 +68,7 @@ int id btnAll 0x0
 int id btnBack 0x0
 int id btnBag 0x0
 int id btnBefore 0x0
+int id btnCancel 0x0
 int id btnCategoryClothes 0x0
 int id btnCategoryEtc 0x0
 int id btnCategoryLocker 0x0
@@ -91,6 +94,7 @@ int id btn_sell 0x0
 int id btn_selling 0x0
 int id btnmarket 0x0
 int id buttonGroup 0x0
+int id change_finish 0x0
 int id checkRemoveBg 0x0
 int id etDescription 0x0
 int id etNickname 0x0
@@ -148,14 +152,17 @@ int id tvSkip 0x0
 int id tvStoreTitle 0x0
 int id tvTitle 0x0
 int id tvTradeCount 0x0
+int layout activity_finish_sell 0x0
 int layout activity_locker_map 0x0
 int layout activity_market 0x0
 int layout activity_market_list 0x0
 int layout activity_my_market 0x0
+int layout activity_my_market_detail 0x0
 int layout activity_my_time_table 0x0
 int layout activity_mypage 0x0
 int layout activity_mypage_list 0x0
 int layout activity_product_detail 0x0
+int layout activity_rewrite_product_acitivity 0x0
 int layout activity_sell 0x0
 int layout activity_sell_detail 0x0
 int layout activity_start 0x0
