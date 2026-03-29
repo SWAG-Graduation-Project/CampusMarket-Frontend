@@ -22,6 +22,7 @@ drawable bg_chip_selected
 drawable bg_chip_white
 drawable bg_dark_round_button
 drawable bg_edittext_box
+drawable bg_floor_dialog
 drawable bg_gray_map_placeholder
 drawable bg_gray_placeholder
 drawable bg_gray_post_image
@@ -33,6 +34,7 @@ drawable bg_light_pill_button
 drawable bg_light_round_button
 drawable bg_light_rounded_button
 drawable bg_market_popup
+drawable bg_move_button
 drawable bg_photo_upload_box
 drawable bg_popup_bottom_right
 drawable bg_popup_btn_left
@@ -57,11 +59,20 @@ drawable bg_wood_button
 drawable binheart
 drawable blackheart
 drawable burger
+drawable cha_center1
+drawable cha_center2
+drawable cha_center3
+drawable cha_center4
 drawable chat_brawn
 drawable check
 drawable danger
 drawable detailbackgruound
 drawable error
+drawable frontlocker
+drawable gotodwon
+drawable gotoleft
+drawable gotoright
+drawable gotoup
 drawable hamburger
 drawable hamburgerbar
 drawable homegray
@@ -74,9 +85,15 @@ drawable icchat
 drawable icdown
 drawable ichome
 drawable icmymarket
+drawable locker_one
+drawable lockerback1
+drawable lockerback2
+drawable lockerfrontleft
+drawable lockerfrontright
 drawable marketbackground
 drawable marketimg
 drawable rounded_box
+drawable stair
 drawable start
 drawable tableimg
 drawable whiteheart
@@ -98,6 +115,7 @@ id btnCategoryEtc
 id btnCategoryLocker
 id btnChat
 id btnCheck
+id btnCloseLounge
 id btnCloseSetting
 id btnConfirm
 id btnDone
@@ -109,6 +127,7 @@ id btnLeaveChat
 id btnLike
 id btnList
 id btnLocker
+id btnMove
 id btnNext
 id btnOfferAccept
 id btnOfferReject
@@ -156,6 +175,7 @@ id gohome
 id gomypage
 id header
 id headerLayout
+id imgLounge
 id infoLayout
 id itemChatPost
 id ivChatBg
@@ -168,6 +188,9 @@ id ivSearch
 id ivStoreBanner
 id ivThumbnail
 id layoutQuickActions
+id loungeContainer
+id loungeImageStage
+id loungeOverlay
 id main
 id mapContainer
 id mapPlaceholder
@@ -183,6 +206,11 @@ id photoScroll
 id postImage
 id productInfoCard
 id profileCircle
+id radioGroupFloor
+id rbFloor1
+id rbFloor2
+id rbFloor3
+id rbFloor4
 id recyclerChat
 id recyclerChatMessages
 id recyclerMarketList
@@ -258,6 +286,7 @@ layout activity_start
 layout activity_start_get_info
 layout activity_timetable
 layout activity_user_market
+layout dialog_floor_select
 layout dialog_market_detail
 layout dialog_report
 layout dialog_sell_complete
