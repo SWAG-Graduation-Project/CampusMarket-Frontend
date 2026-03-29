@@ -35,7 +35,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.CampusMarket" >
         <activity
+            android:name="com.example.campusmarket.ChatListActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.campusmarket.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.campusmarket.ChattActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -14,10 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CampusMarket">
-
-
+        <activity
+            android:name=".ChatListActivity"
+            android:exported="false" />
         <activity
             android:name=".StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChattActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,8 +74,6 @@
         <activity
             android:name=".MarketListActivity"
             android:exported="false" />
-
-
     </application>
 
 </manifest>
