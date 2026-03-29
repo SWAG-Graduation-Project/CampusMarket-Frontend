@@ -6,13 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F6F6"
-    android:elevation="0dp"
     tools:context=".StartGetInfo">
 
-
-    <!-- 상단 입력 영역 -->
-
-    <!-- 지도 영역 -->
+    <Button
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:text="SKIP"
+        android:textAllCaps="false"
+        android:textColor="#2F2F2F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/topFormLayout"
@@ -23,7 +31,6 @@
         android:layout_marginEnd="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSkip">
 
@@ -31,11 +38,11 @@
             android:id="@+id/tvNicknameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginBottom="8dp"
             android:text="닉네임"
             android:textColor="#2F2F2F"
-            android:textSize="15sp"
-            android:layout_marginStart="4dp"/>
+            android:textSize="15sp" />
 
         <LinearLayout
             android:id="@+id/nicknameInputLayout"
@@ -60,6 +67,7 @@
                 android:id="@+id/btnRandom"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
                 android:backgroundTint="#000000"
                 android:text="랜덤"
                 android:textAllCaps="false"
@@ -71,12 +79,12 @@
             android:id="@+id/tvLockerLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="사물함 정보"
             android:textColor="#2F2F2F"
-            android:textSize="15sp"
-            android:layout_marginStart="4dp"/>
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tvLockerSelector"
@@ -94,50 +102,32 @@
             android:id="@+id/tvLockerGuide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:text="사물함이 없을 경우 입력하지 않아도 됩니다."
             android:textColor="#C98A46"
-            android:textSize="13sp"
-            android:layout_marginStart="4dp"/>
+            android:textSize="13sp" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/tvSkip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@android:color/transparent"
-        android:elevation="0dp"
-        android:text="SKIP"
-        android:textColor="#2F2F2F"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="20dp"
+        android:background="#EDEDED"
+        app:layout_constraintTop_toBottomOf="@id/topFormLayout"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <WebView
+            android:id="@+id/webViewMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-
-        <FrameLayout
-            android:id="@+id/mapContainer"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="20dp"
-            android:background="#EDEDED"
-            app:layout_constraintBottom_toTopOf="@id/btnNext"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/topFormLayout">
-
-            <WebView
-                android:id="@+id/webViewMap"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </FrameLayout>
-
-
+    </FrameLayout>
 
     <Button
         android:id="@+id/btnNext"
@@ -154,7 +144,58 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 건물 내부 이미지 오버레이 -->
+    <FrameLayout
+        android:id="@+id/loungeOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:id="@+id/loungeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent">
+
+            <FrameLayout
+                android:id="@+id/loungeImageStage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imgLounge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cha_center1" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btnCloseLounge"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="닫기"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+        </FrameLayout>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -154,12 +154,12 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:21:13-42
-activity#com.example.campusmarket.ChattActivity
+activity#com.example.campusmarket.StartGetInfo
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:exported
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:24:13-42
+		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:24:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
@@ -176,12 +176,12 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:33:13-52
-activity#com.example.campusmarket.StartGetInfo
+activity#com.example.campusmarket.ChattActivity
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:36:13-41
+		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:36:13-42
 activity#com.example.campusmarket.FinishSellActivity
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:38:9-40:40
 	android:exported

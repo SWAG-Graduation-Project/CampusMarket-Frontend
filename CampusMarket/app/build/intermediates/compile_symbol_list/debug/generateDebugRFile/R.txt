@@ -21,6 +21,7 @@ int drawable bg_chip_selected 0x0
 int drawable bg_chip_white 0x0
 int drawable bg_dark_round_button 0x0
 int drawable bg_edittext_box 0x0
+int drawable bg_floor_dialog 0x0
 int drawable bg_gray_map_placeholder 0x0
 int drawable bg_gray_placeholder 0x0
 int drawable bg_gray_post_image 0x0
@@ -32,6 +33,7 @@ int drawable bg_light_pill_button 0x0
 int drawable bg_light_round_button 0x0
 int drawable bg_light_rounded_button 0x0
 int drawable bg_market_popup 0x0
+int drawable bg_move_button 0x0
 int drawable bg_photo_upload_box 0x0
 int drawable bg_popup_bottom_right 0x0
 int drawable bg_popup_btn_left 0x0
@@ -56,11 +58,20 @@ int drawable bg_wood_button 0x0
 int drawable binheart 0x0
 int drawable blackheart 0x0
 int drawable burger 0x0
+int drawable cha_center1 0x0
+int drawable cha_center2 0x0
+int drawable cha_center3 0x0
+int drawable cha_center4 0x0
 int drawable chat_brawn 0x0
 int drawable check 0x0
 int drawable danger 0x0
 int drawable detailbackgruound 0x0
 int drawable error 0x0
+int drawable frontlocker 0x0
+int drawable gotodwon 0x0
+int drawable gotoleft 0x0
+int drawable gotoright 0x0
+int drawable gotoup 0x0
 int drawable hamburger 0x0
 int drawable hamburgerbar 0x0
 int drawable homegray 0x0
@@ -73,9 +84,15 @@ int drawable icchat 0x0
 int drawable icdown 0x0
 int drawable ichome 0x0
 int drawable icmymarket 0x0
+int drawable locker_one 0x0
+int drawable lockerback1 0x0
+int drawable lockerback2 0x0
+int drawable lockerfrontleft 0x0
+int drawable lockerfrontright 0x0
 int drawable marketbackground 0x0
 int drawable marketimg 0x0
 int drawable rounded_box 0x0
+int drawable stair 0x0
 int drawable start 0x0
 int drawable tableimg 0x0
 int drawable whiteheart 0x0
@@ -97,6 +114,7 @@ int id btnCategoryEtc 0x0
 int id btnCategoryLocker 0x0
 int id btnChat 0x0
 int id btnCheck 0x0
+int id btnCloseLounge 0x0
 int id btnCloseSetting 0x0
 int id btnConfirm 0x0
 int id btnDone 0x0
@@ -108,6 +126,7 @@ int id btnLeaveChat 0x0
 int id btnLike 0x0
 int id btnList 0x0
 int id btnLocker 0x0
+int id btnMove 0x0
 int id btnNext 0x0
 int id btnOfferAccept 0x0
 int id btnOfferReject 0x0
@@ -155,6 +174,7 @@ int id gohome 0x0
 int id gomypage 0x0
 int id header 0x0
 int id headerLayout 0x0
+int id imgLounge 0x0
 int id infoLayout 0x0
 int id itemChatPost 0x0
 int id ivChatBg 0x0
@@ -167,6 +187,9 @@ int id ivSearch 0x0
 int id ivStoreBanner 0x0
 int id ivThumbnail 0x0
 int id layoutQuickActions 0x0
+int id loungeContainer 0x0
+int id loungeImageStage 0x0
+int id loungeOverlay 0x0
 int id main 0x0
 int id mapContainer 0x0
 int id mapPlaceholder 0x0
@@ -182,6 +205,11 @@ int id photoScroll 0x0
 int id postImage 0x0
 int id productInfoCard 0x0
 int id profileCircle 0x0
+int id radioGroupFloor 0x0
+int id rbFloor1 0x0
+int id rbFloor2 0x0
+int id rbFloor3 0x0
+int id rbFloor4 0x0
 int id recyclerChat 0x0
 int id recyclerChatMessages 0x0
 int id recyclerMarketList 0x0
@@ -257,6 +285,7 @@ int layout activity_start 0x0
 int layout activity_start_get_info 0x0
 int layout activity_timetable 0x0
 int layout activity_user_market 0x0
+int layout dialog_floor_select 0x0
 int layout dialog_market_detail 0x0
 int layout dialog_report 0x0
 int layout dialog_sell_complete 0x0

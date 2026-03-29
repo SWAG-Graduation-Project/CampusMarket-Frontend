@@ -21,7 +21,7 @@
             android:name=".StartActivity"
             android:exported="false" />
         <activity
-            android:name=".ChattActivity"
+            android:name=".StartGetInfo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
             android:name=".RewriteProductAcitivity"
             android:exported="false" />
         <activity
-            android:name=".StartGetInfo"
+            android:name=".ChattActivity"
             android:exported="false" />
         <activity
             android:name=".FinishSellActivity"

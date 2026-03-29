@@ -41,7 +41,7 @@
             android:name="com.example.campusmarket.StartActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.ChattActivity"
+            android:name="com.example.campusmarket.StartGetInfo"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,7 +53,7 @@
             android:name="com.example.campusmarket.RewriteProductAcitivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.StartGetInfo"
+            android:name="com.example.campusmarket.ChattActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.FinishSellActivity"
