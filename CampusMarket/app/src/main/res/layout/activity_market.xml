@@ -12,14 +12,62 @@
         android:id="@+id/bgImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/marketimg"
+        android:src="@drawable/marketbackground"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <!-- 가운데 영역 -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:background="@drawable/bg_title_board">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="덕성 중고 마켓"
+                    android:textColor="#D1C1C1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
     <!-- 배경 위에 올라갈 UI -->
+
     <LinearLayout
         android:id="@+id/topUiContainer"
         android:layout_width="0dp"
@@ -28,99 +76,83 @@
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:paddingTop="12dp"
+        android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <!-- 상단 카테고리 버튼 -->
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <LinearLayout
+            <!-- 🔥 고정 버튼 -->
+            <Button
+                android:id="@+id/btnList"
                 android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="리스트로 보기"
+                android:textAllCaps="false"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:background="@drawable/bg_chip_gray" />
+
+            <!-- 🔥 스크롤 영역 -->
+            <HorizontalScrollView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:scrollbars="none">
 
-                <Button
-                    android:id="@+id/btnList"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="리스트로 보기"
-                    android:textAllCaps="false"
-                    android:textColor="#333333"
-                    android:textSize="13sp"
-                    android:background="@drawable/bg_chip_gray" />
+                    android:id="@+id/categoryContainer"
 
-                <Button
-                    android:id="@+id/btnAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="전체"
-                    android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
-                    android:textSize="13sp"
-                    android:background="@drawable/bg_chip_selected" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btnOuter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="아우터"
-                    android:textAllCaps="false"
-                    android:textColor="#666666"
-                    android:textSize="13sp"
-                    android:background="@drawable/bg_chip_white" />
+                    <Button
+                        android:id="@+id/btnAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="전체"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:background="@drawable/bg_chip_selected" />
 
-                <Button
-                    android:id="@+id/btnBag"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="가방"
-                    android:textAllCaps="false"
-                    android:textColor="#666666"
-                    android:textSize="13sp"
-                    android:background="@drawable/bg_chip_white" />
+                    <Button
+                        android:id="@+id/btnOuter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="아우터"
+                        android:textAllCaps="false"
+                        android:textColor="#666666"
+                        android:textSize="13sp"
+                        android:background="@drawable/bg_chip_white" />
 
-                <Button
-                    android:id="@+id/btnTop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="상의"
-                    android:textAllCaps="false"
-                    android:textColor="#666666"
-                    android:textSize="13sp"
-                    android:background="@drawable/bg_chip_white" />
+                </LinearLayout>
+            </HorizontalScrollView>
 
-            </LinearLayout>
-        </HorizontalScrollView>
+        </LinearLayout>
 
         <!-- 검색창 줄 -->
         <LinearLayout
@@ -175,6 +207,212 @@
                 android:background="@drawable/bg_sort_button" />
 
         </LinearLayout>
+        <GridLayout
+            android:id="@+id/shopSignGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins">
+
+            <TextView
+                android:id="@+id/tvShopSign1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign4"
+                android:layout_width="0dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginBottom="30dp"
+                android:id="@+id/tvShopSign7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopSign12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_shop_sign"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="XX이네 상점"
+                android:textColor="#FFF4E3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </GridLayout>
 
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -200,6 +438,7 @@
 
         <!-- 홈 -->
         <LinearLayout
+            android:id="@+id/gohome"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -207,6 +446,7 @@
             android:gravity="center">
 
             <ImageView
+
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ichome" />
@@ -221,6 +461,7 @@
         </LinearLayout>
         <!-- 채팅 -->
         <LinearLayout
+            android:id="@+id/goMymarket"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -242,6 +483,7 @@
         </LinearLayout>
         <!-- 채팅 -->
         <LinearLayout
+            android:id="@+id/gochat"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -263,6 +505,7 @@
 
         <!-- MY -->
         <LinearLayout
+            android:id="@+id/gomypage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -292,7 +535,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="80dp"
 
         app:layout_constraintBottom_toTopOf="@id/NavBar"
         app:layout_constraintStart_toStartOf="parent"
