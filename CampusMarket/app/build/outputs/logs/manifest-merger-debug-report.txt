@@ -159,12 +159,12 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:22:13-41
-activity#com.example.campusmarket.MarketListActivity
+activity#com.example.campusmarket.StartActivity
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:24:9-32:20
 	android:exported
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-47
+		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
@@ -181,12 +181,12 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:34:13-52
-activity#com.example.campusmarket.ChattActivity
+activity#com.example.campusmarket.MarketListActivity
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:36:9-38:40
 	android:exported
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:13-42
+		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:13-47
 activity#com.example.campusmarket.FinishSellActivity
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:39:9-41:40
 	android:exported
@@ -247,7 +247,7 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:68:13-37
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:67:13-50
-activity#com.example.campusmarket.StartActivity
+activity#com.example.campusmarket.ChattActivity
 ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:69:9-71:40
 	android:exported
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:71:13-37

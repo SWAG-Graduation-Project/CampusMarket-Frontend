@@ -75,8 +75,8 @@
 43-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:13-37
 44        <activity
 44-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:24:9-32:20
-45            android:name="com.example.campusmarket.MarketListActivity"
-45-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-47
+45            android:name="com.example.campusmarket.StartActivity"
+45-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-42
 46            android:exported="true" >
 46-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:26:13-36
 47            <intent-filter>
@@ -98,8 +98,8 @@
 55-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:35:13-37
 56        <activity
 56-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:36:9-38:40
-57            android:name="com.example.campusmarket.ChattActivity"
-57-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:13-42
+57            android:name="com.example.campusmarket.MarketListActivity"
+57-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:37:13-47
 58            android:exported="false" />
 58-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:38:13-37
 59        <activity
@@ -164,7 +164,7 @@
 88-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:68:13-37
 89        <activity
 89-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:69:9-71:40
-90            android:name="com.example.campusmarket.StartActivity"
+90            android:name="com.example.campusmarket.ChattActivity"
 90-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:70:13-42
 91            android:exported="false" />
 91-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:71:13-37

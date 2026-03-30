@@ -2,12 +2,16 @@ package com.example.campusmarket
 
 import android.app.Dialog
 import android.os.Bundle
-import android.view.*
+import android.view.ViewGroup
+import android.view.Window
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import com.example.campusmarket.data.LoungeImageData
+import com.example.campusmarket.data.LockerGroupData
+import com.example.campusmarket.data.SelectedLockerGroup
 
 class LockerGroupPopupDialogFragment(
     private val buildingName: String,
@@ -106,9 +110,7 @@ class LockerGroupPopupDialogFragment(
             displayX = displayX,
             displayY = displayY,
             lockerWidth = lockerWidth,
-            lockerHeight = lockerHeight,
-            offsetX = lockerData.offsetX,
-            offsetY = lockerData.offsetY
+            lockerHeight = lockerHeight
         )
 
         locker.x = finalX
@@ -128,9 +130,11 @@ class LockerGroupPopupDialogFragment(
             val selected = SelectedLockerGroup(
                 buildingName = lockerData.buildingName,
                 floor = lockerData.floor,
-                imageIndex = lockerData.imageIndex,
                 major = lockerData.major,
-                groupNumber = lockerData.groupNumber
+                groupNumber = lockerData.groupNumber,
+                rowCount = lockerData.rowCount,
+                colCount = lockerData.colCount,
+                frontImageResId = lockerData.frontImageResId
             )
 
             onLockerGroupSelected(selected)
@@ -181,12 +185,10 @@ class LockerGroupPopupDialogFragment(
         displayX: Float,
         displayY: Float,
         lockerWidth: Int,
-        lockerHeight: Int,
-        offsetX: Float,
-        offsetY: Float
+        lockerHeight: Int
     ): Pair<Float, Float> {
-        val finalX = displayX - lockerWidth / 2f + offsetX
-        val finalY = displayY - lockerHeight / 2f + offsetY
+        val finalX = displayX - lockerWidth / 2f
+        val finalY = displayY - lockerHeight / 2f
         return Pair(finalX, finalY)
     }
 

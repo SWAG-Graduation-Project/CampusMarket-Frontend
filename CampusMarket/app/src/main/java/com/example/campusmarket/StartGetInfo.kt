@@ -17,8 +17,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.campusmarket.data.LockerCellData
 import com.example.campusmarket.data.LockerDataSource
+import com.example.campusmarket.data.LockerGroupData
+import com.example.campusmarket.data.SelectedLockerGroup
 import com.example.campusmarket.network.RetrofitClient
+import com.example.campusmarket.network.dto.LockerSaveRequest
 import kotlinx.coroutines.launch
 
 class StartGetInfo : AppCompatActivity() {
@@ -29,8 +33,7 @@ class StartGetInfo : AppCompatActivity() {
     private lateinit var btnNext: Button
     private lateinit var tvSkip: TextView
     private lateinit var webView: WebView
-
-    private val USE_MEMBER_MOCK = false
+    private lateinit var tvLockerSelector: TextView
     private var isNicknameChecked = false
 
     private var currentBuildingName: String = ""
@@ -38,6 +41,7 @@ class StartGetInfo : AppCompatActivity() {
     private var currentImageIndex: Int = 1
 
     private var selectedLockerGroup: SelectedLockerGroup? = null
+    private var selectedLockerCell: LockerCellData? = null
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +54,7 @@ class StartGetInfo : AppCompatActivity() {
         btnNext = findViewById(R.id.btnNext)
         tvSkip = findViewById(R.id.tvSkip)
         webView = findViewById(R.id.webViewMap)
+        tvLockerSelector = findViewById(R.id.tvLockerSelector)
 
         etNickname.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
@@ -91,11 +96,15 @@ class StartGetInfo : AppCompatActivity() {
 
             goToMarket()
         }
-
+       // loadSavedLocker()
         tvSkip.setOnClickListener {
             goToMarket()
         }
 
+        initWebView()
+    }
+
+    private fun initWebView() {
         webView.settings.javaScriptEnabled = true
         webView.settings.domStorageEnabled = true
         webView.settings.allowFileAccess = true
@@ -119,8 +128,6 @@ class StartGetInfo : AppCompatActivity() {
         finish()
     }
 
-
-
     private fun getRandomNickname() {
         lifecycleScope.launch {
             try {
@@ -135,7 +142,11 @@ class StartGetInfo : AppCompatActivity() {
                         isNicknameChecked = false
                         Log.d("API", "닉네임 성공: $nickname")
                     } else {
-                        Toast.makeText(this@StartGetInfo, body?.message ?: "닉네임 실패", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            body?.message ?: "닉네임 실패",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 } else {
                     Toast.makeText(this@StartGetInfo, "서버 오류", Toast.LENGTH_SHORT).show()
@@ -190,6 +201,7 @@ class StartGetInfo : AppCompatActivity() {
             }
         }
     }
+
     inner class WebAppInterface {
         @JavascriptInterface
         fun onBuildingSelected(buildingName: String) {
@@ -241,21 +253,174 @@ class StartGetInfo : AppCompatActivity() {
             imageIndex = imageIndex,
             loungeImages = LockerDataSource.loungeImageList,
             lockerGroups = LockerDataSource.lockerList
-        ) { selected ->
-            selectedLockerGroup = selected
+        ) { selectedGroup ->
+
+            selectedLockerGroup = selectedGroup
 
             Log.d(
-                "LOCKER",
-                "선택 저장: building=${selected.buildingName}, floor=${selected.floor}, major=${selected.major}, group=${selected.groupNumber}"
+                "LOCKER_GROUP",
+                "그룹 선택: building=${selectedGroup.buildingName}, floor=${selectedGroup.floor}, major=${selectedGroup.major}, group=${selectedGroup.groupNumber}"
             )
 
-            Toast.makeText(
-                this,
-                "${selected.major} ${selected.groupNumber}번 그룹 저장 완료",
-                Toast.LENGTH_SHORT
-            ).show()
+            val matchedGroupData = LockerDataSource.lockerList.find {
+                it.buildingName == selectedGroup.buildingName &&
+                        it.floor == selectedGroup.floor &&
+                        it.major == selectedGroup.major &&
+                        it.groupNumber == selectedGroup.groupNumber
+            }
+
+            if (matchedGroupData == null) {
+                Toast.makeText(
+                    this,
+                    "선택한 사물함 그룹 데이터를 찾을 수 없습니다",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.e(
+                    "LOCKER_GROUP",
+                    "groupData not found: building=${selectedGroup.buildingName}, floor=${selectedGroup.floor}, major=${selectedGroup.major}, group=${selectedGroup.groupNumber}"
+                )
+                return@LockerGroupPopupDialogFragment
+            }
+
+            openLockerFrontPopup(matchedGroupData)
         }
 
         popup.show(supportFragmentManager, "LockerGroupPopup")
+    }
+
+    private fun openLockerFrontPopup(group: LockerGroupData) {
+        val lockerCells = LockerDataSource.createLockerCells(group)
+
+        val dialog = LockerFrontPopupDialogFragment(
+            lockerCellImageResId = group.frontImageResId,
+            rowCount = group.rowCount,
+            colCount = group.colCount,
+            lockerCells = lockerCells
+        ) { selectedCell ->
+
+            selectedLockerCell = selectedCell
+
+            Log.d(
+                "LOCKER_CELL",
+                "셀 선택: building=${selectedCell.buildingName}, floor=${selectedCell.floor}, major=${selectedCell.major}, group=${selectedCell.lockerGroup}, row=${selectedCell.row}, col=${selectedCell.col}"
+            )
+
+            saveLockerToServer(selectedCell)
+        }
+
+        dialog.show(supportFragmentManager, "LockerFrontPopup")
+    }
+    private fun loadSavedLocker() {
+        lifecycleScope.launch {
+            try {
+                val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+                val guestUuid = prefs.getString("guestUuid", null)
+
+                if (guestUuid.isNullOrBlank()) {
+                    Log.e("LOCKER_GET", "guestUuid 없음")
+                    return@launch
+                }
+
+                val response = RetrofitClient.memberApi.getMyLocker(guestUuid)
+
+                Log.d("LOCKER_GET", "응답 code = ${response.code()}")
+                Log.d("LOCKER_GET", "응답 body = ${response.body()}")
+                Log.d("LOCKER_GET", "응답 errorBody = ${response.errorBody()?.string()}")
+
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success && body.result != null) {
+                        val result = body.result
+                        tvLockerSelector.text =
+                            "${result.building} ${result.floor}층 ${result.major} ${result.lockerGroup}그룹 ${result.row}행 ${result.col}열"
+                    } else {
+                        tvLockerSelector.text = "지도에서 사물함 위치를 선택하세요!"
+                    }
+                } else {
+                    tvLockerSelector.text = "지도에서 사물함 위치를 선택하세요!"
+                }
+
+            } catch (e: Exception) {
+                Log.e("LOCKER_GET", "조회 예외", e)
+            }
+        }
+    }
+    private fun saveLockerToServer(cell: LockerCellData) {
+        lifecycleScope.launch {
+            try {
+                val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+                val guestUuid = prefs.getString("guestUuid", null)
+
+                if (guestUuid.isNullOrBlank()) {
+                    Toast.makeText(
+                        this@StartGetInfo,
+                        "게스트 정보가 없습니다. 첫 화면부터 다시 시작해주세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    Log.e("LOCKER_API", "guestUuid 없음")
+                    return@launch
+                }
+
+                val request = LockerSaveRequest(
+                    building = cell.buildingName,
+                    floor = cell.floor,
+                    major = cell.major,
+                    lockerGroup = cell.lockerGroup,
+                    row = cell.row,
+                    col = cell.col
+                )
+
+                Log.d("LOCKER_API", "guestUuid = $guestUuid")
+                Log.d("LOCKER_API", "보내는 request = $request")
+
+                val response = RetrofitClient.memberApi.saveMyLocker(
+                    guestUuid,
+                    request
+                )
+
+                Log.d("LOCKER_API", "응답 code = ${response.code()}")
+                Log.d("LOCKER_API", "응답 message = ${response.message()}")
+                Log.d("LOCKER_API", "응답 body = ${response.body()}")
+                Log.d("LOCKER_API", "응답 errorBody = ${response.errorBody()?.string()}")
+
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success && body.result != null) {
+                        val lockerText =
+                            "${body.result.building} ${body.result.floor}층 ${body.result.major} ${body.result.lockerGroup}그룹 ${body.result.row}행 ${body.result.col}열"
+
+                        tvLockerSelector.text = lockerText
+
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            "사물함 저장 성공",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            body?.message ?: "사물함 저장 실패",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } else {
+                    Toast.makeText(
+                        this@StartGetInfo,
+                        "서버 응답 실패: ${response.code()}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+            } catch (e: Exception) {
+                Log.e("LOCKER_API", "예외 발생", e)
+                Toast.makeText(
+                    this@StartGetInfo,
+                    "사물함 저장 중 오류가 발생했습니다",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
     }
 }

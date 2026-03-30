@@ -22,7 +22,7 @@
             android:name=".StartGetInfo"
             android:exported="false" />
         <activity
-            android:name=".MarketListActivity"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
             android:name=".RewriteProductAcitivity"
             android:exported="false" />
         <activity
-            android:name=".ChattActivity"
+            android:name=".MarketListActivity"
             android:exported="false" />
         <activity
             android:name=".FinishSellActivity"
@@ -67,7 +67,7 @@
             android:name=".ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".ChattActivity"
             android:exported="false" />
         <activity
             android:name=".UserMarketActivity"
