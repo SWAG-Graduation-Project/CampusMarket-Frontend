@@ -1,146 +1,110 @@
 package com.example.campusmarket
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.FrameLayout
-import android.widget.ImageButton
-import android.widget.ImageView
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
-data class LockerData(
-    val buildingName: String,
-    val floor: Int,
-    val imageIndex: Int,
-    val originalX: Float,
-    val originalY: Float,
-    val major: String,
-    val groupNumber: Int,
-    val lockerImageResId: Int,
-    val offsetX: Float = 40f,
-    val offsetY: Float = 120f
-)
-
-data class LoungeImageData(
-    val buildingName: String,
-    val floor: Int,
-    val imageIndex: Int,
-    val imageResId: Int
-)
+import androidx.lifecycle.lifecycleScope
+import com.example.campusmarket.data.LockerCellData
+import com.example.campusmarket.data.LockerDataSource
+import com.example.campusmarket.data.LockerGroupData
+import com.example.campusmarket.data.SelectedLockerGroup
+import com.example.campusmarket.RetrofitClient
+import com.example.campusmarket.network.dto.LockerSaveRequest
+import kotlinx.coroutines.launch
 
 class StartGetInfo : AppCompatActivity() {
 
+    private lateinit var etNickname: EditText
+    private lateinit var btnRandom: Button
+    private lateinit var btnCheck: Button
+    private lateinit var btnNext: Button
+    private lateinit var tvSkip: TextView
     private lateinit var webView: WebView
-
-    private lateinit var loungeOverlay: FrameLayout
-    private lateinit var loungeContainer: FrameLayout
-    private lateinit var loungeImageStage: FrameLayout
-    private lateinit var imgLounge: ImageView
-    private lateinit var btnCloseLounge: ImageButton
+    private lateinit var tvLockerSelector: TextView
+    private var isNicknameChecked = false
 
     private var currentBuildingName: String = ""
     private var currentFloor: Int = 1
     private var currentImageIndex: Int = 1
 
-    // 배경 이미지 목록
-    private val loungeImageList = listOf(
-        LoungeImageData("차관", 1, 1, R.drawable.cha_center1),
-        LoungeImageData("차관", 2, 1, R.drawable.cha_center2),
-        LoungeImageData("차관", 3, 1, R.drawable.cha_center3),
-        LoungeImageData("차관", 4, 1, R.drawable.cha_center4)
-
-        // 필요하면 계속 추가
-        // LoungeImageData("차관", 2, 1, R.drawable.cha_2f_1),
-        // LoungeImageData("인문대", 1, 1, R.drawable.human_1f_1)
-    )
-
-    // 사물함 목록
-    private val lockerList = listOf(
-        LockerData(
-            buildingName = "차관",
-            floor = 1,
-            imageIndex = 1,
-            originalX = 637f,
-            originalY = 915f,
-            major = "경영",
-            groupNumber = 1,
-            lockerImageResId = R.drawable.lockerback1,
-            offsetX = 45f,
-            offsetY = 120f
-        ),
-
-        // 예시 추가
-        LockerData(
-            buildingName = "차관",
-            floor = 1,
-            imageIndex = 1,
-            originalX = 795f,
-            originalY = 907f,
-            major = "경영",
-            groupNumber = 2,
-            lockerImageResId = R.drawable.lockerback2,
-            offsetX = 45f,
-            offsetY = 120f
-        ),
-
-        LockerData(
-            buildingName = "차관",
-            floor = 1,
-            imageIndex = 1,
-            originalX = 921f,
-            originalY = 808f,
-            major = "경영",
-            groupNumber = 3,
-            lockerImageResId = R.drawable.lockerback1,
-            offsetX = 45f,
-            offsetY = 120f
-        ),
-                LockerData(
-                buildingName = "차관",
-        floor = 1,
-        imageIndex = 1,
-        originalX = 1086f,
-        originalY = 717f,
-        major = "경영",
-        groupNumber = 4,
-        lockerImageResId = R.drawable.lockerback1,
-                    offsetX = 45f,
-                    offsetY = 120f
-    ),
-        LockerData(
-            buildingName = "차관",
-            floor = 1,
-            imageIndex = 1,
-            originalX = 1618f,
-            originalY = 349f,
-            major = "미상",
-            groupNumber = 3,
-            lockerImageResId = R.drawable.lockerfrontleft,
-            offsetX = 45f,
-            offsetY = 120f
-        ),
-        // 필요하면 건물/층/이미지번호별로 계속 추가
-    )
+    private var selectedLockerGroup: SelectedLockerGroup? = null
+    private var selectedLockerCell: LockerCellData? = null
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_get_info)
 
+        etNickname = findViewById(R.id.etNickname)
+        btnRandom = findViewById(R.id.btnRandom)
+        btnCheck = findViewById(R.id.btnCheck)
+        btnNext = findViewById(R.id.btnNext)
+        tvSkip = findViewById(R.id.tvSkip)
         webView = findViewById(R.id.webViewMap)
+        tvLockerSelector = findViewById(R.id.tvLockerSelector)
 
-        loungeOverlay = findViewById(R.id.loungeOverlay)
-        loungeContainer = findViewById(R.id.loungeContainer)
-        loungeImageStage = findViewById(R.id.loungeImageStage)
-        imgLounge = findViewById(R.id.imgLounge)
-        btnCloseLounge = findViewById(R.id.btnCloseLounge)
+        etNickname.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
 
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                isNicknameChecked = false
+            }
+
+            override fun afterTextChanged(s: Editable?) = Unit
+        })
+
+        btnRandom.setOnClickListener {
+            getRandomNickname()
+        }
+
+        btnCheck.setOnClickListener {
+            val nickname = etNickname.text.toString().trim()
+
+            if (nickname.isEmpty()) {
+                Toast.makeText(this, "닉네임을 입력하세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            checkNickname(nickname)
+        }
+
+        btnNext.setOnClickListener {
+            val nickname = etNickname.text.toString().trim()
+
+            if (nickname.isEmpty()) {
+                Toast.makeText(this, "닉네임을 입력하세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (!isNicknameChecked) {
+                Toast.makeText(this, "닉네임 중복 확인을 해주세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            goToMarket()
+        }
+       // loadSavedLocker()
+        tvSkip.setOnClickListener {
+            goToMarket()
+        }
+
+        initWebView()
+    }
+
+    private fun initWebView() {
         webView.settings.javaScriptEnabled = true
         webView.settings.domStorageEnabled = true
         webView.settings.allowFileAccess = true
@@ -156,17 +120,85 @@ class StartGetInfo : AppCompatActivity() {
 
         webView.addJavascriptInterface(WebAppInterface(), "AndroidBridge")
         webView.loadUrl("https://map-web-sigma.vercel.app/")
+    }
 
-        btnCloseLounge.setOnClickListener {
-            hideLoungeImage()
+    private fun goToMarket() {
+        val intent = Intent(this, MarketActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun getRandomNickname() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.memberApi.getRandomNickname()
+
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success) {
+                        val nickname = body.result.nickname
+                        etNickname.setText(nickname)
+                        isNicknameChecked = false
+                        Log.d("API", "닉네임 성공: $nickname")
+                    } else {
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            body?.message ?: "닉네임 실패",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } else {
+                    Toast.makeText(this@StartGetInfo, "서버 오류", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                Log.e("API", "닉네임 예외", e)
+                Toast.makeText(this@StartGetInfo, "연결 실패", Toast.LENGTH_SHORT).show()
+            }
         }
+    }
 
-        loungeOverlay.setOnClickListener {
-            hideLoungeImage()
-        }
+    private fun checkNickname(nickname: String) {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.memberApi.checkNickname(nickname)
 
-        loungeContainer.setOnClickListener {
-            // 내부 클릭 시 닫히지 않게
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success) {
+                        if (body.result.available) {
+                            isNicknameChecked = true
+                            Toast.makeText(
+                                this@StartGetInfo,
+                                "사용 가능한 닉네임입니다",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            isNicknameChecked = false
+                            Toast.makeText(
+                                this@StartGetInfo,
+                                "이미 사용 중인 닉네임입니다",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    } else {
+                        isNicknameChecked = false
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            body?.message ?: "닉네임 확인 실패",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } else {
+                    isNicknameChecked = false
+                    Toast.makeText(this@StartGetInfo, "서버 오류", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                isNicknameChecked = false
+                Log.e("API", "닉네임 체크 예외", e)
+                Toast.makeText(this@StartGetInfo, "연결 실패", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -188,7 +220,7 @@ class StartGetInfo : AppCompatActivity() {
             when (buildingName) {
                 "차관" -> {
                     Toast.makeText(this, "차관 ${selectedFloor}층 선택", Toast.LENGTH_SHORT).show()
-                    showLoungeImage(selectedFloor, 1)
+                    openLockerGroupPopup(buildingName, selectedFloor, 1)
                 }
 
                 "인문대" -> {
@@ -211,151 +243,184 @@ class StartGetInfo : AppCompatActivity() {
 
         dialog.show(supportFragmentManager, "FloorSelectDialog")
     }
-    private fun showLoungeImage(floor: Int, imageIndex: Int) {
-        currentFloor = floor
+
+    private fun openLockerGroupPopup(buildingName: String, floor: Int, imageIndex: Int) {
         currentImageIndex = imageIndex
 
-        val loungeImage = loungeImageList.find {
-            it.buildingName == currentBuildingName &&
-                    it.floor == floor &&
-                    it.imageIndex == imageIndex
-        }
+        val popup = LockerGroupPopupDialogFragment(
+            buildingName = buildingName,
+            floor = floor,
+            imageIndex = imageIndex,
+            loungeImages = LockerDataSource.loungeImageList,
+            lockerGroups = LockerDataSource.lockerList
+        ) { selectedGroup ->
 
-        if (loungeImage == null) {
-            Toast.makeText(
-                this,
-                "배경 이미지가 없습니다: $currentBuildingName ${floor}층 ${imageIndex}번",
-                Toast.LENGTH_SHORT
-            ).show()
-            return
-        }
+            selectedLockerGroup = selectedGroup
 
-        imgLounge.setImageResource(loungeImage.imageResId)
-        loungeOverlay.visibility = View.VISIBLE
+            Log.d(
+                "LOCKER_GROUP",
+                "그룹 선택: building=${selectedGroup.buildingName}, floor=${selectedGroup.floor}, major=${selectedGroup.major}, group=${selectedGroup.groupNumber}"
+            )
 
-        loungeImageStage.post {
-            removeLockerViews()
-
-            val currentLockers = lockerList.filter {
-                it.buildingName == currentBuildingName &&
-                        it.floor == floor &&
-                        it.imageIndex == imageIndex
+            val matchedGroupData = LockerDataSource.lockerList.find {
+                it.buildingName == selectedGroup.buildingName &&
+                        it.floor == selectedGroup.floor &&
+                        it.major == selectedGroup.major &&
+                        it.groupNumber == selectedGroup.groupNumber
             }
 
-            addLockers(currentLockers)
-        }
-    }
+            if (matchedGroupData == null) {
+                Toast.makeText(
+                    this,
+                    "선택한 사물함 그룹 데이터를 찾을 수 없습니다",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.e(
+                    "LOCKER_GROUP",
+                    "groupData not found: building=${selectedGroup.buildingName}, floor=${selectedGroup.floor}, major=${selectedGroup.major}, group=${selectedGroup.groupNumber}"
+                )
+                return@LockerGroupPopupDialogFragment
+            }
 
-    private fun addLockers(lockers: List<LockerData>) {
-        for (lockerData in lockers) {
-            addLocker(lockerData)
-        }
-    }
-
-    private fun addLocker(lockerData: LockerData) {
-        val (displayX, displayY) = convertToDisplayPosition(
-            lockerData.originalX,
-            lockerData.originalY
-        )
-
-        val locker = ImageView(this)
-        locker.setImageResource(lockerData.lockerImageResId)
-
-        val lockerWidth = (loungeImageStage.width * 0.08f).toInt()
-        val lockerHeight = (lockerWidth * 1.2f).toInt()
-
-        val params = FrameLayout.LayoutParams(lockerWidth, lockerHeight)
-        locker.layoutParams = params
-
-        val (finalX, finalY) = applyLockerOffset(
-            displayX = displayX,
-            displayY = displayY,
-            lockerWidth = lockerWidth,
-            lockerHeight = lockerHeight,
-            offsetX = lockerData.offsetX,
-            offsetY = lockerData.offsetY
-        )
-
-        locker.x = finalX
-        locker.y = finalY
-
-        locker.setOnClickListener {
-
-            // 1. 기존 선택 상태 초기화 (다른 사물함 원래대로)
-            resetLockerSelection()
-
-            // 2. 선택된 사물함 확대 + 그림자
-            locker.animate()
-                .scaleX(1.2f)
-                .scaleY(1.2f)
-                .setDuration(150)
-                .start()
-
-            locker.elevation = 20f
-
-            Toast.makeText(
-                this,
-                "${lockerData.major} / ${lockerData.groupNumber}번 그룹",
-                Toast.LENGTH_SHORT
-            ).show()
+            openLockerFrontPopup(matchedGroupData)
         }
 
-        loungeImageStage.addView(locker)
+        popup.show(supportFragmentManager, "LockerGroupPopup")
     }
-    private fun resetLockerSelection() {
-        for (i in 0 until loungeImageStage.childCount) {
-            val child = loungeImageStage.getChildAt(i)
 
-            if (child is ImageView && child.id != R.id.imgLounge) {
-                child.animate()
-                    .scaleX(1f)
-                    .scaleY(1f)
-                    .setDuration(150)
-                    .start()
+    private fun openLockerFrontPopup(group: LockerGroupData) {
+        val lockerCells = LockerDataSource.createLockerCells(group)
 
-                child.elevation = 0f
+        val dialog = LockerFrontPopupDialogFragment(
+            lockerCellImageResId = group.frontImageResId,
+            rowCount = group.rowCount,
+            colCount = group.colCount,
+            lockerCells = lockerCells
+        ) { selectedCell ->
+
+            selectedLockerCell = selectedCell
+
+            Log.d(
+                "LOCKER_CELL",
+                "셀 선택: building=${selectedCell.buildingName}, floor=${selectedCell.floor}, major=${selectedCell.major}, group=${selectedCell.lockerGroup}, row=${selectedCell.row}, col=${selectedCell.col}"
+            )
+
+            saveLockerToServer(selectedCell)
+        }
+
+        dialog.show(supportFragmentManager, "LockerFrontPopup")
+    }
+    private fun loadSavedLocker() {
+        lifecycleScope.launch {
+            try {
+                val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+                val guestUuid = prefs.getString("guestUuid", null)
+
+                if (guestUuid.isNullOrBlank()) {
+                    Log.e("LOCKER_GET", "guestUuid 없음")
+                    return@launch
+                }
+
+                val response = RetrofitClient.memberApi.getMyLocker(guestUuid)
+
+                Log.d("LOCKER_GET", "응답 code = ${response.code()}")
+                Log.d("LOCKER_GET", "응답 body = ${response.body()}")
+                Log.d("LOCKER_GET", "응답 errorBody = ${response.errorBody()?.string()}")
+
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success && body.result != null) {
+                        val result = body.result
+                        tvLockerSelector.text =
+                            "${result.building} ${result.floor}층 ${result.major} ${result.lockerGroup}그룹 ${result.row}행 ${result.col}열"
+                    } else {
+                        tvLockerSelector.text = "지도에서 사물함 위치를 선택하세요!"
+                    }
+                } else {
+                    tvLockerSelector.text = "지도에서 사물함 위치를 선택하세요!"
+                }
+
+            } catch (e: Exception) {
+                Log.e("LOCKER_GET", "조회 예외", e)
             }
         }
     }
-    private fun convertToDisplayPosition(
-        originalX: Float,
-        originalY: Float
-    ): Pair<Float, Float> {
-        val originalWidth = 2000f
-        val originalHeight = 1500f
+    private fun saveLockerToServer(cell: LockerCellData) {
+        lifecycleScope.launch {
+            try {
+                val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+                val guestUuid = prefs.getString("guestUuid", null)
 
-        val stageWidth = loungeImageStage.width.toFloat()
-        val stageHeight = loungeImageStage.height.toFloat()
+                if (guestUuid.isNullOrBlank()) {
+                    Toast.makeText(
+                        this@StartGetInfo,
+                        "게스트 정보가 없습니다. 첫 화면부터 다시 시작해주세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    Log.e("LOCKER_API", "guestUuid 없음")
+                    return@launch
+                }
 
-        val displayX = (originalX / originalWidth) * stageWidth
-        val displayY = (originalY / originalHeight) * stageHeight
+                val request = LockerSaveRequest(
+                    building = cell.buildingName,
+                    floor = cell.floor,
+                    major = cell.major,
+                    lockerGroup = cell.lockerGroup,
+                    row = cell.row,
+                    col = cell.col
+                )
 
-        return Pair(displayX, displayY)
-    }
+                Log.d("LOCKER_API", "guestUuid = $guestUuid")
+                Log.d("LOCKER_API", "보내는 request = $request")
 
-    private fun applyLockerOffset(
-        displayX: Float,
-        displayY: Float,
-        lockerWidth: Int,
-        lockerHeight: Int,
-        offsetX: Float,
-        offsetY: Float
-    ): Pair<Float, Float> {
-        val finalX = displayX - lockerWidth / 2f + offsetX
-        val finalY = displayY - lockerHeight / 2f + offsetY
-        return Pair(finalX, finalY)
-    }
+                val response = RetrofitClient.memberApi.saveMyLocker(
+                    guestUuid,
+                    request
+                )
 
-    private fun removeLockerViews() {
-        for (i in loungeImageStage.childCount - 1 downTo 0) {
-            val child = loungeImageStage.getChildAt(i)
-            if (child.id != R.id.imgLounge) {
-                loungeImageStage.removeViewAt(i)
+                Log.d("LOCKER_API", "응답 code = ${response.code()}")
+                Log.d("LOCKER_API", "응답 message = ${response.message()}")
+                Log.d("LOCKER_API", "응답 body = ${response.body()}")
+                Log.d("LOCKER_API", "응답 errorBody = ${response.errorBody()?.string()}")
+
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success && body.result != null) {
+                        val lockerText =
+                            "${body.result.building} ${body.result.floor}층 ${body.result.major} ${body.result.lockerGroup}그룹 ${body.result.row}행 ${body.result.col}열"
+
+                        tvLockerSelector.text = lockerText
+
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            "사물함 저장 성공",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            this@StartGetInfo,
+                            body?.message ?: "사물함 저장 실패",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } else {
+                    Toast.makeText(
+                        this@StartGetInfo,
+                        "서버 응답 실패: ${response.code()}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+            } catch (e: Exception) {
+                Log.e("LOCKER_API", "예외 발생", e)
+                Toast.makeText(
+                    this@StartGetInfo,
+                    "사물함 저장 중 오류가 발생했습니다",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
-    }
-
-    private fun hideLoungeImage() {
-        loungeOverlay.visibility = View.GONE
     }
 }

@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/detailbackgruound"
+
+    android:layout_marginTop="20dp"
     tools:context=".UserMarketActivity">
 
     <!-- 배경 이미지는 NavBar 위까지만 보이게 따로 분리 -->
@@ -167,9 +169,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="40dp"
         android:clipToPadding="false"
         android:paddingEnd="6dp"
         app:layout_constraintTop_toBottomOf="@id/buttonGroup"

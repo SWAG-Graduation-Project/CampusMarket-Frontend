@@ -33,15 +33,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.CampusMarket" >
+        android:theme="@style/Theme.CampusMarket"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.campusmarket.ChatListActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.StartActivity"
+            android:name="com.example.campusmarket.StartGetInfo"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.StartGetInfo"
+            android:name="com.example.campusmarket.MyMarketActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,7 +54,7 @@
             android:name="com.example.campusmarket.RewriteProductAcitivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.ChattActivity"
+            android:name="com.example.campusmarket.MarketListActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.FinishSellActivity"
@@ -68,7 +69,7 @@
             android:name="com.example.campusmarket.SellActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.MyMarketActivity"
+            android:name="com.example.campusmarket.StartActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.LockerMapActivity"
@@ -86,13 +87,13 @@
             android:name="com.example.campusmarket.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.MarketActivity"
+            android:name="com.example.campusmarket.ChattActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.UserMarketActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.MarketListActivity"
+            android:name="com.example.campusmarket.MarketActivity"
             android:exported="false" />
         <activity
             android:name="androidx.activity.ComponentActivity"
