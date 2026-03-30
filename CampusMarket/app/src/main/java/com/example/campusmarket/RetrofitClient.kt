@@ -1,5 +1,9 @@
-package com.example.campusmarket.network
+package com.example.campusmarket
 
+import com.example.campusmarket.network.ApiService
+import com.example.campusmarket.network.AuthApi
+import com.example.campusmarket.network.MemberApi
+import com.example.campusmarket.network.ProductImageApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -29,5 +33,12 @@ object RetrofitClient {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)
+    }
+    val productImageApi: ProductImageApi by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ProductImageApi::class.java)
     }
 }

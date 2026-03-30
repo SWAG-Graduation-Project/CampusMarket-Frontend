@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.campusmarket.model.GuestRequest
 import com.example.campusmarket.model.GuestResponse
 import com.example.campusmarket.model.GuestResult
-import com.example.campusmarket.network.RetrofitClient
+import com.example.campusmarket.RetrofitClient
 import kotlinx.coroutines.launch
 import java.util.UUID
 

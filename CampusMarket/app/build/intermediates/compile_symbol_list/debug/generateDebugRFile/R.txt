@@ -223,6 +223,12 @@ int id infoLayout 0x0
 int id itemChatPost 0x0
 int id ivChatBg 0x0
 int id ivHeart 0x0
+int id ivPhoto1 0x0
+int id ivPhoto2 0x0
+int id ivPhoto3 0x0
+int id ivPhoto4 0x0
+int id ivPhoto5 0x0
+int id ivPhotoPreview1 0x0
 int id ivPopupBg 0x0
 int id ivProduct 0x0
 int id ivProductThumb 0x0
@@ -230,6 +236,7 @@ int id ivProfile 0x0
 int id ivSearch 0x0
 int id ivStoreBanner 0x0
 int id ivThumbnail 0x0
+int id layoutPhotoUpload1 0x0
 int id layoutQuickActions 0x0
 int id loungeContainer 0x0
 int id loungeImageStage 0x0
@@ -264,6 +271,11 @@ int id scrollView 0x0
 int id scrollViewPosts 0x0
 int id settingDim 0x0
 int id shopSignGrid 0x0
+int id slot1 0x0
+int id slot2 0x0
+int id slot3 0x0
+int id slot4 0x0
+int id slot5 0x0
 int id sort_latest 0x0
 int id sort_popular 0x0
 int id sort_price_low 0x0
@@ -300,6 +312,7 @@ int id tvOfferNotice 0x0
 int id tvOpenDate 0x0
 int id tvOtherMessage 0x0
 int id tvOtherTime 0x0
+int id tvPhotoCount1 0x0
 int id tvPreview 0x0
 int id tvPrice 0x0
 int id tvProductName 0x0

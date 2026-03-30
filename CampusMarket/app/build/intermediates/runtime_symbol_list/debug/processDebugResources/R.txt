@@ -3569,6 +3569,12 @@ int id itemChatPost 0x7f080146
 int id item_touch_helper_previous_elevation 0x7f080147
 int id ivChatBg 0x7f080148
 int id ivHeart 0x7f080149
+int id ivPhoto1 0x7f0802c3
+int id ivPhoto2 0x7f0802c4
+int id ivPhoto3 0x7f0802c5
+int id ivPhoto4 0x7f0802c6
+int id ivPhoto5 0x7f0802c7
+int id ivPhotoPreview1 0x7f0802d0
 int id ivPopupBg 0x7f08014a
 int id ivProduct 0x7f08014b
 int id ivProductThumb 0x7f08014c
@@ -3580,6 +3586,7 @@ int id jumpToEnd 0x7f080151
 int id jumpToStart 0x7f080152
 int id labeled 0x7f080153
 int id layout 0x7f080154
+int id layoutPhotoUpload1 0x7f0802d5
 int id layoutQuickActions 0x7f080155
 int id left 0x7f080156
 int id leftToRight 0x7f080157
@@ -3781,6 +3788,11 @@ int id sin 0x7f080218
 int id skipCollapsed 0x7f080219
 int id skipped 0x7f08021a
 int id slide 0x7f08021b
+int id slot1 0x7f0802c8
+int id slot2 0x7f0802c9
+int id slot3 0x7f0802ca
+int id slot4 0x7f0802cb
+int id slot5 0x7f0802cc
 int id snackbar_action 0x7f08021c
 int id snackbar_text 0x7f08021d
 int id snap 0x7f08021e
@@ -3893,6 +3905,7 @@ int id tvOfferNotice 0x7f080288
 int id tvOpenDate 0x7f080289
 int id tvOtherMessage 0x7f08028a
 int id tvOtherTime 0x7f08028b
+int id tvPhotoCount1 0x7f0802da
 int id tvPreview 0x7f08028c
 int id tvPrice 0x7f08028d
 int id tvProductName 0x7f08028e

@@ -21,7 +21,7 @@ import com.example.campusmarket.data.LockerCellData
 import com.example.campusmarket.data.LockerDataSource
 import com.example.campusmarket.data.LockerGroupData
 import com.example.campusmarket.data.SelectedLockerGroup
-import com.example.campusmarket.network.RetrofitClient
+import com.example.campusmarket.RetrofitClient
 import com.example.campusmarket.network.dto.LockerSaveRequest
 import kotlinx.coroutines.launch
 

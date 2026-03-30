@@ -75,8 +75,8 @@
 43-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:23:13-37
 44        <activity
 44-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:24:9-32:20
-45            android:name="com.example.campusmarket.StartActivity"
-45-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-42
+45            android:name="com.example.campusmarket.MyMarketActivity"
+45-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:25:13-45
 46            android:exported="true" >
 46-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:26:13-36
 47            <intent-filter>
@@ -128,8 +128,8 @@
 70-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:50:13-37
 71        <activity
 71-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:51:9-53:40
-72            android:name="com.example.campusmarket.MyMarketActivity"
-72-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:52:13-45
+72            android:name="com.example.campusmarket.StartActivity"
+72-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:52:13-42
 73            android:exported="false" />
 73-->C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:53:13-37
 74        <activity

@@ -224,6 +224,12 @@ id infoLayout
 id itemChatPost
 id ivChatBg
 id ivHeart
+id ivPhoto1
+id ivPhoto2
+id ivPhoto3
+id ivPhoto4
+id ivPhoto5
+id ivPhotoPreview1
 id ivPopupBg
 id ivProduct
 id ivProductThumb
@@ -231,6 +237,7 @@ id ivProfile
 id ivSearch
 id ivStoreBanner
 id ivThumbnail
+id layoutPhotoUpload1
 id layoutQuickActions
 id loungeContainer
 id loungeImageStage
@@ -265,6 +272,11 @@ id scrollView
 id scrollViewPosts
 id settingDim
 id shopSignGrid
+id slot1
+id slot2
+id slot3
+id slot4
+id slot5
 id sort_latest
 id sort_popular
 id sort_price_low
@@ -301,6 +313,7 @@ id tvOfferNotice
 id tvOpenDate
 id tvOtherMessage
 id tvOtherTime
+id tvPhotoCount1
 id tvPreview
 id tvPrice
 id tvProductName

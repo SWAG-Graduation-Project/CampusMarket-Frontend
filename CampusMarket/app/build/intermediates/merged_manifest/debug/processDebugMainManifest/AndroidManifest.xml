@@ -42,7 +42,7 @@
             android:name="com.example.campusmarket.StartGetInfo"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.StartActivity"
+            android:name="com.example.campusmarket.MyMarketActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,7 +69,7 @@
             android:name="com.example.campusmarket.SellActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.MyMarketActivity"
+            android:name="com.example.campusmarket.StartActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.LockerMapActivity"

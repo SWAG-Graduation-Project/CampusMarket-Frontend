@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RewriteProductAcitivity">
+    tools:context=".RewriteProductActivity">
 
     <!-- 배경 이미지 -->
     <ImageView
@@ -93,33 +93,80 @@
                     android:orientation="horizontal">
 
                     <FrameLayout
+                        android:id="@+id/slot1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/bg_photo_upload_box" />
+                        android:background="@drawable/bg_photo_upload_box"
+                        android:clickable="true"
+                        android:focusable="true">
 
+                        <ImageView
+                            android:id="@+id/ivPhoto1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                    </FrameLayout>
                     <FrameLayout
+                        android:id="@+id/slot2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/bg_photo_upload_box" />
+                        android:background="@drawable/bg_photo_upload_box"
+                        android:clickable="true"
+                        android:focusable="true">
 
+                        <ImageView
+                            android:id="@+id/ivPhoto2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                    </FrameLayout>
                     <FrameLayout
+                        android:id="@+id/slot3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/bg_photo_upload_box" />
+                        android:background="@drawable/bg_photo_upload_box"
+                        android:clickable="true"
+                        android:focusable="true">
 
+                        <ImageView
+                            android:id="@+id/ivPhoto3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                    </FrameLayout>
                     <FrameLayout
+                        android:id="@+id/slot4"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/bg_photo_upload_box" />
+                        android:background="@drawable/bg_photo_upload_box"
+                        android:clickable="true"
+                        android:focusable="true">
 
+                        <ImageView
+                            android:id="@+id/ivPhoto4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                    </FrameLayout>
                     <FrameLayout
+                        android:id="@+id/slot5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/bg_photo_upload_box" />
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_photo_upload_box"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/ivPhoto5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                    </FrameLayout>
                 </LinearLayout>
             </HorizontalScrollView>
 

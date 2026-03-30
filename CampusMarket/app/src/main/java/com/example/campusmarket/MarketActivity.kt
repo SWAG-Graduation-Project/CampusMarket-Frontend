@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.campusmarket.data.model.MajorCategory
 import com.example.campusmarket.data.model.Store
-import com.example.campusmarket.network.RetrofitClient
+import com.example.campusmarket.RetrofitClient
 import kotlinx.coroutines.launch
 
 class MarketActivity : AppCompatActivity() {
