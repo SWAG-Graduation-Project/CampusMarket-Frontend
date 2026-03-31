@@ -21,7 +21,7 @@ import com.example.campusmarket.data.LockerCellData
 import com.example.campusmarket.data.LockerDataSource
 import com.example.campusmarket.data.LockerGroupData
 import com.example.campusmarket.data.SelectedLockerGroup
-import com.example.campusmarket.RetrofitClient
+import com.example.campusmarket.model.ProfileInitRequest
 import com.example.campusmarket.network.dto.LockerSaveRequest
 import kotlinx.coroutines.launch
 
@@ -34,6 +34,7 @@ class StartGetInfo : AppCompatActivity() {
     private lateinit var tvSkip: TextView
     private lateinit var webView: WebView
     private lateinit var tvLockerSelector: TextView
+
     private var isNicknameChecked = false
 
     private var currentBuildingName: String = ""
@@ -94,14 +95,21 @@ class StartGetInfo : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            goToMarket()
+            if (selectedLockerCell == null) {
+                Toast.makeText(this, "사물함을 선택해주세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            saveProfileToServer()
         }
-       // loadSavedLocker()
+
         tvSkip.setOnClickListener {
             goToMarket()
         }
 
         initWebView()
+        loadSavedLocker()
+        loadSavedNickname()
     }
 
     private fun initWebView() {
@@ -310,6 +318,17 @@ class StartGetInfo : AppCompatActivity() {
 
         dialog.show(supportFragmentManager, "LockerFrontPopup")
     }
+
+    private fun loadSavedNickname() {
+        val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+        val savedNickname = prefs.getString("nickname", null)
+
+        if (!savedNickname.isNullOrBlank()) {
+            etNickname.setText(savedNickname)
+            isNicknameChecked = true
+        }
+    }
+
     private fun loadSavedLocker() {
         lifecycleScope.launch {
             try {
@@ -340,12 +359,12 @@ class StartGetInfo : AppCompatActivity() {
                 } else {
                     tvLockerSelector.text = "지도에서 사물함 위치를 선택하세요!"
                 }
-
             } catch (e: Exception) {
                 Log.e("LOCKER_GET", "조회 예외", e)
             }
         }
     }
+
     private fun saveLockerToServer(cell: LockerCellData) {
         lifecycleScope.launch {
             try {
@@ -412,7 +431,6 @@ class StartGetInfo : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-
             } catch (e: Exception) {
                 Log.e("LOCKER_API", "예외 발생", e)
                 Toast.makeText(
@@ -420,6 +438,81 @@ class StartGetInfo : AppCompatActivity() {
                     "사물함 저장 중 오류가 발생했습니다",
                     Toast.LENGTH_SHORT
                 ).show()
+            }
+        }
+    }
+
+    private fun saveProfileToServer() {
+        val nickname = etNickname.text.toString().trim()
+        val lockerCell = selectedLockerCell
+
+        if (nickname.isBlank()) {
+            Toast.makeText(this, "닉네임을 입력하세요", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        if (lockerCell == null) {
+            Toast.makeText(this, "사물함을 선택해주세요", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val guestUuid = GuestManager.getGuestUuid(this)
+        val memberId = GuestManager.getMemberId(this)
+
+        if (guestUuid.isNullOrBlank() || memberId == null) {
+            Toast.makeText(this, "회원 식별 정보가 없습니다", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val lockerName =
+            "${lockerCell.buildingName} ${lockerCell.floor}층 ${lockerCell.major} ${lockerCell.lockerGroup}그룹 ${lockerCell.row}행 ${lockerCell.col}열"
+
+        val request = ProfileInitRequest(
+            nickname = nickname,
+            profileImageUrl = "https://your-domain.com/default-profile.png",
+            lockerName = lockerName,
+            timetableData = ""
+        )
+
+        lifecycleScope.launch {
+            try {
+                Log.d("PROFILE_API", "guestUuid=$guestUuid")
+                Log.d("PROFILE_API", "memberId=$memberId")
+                Log.d("PROFILE_API", "request=$request")
+
+                val response = RetrofitClient.memberApi.saveProfile(
+                    guestUuid = guestUuid,
+                    memberId = memberId,
+                    request = request
+                )
+
+                Log.d("PROFILE_API", "code=${response.code()}")
+                Log.d("PROFILE_API", "body=${response.body()}")
+                Log.d("PROFILE_API", "errorBody=${response.errorBody()?.string()}")
+
+                if (response.isSuccessful) {
+                    val body = response.body()
+
+                    if (body != null && body.success && body.result != null) {
+                        val result = body.result
+
+                        getSharedPreferences("app_prefs", MODE_PRIVATE)
+                            .edit()
+                            .putString("nickname", result.nickname)
+                            .putString("lockerName", result.lockerName)
+                            .apply()
+
+                        Toast.makeText(this@StartGetInfo, "프로필 저장 성공", Toast.LENGTH_SHORT).show()
+                        goToMarket()
+                    } else {
+                        Toast.makeText(this@StartGetInfo, body?.message ?: "프로필 저장 실패", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(this@StartGetInfo, "실패: ${response.code()}", Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (e: Exception) {
+                Log.e("PROFILE_API", "error", e)
             }
         }
     }

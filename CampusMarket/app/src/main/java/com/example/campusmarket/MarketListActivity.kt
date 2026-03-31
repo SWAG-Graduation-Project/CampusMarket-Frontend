@@ -3,6 +3,7 @@ package com.example.campusmarket
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -43,6 +44,11 @@ class MarketListActivity : AppCompatActivity() {
                 "상품 2",
                 "상품 3",
                 "상품 4",
+                "상품 4",
+
+                "상품 4",
+
+                "상품 5",
                 "상품 5"
             )
 

@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:name=".GlobalApplication"
@@ -22,7 +25,7 @@
             android:name=".StartGetInfo"
             android:exported="false" />
         <activity
-            android:name=".MyMarketActivity"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,13 +34,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RewriteProductAcitivity"
-            android:exported="false" />
-        <activity
-            android:name=".MarketListActivity"
+            android:name=".RewriteProductActivity"
             android:exported="false" />
         <activity
             android:name=".FinishSellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarketListActivity"
             android:exported="false" />
         <activity
             android:name=".MyMarketDetail"
@@ -49,7 +52,7 @@
             android:name=".SellActivity"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".MyMarketActivity"
             android:exported="false" />
         <activity
             android:name=".LockerMapActivity"
