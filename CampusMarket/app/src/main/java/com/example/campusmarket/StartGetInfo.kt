@@ -457,9 +457,8 @@ class StartGetInfo : AppCompatActivity() {
         }
 
         val guestUuid = GuestManager.getGuestUuid(this)
-        val memberId = GuestManager.getMemberId(this)
 
-        if (guestUuid.isNullOrBlank() || memberId == null) {
+        if (guestUuid.isNullOrBlank()) {
             Toast.makeText(this, "회원 식별 정보가 없습니다", Toast.LENGTH_SHORT).show()
             return
         }
@@ -477,12 +476,10 @@ class StartGetInfo : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 Log.d("PROFILE_API", "guestUuid=$guestUuid")
-                Log.d("PROFILE_API", "memberId=$memberId")
                 Log.d("PROFILE_API", "request=$request")
 
                 val response = RetrofitClient.memberApi.saveProfile(
                     guestUuid = guestUuid,
-                    memberId = memberId,
                     request = request
                 )
 
@@ -508,11 +505,14 @@ class StartGetInfo : AppCompatActivity() {
                         Toast.makeText(this@StartGetInfo, body?.message ?: "프로필 저장 실패", Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(this@StartGetInfo, "실패: ${response.code()}", Toast.LENGTH_SHORT).show()
+                    val errorBody = response.errorBody()?.string()
+                    Log.e("PROFILE_API", "HTTP 오류 ${response.code()}: $errorBody")
+                    Toast.makeText(this@StartGetInfo, "저장 실패 (${response.code()})", Toast.LENGTH_SHORT).show()
                 }
 
             } catch (e: Exception) {
                 Log.e("PROFILE_API", "error", e)
+                Toast.makeText(this@StartGetInfo, "오류: ${e.message ?: "알 수 없는 오류"}", Toast.LENGTH_SHORT).show()
             }
         }
     }

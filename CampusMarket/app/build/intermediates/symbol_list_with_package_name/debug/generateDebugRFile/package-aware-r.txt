@@ -149,6 +149,7 @@ id Rewrite
 id backbutton
 id bgImage
 id bottomButtonContainer
+id boxLockerImage
 id boxTimetableImage
 id btnAiRemove
 id btnAll
@@ -164,9 +165,9 @@ id btnCheck
 id btnCloseLounge
 id btnCloseSetting
 id btnConfirm
-id btnContact
 id btnDone
 id btnDown
+id btnEditLocker
 id btnEditTimetable
 id btnFabMain
 id btnGoProduct
@@ -247,6 +248,8 @@ id ivPopupBg
 id ivProduct
 id ivProductThumb
 id ivProfile
+id ivProfileImage
+id ivProfilePhoto
 id ivSearch
 id ivShopItem1
 id ivShopItem10
@@ -284,7 +287,6 @@ id postImage
 id productInfoCard
 id profileCircle
 id profilename
-id profilephoto
 id radioGroupFloor
 id rbFloor1
 id rbFloor2
@@ -333,6 +335,7 @@ id tvLikeCount
 id tvLockerGuide
 id tvLockerLabel
 id tvLockerLocation
+id tvLockerName
 id tvLockerSelector
 id tvMapPlaceholder
 id tvMyMessage

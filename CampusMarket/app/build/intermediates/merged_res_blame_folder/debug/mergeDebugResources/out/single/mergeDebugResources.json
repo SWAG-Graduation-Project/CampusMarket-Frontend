@@ -12,6 +12,10 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_market_popup.xml"
     },
     {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_unselected.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_unselected.xml"
+    },
+    {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_market_post.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_market_post.xml"
     },
@@ -20,16 +24,12 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_price_gray.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_sell_detail.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_sell_detail.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_product_detail.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_product_detail.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chat_other.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chat_other.xml"
-    },
-    {
-        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_product_detail.xml.flat",
-        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_product_detail.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_gray_round_small.xml.flat",
@@ -158,10 +158,6 @@
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_popup_header.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_popup_header.xml"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_selected_yellow.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_selected_yellow.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_floor_dialog.xml.flat",
@@ -420,10 +416,6 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_photo_upload_box.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_unselected.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_unselected.xml"
-    },
-    {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_locker_one.png.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\locker_one.png"
     },
@@ -510,6 +502,10 @@
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_user_market.xml.flat",
+        "source": "com.example.campusmarket.app-main-53:/layout/activity_user_market.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_iccamera.png.flat",
@@ -650,6 +646,10 @@
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_price_black.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_price_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_selected_yellow.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_selected_yellow.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_gotodwon.png.flat",

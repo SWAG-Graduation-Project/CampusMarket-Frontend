@@ -148,6 +148,7 @@ int id Rewrite 0x0
 int id backbutton 0x0
 int id bgImage 0x0
 int id bottomButtonContainer 0x0
+int id boxLockerImage 0x0
 int id boxTimetableImage 0x0
 int id btnAiRemove 0x0
 int id btnAll 0x0
@@ -163,9 +164,9 @@ int id btnCheck 0x0
 int id btnCloseLounge 0x0
 int id btnCloseSetting 0x0
 int id btnConfirm 0x0
-int id btnContact 0x0
 int id btnDone 0x0
 int id btnDown 0x0
+int id btnEditLocker 0x0
 int id btnEditTimetable 0x0
 int id btnFabMain 0x0
 int id btnGoProduct 0x0
@@ -246,6 +247,8 @@ int id ivPopupBg 0x0
 int id ivProduct 0x0
 int id ivProductThumb 0x0
 int id ivProfile 0x0
+int id ivProfileImage 0x0
+int id ivProfilePhoto 0x0
 int id ivSearch 0x0
 int id ivShopItem1 0x0
 int id ivShopItem10 0x0
@@ -283,7 +286,6 @@ int id postImage 0x0
 int id productInfoCard 0x0
 int id profileCircle 0x0
 int id profilename 0x0
-int id profilephoto 0x0
 int id radioGroupFloor 0x0
 int id rbFloor1 0x0
 int id rbFloor2 0x0
@@ -332,6 +334,7 @@ int id tvLikeCount 0x0
 int id tvLockerGuide 0x0
 int id tvLockerLabel 0x0
 int id tvLockerLocation 0x0
+int id tvLockerName 0x0
 int id tvLockerSelector 0x0
 int id tvMapPlaceholder 0x0
 int id tvMyMessage 0x0

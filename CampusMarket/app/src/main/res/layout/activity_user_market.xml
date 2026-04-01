@@ -5,27 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserMarketActivity"
-
     android:background="@drawable/detailbackgruound"
-    >
+    tools:context=".UserMarketActivity">
 
-    <!-- 상단 바 -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingStart="55dp"
-        android:paddingEnd="60dp"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
         android:paddingTop="8dp"
+        android:paddingEnd="24dp"
         android:paddingBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/btnBack"
@@ -38,21 +33,19 @@
             android:id="@+id/tvStoreTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="수진이네 상점"
+            android:text="상점명"
             android:textColor="#111111"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:background="#D9D9D9" />
-
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- 상점 정보 카드 -->
     <LinearLayout
         android:id="@+id/storeInfoCard"
         android:layout_width="0dp"
@@ -60,19 +53,22 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="14dp"
         android:background="@drawable/bg_store_info_card"
-        app:layout_constraintTop_toBottomOf="@id/topBar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/topBar">
 
-        <View
-            android:id="@+id/profileCircle"
+        <ImageView
+            android:id="@+id/ivProfileImage"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:background="@drawable/bg_profile_circle" />
+            android:background="@drawable/bg_profile_circle"
+            android:contentDescription="프로필 이미지"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -84,7 +80,7 @@
                 android:id="@+id/tvOpenDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="상점 시작 날짜: 2026. 03. 02"
+                android:text="상점 시작 날짜: -"
                 android:textColor="#222222"
                 android:textSize="14sp" />
 
@@ -93,13 +89,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="거래 횟수: 999 번"
+                android:text="거래 횟수: - 번"
                 android:textColor="#222222"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
-    <!-- 대표 이미지 -->
     <ImageView
         android:id="@+id/ivStoreBanner"
         android:layout_width="0dp"
@@ -110,66 +105,47 @@
         android:background="#D9D9D9"
         android:contentDescription="상점 대표 이미지"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@id/storeInfoCard"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/tableimg"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storeInfoCard" />
 
-
-
-
-    <!-- 판매 게시글 리스트 -->
-
-    <!-- 하단 네비게이션 바 -->
-
-
-
-    <!--네비게이션 있는곳-->
-
-    <!-- 1️⃣ NavBar (맨 아래) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerUserMarketPosts"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="120dp"
         android:clipToPadding="false"
-
         android:paddingEnd="6dp"
         android:paddingBottom="8dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginStart="45dp"
-
         app:layout_constraintBottom_toTopOf="@id/NavBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivStoreBanner"
-        app:layout_constraintVertical_bias="1.0"
         tools:itemCount="4"
-        tools:listitem="@layout/item_user_market_post"
-        android:layout_marginBottom="120dp"
-        />
+        tools:listitem="@layout/item_user_market_post" />
 
     <LinearLayout
         android:id="@+id/NavBar"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:orientation="horizontal"
         android:background="#FFFFFF"
+        android:orientation="horizontal"
         android:weightSum="4"
-
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <!-- 홈 -->
         <LinearLayout
+            android:id="@+id/gohome"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="40dp"
@@ -180,17 +156,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="홈"
-                android:textSize="10sp"
                 android:textColor="#AF6330"
-                android:textStyle="bold"/>
+                android:textSize="10sp"
+                android:textStyle="bold" />
         </LinearLayout>
-        <!-- 채팅 -->
+
         <LinearLayout
+            android:id="@+id/goMymarket"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="40dp"
@@ -201,17 +178,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="내 상점"
-                android:textSize="10sp"
                 android:textColor="#999999"
-                android:textStyle="bold"/>
+                android:textSize="10sp"
+                android:textStyle="bold" />
         </LinearLayout>
-        <!-- 채팅 -->
+
         <LinearLayout
+            android:id="@+id/gochat"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="40dp"
@@ -222,17 +200,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="채팅"
-                android:textSize="10sp"
-                android:textColor="#999999"/>
+                android:textColor="#999999"
+                android:textSize="10sp" />
         </LinearLayout>
 
-        <!-- MY -->
         <LinearLayout
+            android:id="@+id/gomypage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="40dp"
@@ -243,10 +221,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MY"
-                android:textSize="10sp"
-                android:textColor="#999999"/>
+                android:textColor="#999999"
+                android:textSize="10sp" />
         </LinearLayout>
-
-
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

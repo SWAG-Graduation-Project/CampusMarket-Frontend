@@ -5,12 +5,47 @@
     android:layout_height="match_parent"
     android:background="@drawable/detailbackgruound">
 
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvStoreTitle"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="#E6C7A0"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="내 시간표"
+            android:textColor="#3A2A1C"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="180dp"
         android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,15 +63,7 @@
                 android:orientation="vertical"
                 android:layout_marginTop="30dp"
                 android:paddingStart="60dp"
-                android:paddingEnd="60dp"
-                android:paddingTop="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="내 정보"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                android:paddingEnd="60dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -45,10 +72,12 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
 
-                    <View
-                        android:id="@+id/profilephoto"
+                    <ImageView
+                        android:id="@+id/ivProfilePhoto"
                         android:layout_width="72dp"
                         android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_myinfo"
                         android:background="@drawable/bg_profile_circle" />
 
                     <LinearLayout
@@ -80,17 +109,6 @@
                             android:layout_marginTop="8dp">
 
                             <Button
-                                android:id="@+id/btnContact"
-                                android:layout_width="0dp"
-                                android:layout_height="36dp"
-                                android:layout_weight="1"
-                                android:text="연락하기"
-                                android:textAllCaps="false"
-                                android:textColor="#fff"
-                                android:background="@drawable/bg_black_small_button"
-                                android:layout_marginEnd="6dp" />
-
-                            <Button
                                 android:id="@+id/btnWishlist"
                                 android:layout_width="0dp"
                                 android:layout_height="36dp"
@@ -101,7 +119,6 @@
                                 android:background="@drawable/bg_black_small_button"
                                 android:layout_marginStart="6dp" />
                         </LinearLayout>
-
                     </LinearLayout>
                 </LinearLayout>
 
@@ -119,6 +136,7 @@
                         android:background="@drawable/bg_light_pill_button" />
 
                     <Button
+                        android:id="@+id/btnEditLocker"
                         android:layout_width="120dp"
                         android:layout_height="42dp"
                         android:layout_marginStart="10dp"
@@ -128,14 +146,16 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvLockerName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="• 차미리사관 3층 t-07" />
+                    android:text="• 등록된 사물함이 없습니다." />
 
             </LinearLayout>
 
             <FrameLayout
+                android:id="@+id/boxLockerImage"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
                 android:layout_marginTop="10dp"
@@ -172,13 +192,12 @@
                         android:textColor="#fff"
                         android:background="@drawable/bg_black_rounded_button" />
                 </LinearLayout>
-
             </LinearLayout>
 
             <FrameLayout
                 android:id="@+id/boxTimetableImage"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="360dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginEnd="60dp"
@@ -208,14 +227,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ichome" />
+                android:src="@drawable/homegray" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="홈"
                 android:textSize="10sp"
-                android:textColor="#AF6330"
+                android:textColor="#999999"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -250,14 +269,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:src="@drawable/icchat" />
+                android:src="@drawable/chat_brawn" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="채팅"
                 android:textSize="10sp"
-                android:textColor="#999999" />
+                android:textColor="#AF6330" />
         </LinearLayout>
 
         <LinearLayout

@@ -1,32 +1,29 @@
 package com.example.campusmarket.data.model
 
-import com.google.gson.annotations.SerializedName
-
 data class ProductDetailResponse(
-    val code: String?,
-    val message: String?,
-    @SerializedName(value = "result", alternate = ["data"])
-    val result: ProductDetailData?,
-    val success: Boolean? = null
+    val code: String,
+    val message: String,
+    val result: ProductDetailResult,
+    val success: Boolean
 )
 
-data class ProductDetailData(
+data class ProductDetailResult(
     val productId: Long,
     val name: String,
     val brand: String?,
     val color: String?,
-    val productCondition: String?,
+    val productCondition: String,
     val description: String?,
     val price: Int,
     val isFree: Boolean,
-    val saleStatus: String?,
+    val saleStatus: String,
     val viewCount: Int,
     val wishCount: Int,
     val displayAssetImageUrl: String?,
     val createdAt: String?,
     val category: ProductCategory?,
     val seller: ProductSeller?,
-    val images: List<ProductImageItem> = emptyList(),
+    val images: List<ProductImage>?,
     val isWished: Boolean,
     val canChat: Boolean
 )
@@ -43,10 +40,10 @@ data class ProductSeller(
     val nickname: String?,
     val profileImageUrl: String?,
     val storeStartedAt: String?,
-    val saleCount: Int?
+    val saleCount: Int
 )
 
-data class ProductImageItem(
+data class ProductImage(
     val productImageId: Long,
     val imageUrl: String?,
     val originalImageUrl: String?,
