@@ -1,7 +1,7 @@
-com.example.campusmarket.app-pngs-0 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\build\generated\res\pngs\debug
-com.example.campusmarket.app-updated_navigation_xml-1 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\build\generated\updated_navigation_xml\debug
-com.example.campusmarket.app-packageDebugResources-2 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.campusmarket.app-packageDebugResources-3 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.campusmarket.app-debug-4 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.campusmarket.app-debug-5 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\debug\res
-com.example.campusmarket.app-main-6 C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\res
+com.example.campusmarket.app-pngs-0 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\build\generated\res\pngs\debug
+com.example.campusmarket.app-updated_navigation_xml-1 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\build\generated\updated_navigation_xml\debug
+com.example.campusmarket.app-packageDebugResources-2 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.campusmarket.app-packageDebugResources-3 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.campusmarket.app-debug-4 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.campusmarket.app-debug-5 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\debug\res
+com.example.campusmarket.app-main-6 C:\Users\gimhh\StudioProjects\CampusMarket-Frontend\CampusMarket\app\src\main\res

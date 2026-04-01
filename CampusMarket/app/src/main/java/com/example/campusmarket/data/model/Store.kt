@@ -14,12 +14,13 @@ data class StoreResult(
     val hasNext: Boolean
 )
 
+
+
 data class Store(
     val sellerId: Long,
     val nickname: String,
     val profileImageUrl: String?,
-    val latestProductImageUrl: String?,   // 상세 페이지용 실제 사진
-    val displayAssetImageUrl: String?,    // 목록 페이지용 아이콘 경로
+    val latestProductImageUrl: String?,
     val saleCount: Int,
     val purchaseCount: Int
 )

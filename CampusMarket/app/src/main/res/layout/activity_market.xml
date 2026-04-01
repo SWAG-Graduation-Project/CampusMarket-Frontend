@@ -203,47 +203,50 @@
 
         </LinearLayout>
 
-        <!-- 상점 판자 + 이미지 영역 -->
         <GridLayout
             android:id="@+id/shopSignGrid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             android:alignmentMode="alignMargins"
             android:columnCount="3"
             android:rowCount="4"
-            android:useDefaultMargins="true">
+            android:useDefaultMargins="false">
 
             <!-- 1 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem1"
-                    android:layout_width="72dp"
-                    android:layout_height="100dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="15dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
+                    android:layout_marginStart="15dp"
                     android:textSize="10sp"
                     android:textStyle="bold" />
             </FrameLayout>
@@ -251,31 +254,33 @@
             <!-- 2 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem2"
-                    android:layout_width="72dp"
-                    android:layout_height="100dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -285,32 +290,36 @@
             <!-- 3 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem3"
-                    android:layout_width="72dp"
-                    android:layout_height="100dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="15dp"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign3"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
+                    android:layout_marginEnd="15dp"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
                     android:textStyle="bold" />
@@ -319,31 +328,34 @@
             <!-- 4 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem4"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign4"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -353,31 +365,34 @@
             <!-- 5 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem5"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign5"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -387,31 +402,34 @@
             <!-- 6 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="15dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem6"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign6"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -421,31 +439,37 @@
             <!-- 7 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem7"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign7"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
+                    android:layout_marginEnd="15dp"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
                     android:textStyle="bold" />
@@ -453,31 +477,35 @@
 
             <!-- 8 -->
             <FrameLayout
+                android:layout_marginTop="25dp"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem8"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign8"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -487,30 +515,36 @@
             <!-- 9 -->
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_marginTop="25dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem9"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:layout_marginStart="13dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign9"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -519,64 +553,74 @@
 
             <!-- 10 -->
             <FrameLayout
+                android:layout_marginTop="43dp"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem10"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="15dp"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign10"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
+                    android:layout_marginEnd="15dp"
                     android:textStyle="bold" />
             </FrameLayout>
 
             <!-- 11 -->
             <FrameLayout
+                android:layout_marginTop="43dp"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem11"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign11"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
@@ -585,39 +629,44 @@
 
             <!-- 12 -->
             <FrameLayout
+                android:layout_marginTop="43dp"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="92dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:layout_margin="6dp">
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
 
                 <ImageView
                     android:id="@+id/ivShopItem12"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
                     android:contentDescription="@null"
-                    android:scaleType="centerCrop"
-                    android:translationY="-8dp"
+                    android:layout_marginStart="15dp"
+                    android:scaleType="fitCenter"
                     tools:src="@drawable/logo" />
 
                 <TextView
                     android:id="@+id/tvShopSign12"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:background="@drawable/bg_shop_sign"
                     android:gravity="center"
                     android:paddingHorizontal="6dp"
-                    android:paddingVertical="8dp"
+                    android:paddingVertical="6dp"
                     android:text="XX이네 상점"
                     android:textColor="#FFF4E3"
                     android:textSize="10sp"
+                    android:layout_marginStart="15dp"
                     android:textStyle="bold" />
             </FrameLayout>
 
         </GridLayout>
-
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

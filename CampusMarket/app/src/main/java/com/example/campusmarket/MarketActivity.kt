@@ -38,11 +38,7 @@ class MarketActivity : AppCompatActivity() {
     private var selectedMajorCategoryId: Long? = null
 
     private val apiService by lazy { RetrofitClient.apiService }
-
     private val apiBaseUrl = "http://3.36.120.78:8080"
-
-    // 테스트용 상품 ID
-    private val testProductIds = listOf(22L, 23L, 24L, 25L)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,9 +58,6 @@ class MarketActivity : AppCompatActivity() {
 
         loadMajorCategories()
         loadStores()
-
-        // 테스트용: 22~25번 상품의 displayAssetImageUrl 띄우기
-        loadTestProductImages()
     }
 
     private fun bindViews() {
@@ -208,85 +201,80 @@ class MarketActivity : AppCompatActivity() {
     }
 
     private fun updateStoreTables(stores: List<Store>) {
-        for (i in shopSigns.indices) {
-            if (i < stores.size) {
-                val store = stores[i]
-                val nickname = if (store.nickname.isBlank()) "이름없는" else store.nickname
-                shopSigns[i].text = "${nickname}이네 상점"
-            } else {
+        lifecycleScope.launch {
+            clearAllStoreViews()
+
+            val jobs = stores.take(shopSigns.size).mapIndexed { index, store ->
+                async {
+                    val nickname = store.nickname.takeIf { it.isNotBlank() } ?: "이름없는"
+                    val imageUrl = normalizeImageUrl(store.latestProductImageUrl)
+
+                    Log.d(
+                        "STORE_BIND",
+                        "index=$index, sellerId=${store.sellerId}, nickname=$nickname, rawImage=${store.latestProductImageUrl}, finalImage=$imageUrl"
+                    )
+
+                    val bitmap = if (imageUrl != null) {
+                        loadBitmapFromUrl(imageUrl)
+                    } else {
+                        null
+                    }
+
+                    withContext(Dispatchers.Main) {
+                        if (index < shopSigns.size) {
+                            shopSigns[index].text = "${nickname}이네"
+                        }
+
+                        if (index < shopImages.size) {
+                            if (bitmap != null) {
+                                shopImages[index].setImageBitmap(bitmap)
+                            } else {
+                                shopImages[index].setImageDrawable(null)
+                            }
+                        }
+
+                        setupStoreClickListener(index, store)
+                    }
+                }
+            }
+
+            jobs.awaitAll()
+
+            for (i in stores.size until shopSigns.size) {
                 shopSigns[i].text = "빈 상점"
+                shopImages[i].setImageDrawable(null)
+                shopSigns[i].setOnClickListener(null)
+                shopImages[i].setOnClickListener(null)
             }
         }
     }
 
-    private fun loadTestProductImages() {
-        lifecycleScope.launch {
-            try {
-                val memberId = GuestManager.getMemberId(this@MarketActivity) ?: 1L
+    private fun setupStoreClickListener(index: Int, store: Store) {
+        if (index >= shopSigns.size || index >= shopImages.size) return
 
-                for (i in shopImages.indices) {
-                    shopImages[i].setImageDrawable(null)
-                }
+        val moveToSellerStore = {
+            val intent = Intent(this, UserMarketActivity::class.java)
+            intent.putExtra("sellerId", store.sellerId)
+            startActivity(intent)
+        }
 
-                val jobs = testProductIds.mapIndexed { index, productId ->
-                    async {
-                        try {
-                            Log.d("TEST_PRODUCT_IMAGE", "요청 productId=$productId")
+        shopSigns[index].setOnClickListener {
+            moveToSellerStore()
+        }
 
-                            val response = apiService.getProductDetail(
-                                productId = productId,
-                                memberId = memberId
-                            )
+        shopImages[index].setOnClickListener {
+            // 지금 /stores 응답에는 productId가 없어서
+            // 일단 판매자 페이지로 이동
+            moveToSellerStore()
+        }
+    }
 
-                            val product = response.result
-                            if (product == null) {
-                                Log.e(
-                                    "TEST_PRODUCT_IMAGE",
-                                    "result null productId=$productId, code=${response.code}, message=${response.message}"
-                                )
-                                return@async
-                            }
-
-                            val rawPath = product.displayAssetImageUrl
-                            val finalUrl = normalizeImageUrl(rawPath)
-
-                            Log.d(
-                                "TEST_PRODUCT_IMAGE",
-                                "productId=$productId, rawPath=$rawPath, finalUrl=$finalUrl"
-                            )
-
-                            if (finalUrl != null) {
-                                val bitmap = loadBitmapFromUrl(finalUrl)
-                                withContext(Dispatchers.Main) {
-                                    if (bitmap != null && index < shopImages.size) {
-                                        shopImages[index].setImageBitmap(bitmap)
-                                        shopSigns[index].text = "ID $productId"
-                                    } else if (index < shopSigns.size) {
-                                        shopSigns[index].text = "ID $productId (이미지 없음)"
-                                    }
-                                }
-                            } else {
-                                withContext(Dispatchers.Main) {
-                                    if (index < shopSigns.size) {
-                                        shopSigns[index].text = "ID $productId (URL 없음)"
-                                    }
-                                }
-                            }
-                        } catch (e: Exception) {
-                            Log.e("TEST_PRODUCT_IMAGE", "상품 상세 조회 실패 productId=$productId", e)
-                            withContext(Dispatchers.Main) {
-                                if (index < shopSigns.size) {
-                                    shopSigns[index].text = "ID $productId 실패"
-                                }
-                            }
-                        }
-                    }
-                }
-
-                jobs.awaitAll()
-            } catch (e: Exception) {
-                Log.e("TEST_PRODUCT_IMAGE", "테스트 이미지 전체 로딩 실패", e)
-            }
+    private fun clearAllStoreViews() {
+        for (i in shopSigns.indices) {
+            shopSigns[i].text = "빈 상점"
+            shopImages[i].setImageDrawable(null)
+            shopSigns[i].setOnClickListener(null)
+            shopImages[i].setOnClickListener(null)
         }
     }
 
