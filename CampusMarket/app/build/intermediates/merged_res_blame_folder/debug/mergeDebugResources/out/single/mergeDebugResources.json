@@ -504,10 +504,6 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_user_market.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_user_market.xml"
-    },
-    {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_iccamera.png.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\iccamera.png"
     },
@@ -554,6 +550,10 @@
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_soldout_notice.xml.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_soldout_notice.xml"
+    },
+    {
+        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_market.xml.flat",
+        "source": "com.example.campusmarket.app-main-53:/layout/activity_market.xml"
     },
     {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_marketimg.png.flat",
