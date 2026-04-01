@@ -23,6 +23,8 @@ drawable bg_chat_me
 drawable bg_chat_other
 drawable bg_chip_gray
 drawable bg_chip_selected
+drawable bg_chip_selected_yellow
+drawable bg_chip_unselected
 drawable bg_chip_white
 drawable bg_dark_round_button
 drawable bg_edittext_box
@@ -208,7 +210,13 @@ id chatInputBar
 id chatSettingOverlay
 id chatSettingPanel
 id checkRemoveBg
-id etBrand
+id chipCategoryMain
+id chipCategorySub
+id chipColor
+id chipCondition
+id chipGroupCategory
+id chipGroupColor
+id chipGroupCondition
 id etDescription
 id etMessage
 id etNickname

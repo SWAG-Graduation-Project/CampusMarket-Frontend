@@ -21,6 +21,8 @@ int drawable bg_chat_me 0x0
 int drawable bg_chat_other 0x0
 int drawable bg_chip_gray 0x0
 int drawable bg_chip_selected 0x0
+int drawable bg_chip_selected_yellow 0x0
+int drawable bg_chip_unselected 0x0
 int drawable bg_chip_white 0x0
 int drawable bg_dark_round_button 0x0
 int drawable bg_edittext_box 0x0
@@ -206,7 +208,13 @@ int id chatInputBar 0x0
 int id chatSettingOverlay 0x0
 int id chatSettingPanel 0x0
 int id checkRemoveBg 0x0
-int id etBrand 0x0
+int id chipCategoryMain 0x0
+int id chipCategorySub 0x0
+int id chipColor 0x0
+int id chipCondition 0x0
+int id chipGroupCategory 0x0
+int id chipGroupColor 0x0
+int id chipGroupCondition 0x0
 int id etDescription 0x0
 int id etMessage 0x0
 int id etNickname 0x0

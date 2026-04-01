@@ -3011,6 +3011,8 @@ int drawable bg_chat_me 0x7f070083
 int drawable bg_chat_other 0x7f070084
 int drawable bg_chip_gray 0x7f070085
 int drawable bg_chip_selected 0x7f070086
+int drawable bg_chip_selected_yellow 0x7f07016c
+int drawable bg_chip_unselected 0x7f07016d
 int drawable bg_chip_white 0x7f070087
 int drawable bg_dark_round_button 0x7f070088
 int drawable bg_edittext_box 0x7f070089
@@ -3429,6 +3431,13 @@ int id chatSettingPanel 0x7f0800b8
 int id checkRemoveBg 0x7f0800b9
 int id checkbox 0x7f0800ba
 int id checked 0x7f0800bb
+int id chipCategoryMain 0x7f0802fa
+int id chipCategorySub 0x7f0802fb
+int id chipColor 0x7f0802fc
+int id chipCondition 0x7f0802fd
+int id chipGroupCategory 0x7f0802fe
+int id chipGroupColor 0x7f0802ff
+int id chipGroupCondition 0x7f080300
 int id chronometer 0x7f0800bc
 int id circle_center 0x7f0800bd
 int id clear_text 0x7f0800be
@@ -3498,7 +3507,6 @@ int id end 0x7f0800fd
 int id endToStart 0x7f0800fe
 int id enterAlways 0x7f0800ff
 int id enterAlwaysCollapsed 0x7f080100
-int id etBrand 0x7f0802e9
 int id etDescription 0x7f080101
 int id etMessage 0x7f080102
 int id etNickname 0x7f080103

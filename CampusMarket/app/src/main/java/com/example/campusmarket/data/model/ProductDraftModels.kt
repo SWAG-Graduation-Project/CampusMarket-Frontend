@@ -1,14 +1,17 @@
 package com.example.campusmarket.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class ProductDraftRequest(
     val tempImageIds: List<Long>
 )
 
 data class ProductDraftResponse(
-    val code: String,
-    val message: String,
-    val data: ProductDraftResult?,
-    val success: Boolean
+    val code: String?,
+    val message: String?,
+    @SerializedName(value = "result", alternate = ["data"])
+    val result: ProductDraftResult?,
+    val success: Boolean?
 )
 
 data class ProductDraftResult(

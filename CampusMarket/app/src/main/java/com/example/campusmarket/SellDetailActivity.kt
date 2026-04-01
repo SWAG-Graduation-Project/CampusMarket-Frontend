@@ -1,12 +1,11 @@
 package com.example.campusmarket
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -42,7 +41,11 @@ class SellDetailActivity : AppCompatActivity() {
     private lateinit var spCondition: Spinner
     private lateinit var spColor: Spinner
 
-    private lateinit var etBrand: EditText
+    private lateinit var chipCategoryMain: Button
+    private lateinit var chipCategorySub: Button
+    private lateinit var chipCondition: Button
+    private lateinit var chipColor: Button
+
     private lateinit var etTitle: EditText
     private lateinit var etPrice: EditText
     private lateinit var etDescription: EditText
@@ -219,8 +222,13 @@ class SellDetailActivity : AppCompatActivity() {
         bindViews()
         receiveIntentData()
         setupSelectors()
+        setupChipButtons()
         setupButtons()
         renderImages(imageList)
+
+        if (tempImageIds.isNotEmpty()) {
+            loadDraftData()
+        }
     }
 
     private fun bindViews() {
@@ -235,7 +243,11 @@ class SellDetailActivity : AppCompatActivity() {
         spCondition = findViewById(R.id.spCondition)
         spColor = findViewById(R.id.spColor)
 
-        etBrand = findViewById(R.id.etBrand)
+        chipCategoryMain = findViewById(R.id.chipCategoryMain)
+        chipCategorySub = findViewById(R.id.chipCategorySub)
+        chipCondition = findViewById(R.id.chipCondition)
+        chipColor = findViewById(R.id.chipColor)
+
         etTitle = findViewById(R.id.etTitle)
         etPrice = findViewById(R.id.etPrice)
         etDescription = findViewById(R.id.etDescription)
@@ -263,20 +275,6 @@ class SellDetailActivity : AppCompatActivity() {
         majorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spMajorCategory.adapter = majorAdapter
 
-        spMajorCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                val selectedMajor = majorCategories[position]
-                updateSubCategorySpinner(selectedMajor.id, null)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) = Unit
-        }
-
         val conditionAdapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_item,
@@ -296,6 +294,37 @@ class SellDetailActivity : AppCompatActivity() {
         if (majorCategories.isNotEmpty()) {
             updateSubCategorySpinner(majorCategories.first().id, null)
         }
+
+        spMajorCategory.setSelection(0)
+        spCondition.setSelection(0)
+        spColor.setSelection(0)
+
+        updateCategoryChips()
+        updateConditionChip()
+        updateColorChip()
+    }
+
+    private fun setupChipButtons() {
+        chipCategoryMain.setOnClickListener {
+            showMajorCategoryDialog()
+        }
+
+        chipCategorySub.setOnClickListener {
+            val selectedMajor = spMajorCategory.selectedItem as? CategoryOption
+            if (selectedMajor == null) {
+                Toast.makeText(this, "먼저 카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                showSubCategoryDialog(selectedMajor.id)
+            }
+        }
+
+        chipCondition.setOnClickListener {
+            showConditionDialog()
+        }
+
+        chipColor.setOnClickListener {
+            showColorDialog()
+        }
     }
 
     private fun updateSubCategorySpinner(majorCategoryId: Long, selectedSubCategoryId: Long?) {
@@ -311,6 +340,7 @@ class SellDetailActivity : AppCompatActivity() {
 
         if (subCategories.isEmpty()) {
             Log.e("SELL_DETAIL", "No subcategories for majorCategoryId=$majorCategoryId")
+            chipCategorySub.text = "세부 카테고리"
             return
         }
 
@@ -321,6 +351,98 @@ class SellDetailActivity : AppCompatActivity() {
         }
 
         spSubCategory.setSelection(if (targetIndex >= 0) targetIndex else 0)
+        updateCategoryChips()
+    }
+
+    private fun showMajorCategoryDialog() {
+        val labels = majorCategories.map { it.label }.toTypedArray()
+        val currentIndex = spMajorCategory.selectedItemPosition
+
+        AlertDialog.Builder(this)
+            .setTitle("카테고리 선택")
+            .setSingleChoiceItems(labels, currentIndex) { dialog, which ->
+                spMajorCategory.setSelection(which)
+                val selectedMajor = majorCategories[which]
+                updateSubCategorySpinner(selectedMajor.id, null)
+                updateCategoryChips()
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun showSubCategoryDialog(majorCategoryId: Long) {
+        val subCategories = subCategoryMap[majorCategoryId].orEmpty()
+        if (subCategories.isEmpty()) {
+            Toast.makeText(this, "선택 가능한 세부 카테고리가 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val labels = subCategories.map { it.label }.toTypedArray()
+        val currentIndex = spSubCategory.selectedItemPosition
+
+        AlertDialog.Builder(this)
+            .setTitle("세부 카테고리 선택")
+            .setSingleChoiceItems(labels, currentIndex) { dialog, which ->
+                spSubCategory.setSelection(which)
+                updateCategoryChips()
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun showConditionDialog() {
+        val labels = conditionDisplayList.toTypedArray()
+        val currentIndex = spCondition.selectedItemPosition
+
+        AlertDialog.Builder(this)
+            .setTitle("상태 선택")
+            .setSingleChoiceItems(labels, currentIndex) { dialog, which ->
+                spCondition.setSelection(which)
+                updateConditionChip()
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun showColorDialog() {
+        val labels = colorDisplayList.toTypedArray()
+        val currentIndex = spColor.selectedItemPosition
+
+        AlertDialog.Builder(this)
+            .setTitle("색깔 선택")
+            .setSingleChoiceItems(labels, currentIndex) { dialog, which ->
+                spColor.setSelection(which)
+                updateColorChip()
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun updateCategoryChips() {
+        val selectedMajor = spMajorCategory.selectedItem as? CategoryOption
+        val selectedSub = spSubCategory.selectedItem as? CategoryOption
+
+        chipCategoryMain.text = selectedMajor?.label ?: "카테고리"
+        chipCategorySub.text = selectedSub?.label ?: "세부 카테고리"
+
+        chipCategoryMain.setBackgroundResource(R.drawable.bg_chip_selected)
+        chipCategorySub.setBackgroundResource(R.drawable.bg_chip_unselected)
+    }
+
+    private fun updateConditionChip() {
+        val condition = spCondition.selectedItem?.toString()?.ifBlank { "상태" } ?: "상태"
+        chipCondition.text = condition
+        chipCondition.setBackgroundResource(R.drawable.bg_chip_selected)
+    }
+
+    private fun updateColorChip() {
+        val color = spColor.selectedItem?.toString()?.ifBlank { "색깔" } ?: "색깔"
+        chipColor.text = color
+
+        when (color) {
+            "노랑" -> chipColor.setBackgroundResource(R.drawable.bg_chip_selected_yellow)
+            else -> chipColor.setBackgroundResource(R.drawable.bg_chip_selected)
+        }
     }
 
     private fun setupButtons() {
@@ -346,7 +468,6 @@ class SellDetailActivity : AppCompatActivity() {
             updatePriceModeUi()
         }
 
-        // 🔥 핵심 수정
         btnSell.setOnClickListener {
             submitProduct()
         }
@@ -407,24 +528,37 @@ class SellDetailActivity : AppCompatActivity() {
                     val body = response.body()
                     Log.d("DRAFT_AUTO", "body=$body")
 
-                    if (body != null && body.success == true && body.data != null) {
-                        val result = body.data
+                    val result = body?.result
 
+                    if (body?.success == true && result != null) {
                         setSpinnerByCategoryId(result.majorCategoryId)
                         setSpinnerBySubCategoryId(result.majorCategoryId, result.subCategoryId)
-                        setSpinnerByValue(spCondition, result.productCondition ?: "GOOD")
-                        setSpinnerByValue(spColor, result.color ?: "기타")
+                        setSpinnerByValue(spCondition, mapConditionValue(result.productCondition))
+                        setSpinnerByValue(spColor, mapColorValue(result.color))
 
                         etTitle.setText(result.productName ?: "")
                         etDescription.setText(result.description ?: "")
 
+                        updateCategoryChips()
+                        updateConditionChip()
+                        updateColorChip()
+
+                        Log.d("DRAFT_AUTO", "condition=${result.productCondition}")
+                        Log.d("DRAFT_AUTO", "color=${result.color}")
+                        Log.d("DRAFT_AUTO", "majorCategoryId=${result.majorCategoryId}")
+                        Log.d("DRAFT_AUTO", "subCategoryId=${result.subCategoryId}")
                         Log.d("DRAFT_AUTO", "auto fill success: $result")
+
                         Toast.makeText(
                             this@SellDetailActivity,
                             "AI 추천값을 불러왔습니다.",
                             Toast.LENGTH_SHORT
                         ).show()
                     } else {
+                        Log.e(
+                            "DRAFT_AUTO",
+                            "success=${body?.success}, result=${body?.result}, message=${body?.message}"
+                        )
                         Toast.makeText(
                             this@SellDetailActivity,
                             body?.message ?: "AI 추천값 불러오기 실패",
@@ -432,8 +566,9 @@ class SellDetailActivity : AppCompatActivity() {
                         ).show()
                     }
                 } else {
+                    val errorText = response.errorBody()?.string()
                     Log.e("DRAFT_AUTO", "code=${response.code()}")
-                    Log.e("DRAFT_AUTO", "error=${response.errorBody()?.string()}")
+                    Log.e("DRAFT_AUTO", "error=$errorText")
 
                     Toast.makeText(
                         this@SellDetailActivity,
@@ -463,7 +598,6 @@ class SellDetailActivity : AppCompatActivity() {
 
     private fun setSpinnerBySubCategoryId(majorCategoryId: Long?, subCategoryId: Long?) {
         if (majorCategoryId == null) return
-
         updateSubCategorySpinner(majorCategoryId, subCategoryId)
     }
 
@@ -475,52 +609,95 @@ class SellDetailActivity : AppCompatActivity() {
                 return
             }
         }
+        Log.w("SELL_DETAIL", "Spinner value not matched: $value")
+    }
+
+    private fun mapConditionValue(serverValue: String?): String {
+        return when (serverValue?.trim()?.uppercase()) {
+            "UNOPENED" -> "UNOPENED"
+            "LIKE_NEW" -> "LIKE_NEW"
+            "GOOD" -> "GOOD"
+            "USED" -> "USED"
+            else -> "GOOD"
+        }
+    }
+
+    private fun mapColorValue(serverValue: String?): String {
+        return when (serverValue?.trim()?.uppercase()) {
+            "BLACK", "검정", "블랙" -> "검정"
+            "WHITE", "흰색", "화이트" -> "흰색"
+            "GRAY", "GREY", "회색" -> "회색"
+            "BEIGE", "베이지" -> "베이지"
+            "BROWN", "갈색" -> "갈색"
+            "RED", "빨강", "레드" -> "빨강"
+            "BLUE", "파랑", "블루" -> "파랑"
+            "GREEN", "초록", "그린" -> "초록"
+            "YELLOW", "노랑", "옐로우" -> "노랑"
+            "PINK", "핑크" -> "핑크"
+            "PURPLE", "보라", "퍼플" -> "보라"
+            else -> "기타"
+        }
     }
 
     private fun submitProduct() {
         val guestUuid = GuestManager.getGuestUuid(this)
 
+        if (guestUuid.isNullOrBlank()) {
+            Toast.makeText(this, "게스트 정보가 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val selectedMajor = spMajorCategory.selectedItem as? CategoryOption
         val selectedSub = spSubCategory.selectedItem as? CategoryOption
+
+        if (selectedMajor == null || selectedSub == null) {
+            Toast.makeText(this, "카테고리를 선택해주세요.", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         val title = etTitle.text.toString().trim()
         val description = etDescription.text.toString().trim()
         val priceText = etPrice.text.toString().trim()
 
+        if (title.isBlank()) {
+            Toast.makeText(this, "상품명을 입력해주세요.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val price = if (isFree) 0 else priceText.toIntOrNull() ?: 0
 
         val request = CreateProductRequest(
-            majorCategoryId = selectedMajor!!.id,
-            subCategoryId = selectedSub!!.id,
+            majorCategoryId = selectedMajor.id,
+            subCategoryId = selectedSub.id,
             name = title,
-            brand = etBrand.text.toString(),
-            color = spColor.selectedItem.toString(),
-            productCondition = spCondition.selectedItem.toString(),
+            brand = "",
+            color = spColor.selectedItem?.toString() ?: "기타",
+            productCondition = spCondition.selectedItem?.toString() ?: "GOOD",
             description = description,
             price = price,
             isFree = isFree,
             images = imageList.map {
-                CreateProductImageRequest(imageUrl = it) // 🔥 중요
+                CreateProductImageRequest(imageUrl = it)
             }
         )
 
         lifecycleScope.launch {
             try {
                 val response = RetrofitClient.productImageApi.createMyStoreProduct(
-                    guestUuid = guestUuid!!,
+                    guestUuid = guestUuid,
                     request = request
                 )
 
+                val responseBody = response.body()
+                val errorText = response.errorBody()?.string()
+
+                Log.d("DEBUG", "request=$request")
                 Log.d("DEBUG", "code=${response.code()}")
-                Log.d("DEBUG", "body=${response.body()}")
-                Log.d("DEBUG", "error=${response.errorBody()?.string()}")
+                Log.d("DEBUG", "body=$responseBody")
+                Log.d("DEBUG", "error=$errorText")
 
                 if (response.isSuccessful) {
-                    val body = response.body()
-
-                    // 🔥 핵심 수정 (data OR result 둘 다 대응)
-                    if (body != null && body.success == true) {
-
+                    if (responseBody?.success == true) {
                         Toast.makeText(
                             this@SellDetailActivity,
                             "상품 등록 완료",
@@ -529,11 +706,10 @@ class SellDetailActivity : AppCompatActivity() {
 
                         startActivity(Intent(this@SellDetailActivity, MarketActivity::class.java))
                         finish()
-
                     } else {
                         Toast.makeText(
                             this@SellDetailActivity,
-                            body?.message ?: "등록 실패",
+                            responseBody?.message ?: "등록 실패",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -544,21 +720,10 @@ class SellDetailActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-
             } catch (e: Exception) {
-                Log.e("DEBUG", "exception=${e.message}")
+                Log.e("DEBUG", "exception=${e.message}", e)
                 Toast.makeText(this@SellDetailActivity, "네트워크 오류", Toast.LENGTH_SHORT).show()
             }
-        }
-    }
-
-    private fun normalizeImageUrl(raw: String?): String? {
-        if (raw.isNullOrBlank()) return null
-
-        return when {
-            raw.startsWith("http://") || raw.startsWith("https://") -> raw
-            raw.startsWith("/uploads/") -> "http://3.36.120.78:8080$raw"
-            else -> null
         }
     }
 
