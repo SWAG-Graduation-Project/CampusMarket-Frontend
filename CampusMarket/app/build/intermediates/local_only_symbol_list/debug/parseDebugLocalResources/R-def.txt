@@ -155,7 +155,6 @@ id boxTimetableImage
 id btnAiRemove
 id btnAll
 id btnBack
-id btnBag
 id btnBefore
 id btnCancel
 id btnCategoryClothes
@@ -180,7 +179,6 @@ id btnMove
 id btnNext
 id btnOfferAccept
 id btnOfferReject
-id btnOuter
 id btnPriceDirect
 id btnPriceShare
 id btnRandom
@@ -192,8 +190,6 @@ id btnSort
 id btnSubmitReport
 id btnSuggestDelivery
 id btnSuggestDirect
-id btnTop
-id btnTop2
 id btnUploadTimetable
 id btnWishlist
 id btn_completed
@@ -205,6 +201,7 @@ id btnmarket
 id burgerbar
 id buttonGroup
 id categoryContainer
+id categoryScrollView
 id change_finish
 id chatContentArea
 id chatInputBar

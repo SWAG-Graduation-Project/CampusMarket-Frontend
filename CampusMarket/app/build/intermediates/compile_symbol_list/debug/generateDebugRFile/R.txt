@@ -153,7 +153,6 @@ int id boxTimetableImage 0x0
 int id btnAiRemove 0x0
 int id btnAll 0x0
 int id btnBack 0x0
-int id btnBag 0x0
 int id btnBefore 0x0
 int id btnCancel 0x0
 int id btnCategoryClothes 0x0
@@ -178,7 +177,6 @@ int id btnMove 0x0
 int id btnNext 0x0
 int id btnOfferAccept 0x0
 int id btnOfferReject 0x0
-int id btnOuter 0x0
 int id btnPriceDirect 0x0
 int id btnPriceShare 0x0
 int id btnRandom 0x0
@@ -190,8 +188,6 @@ int id btnSort 0x0
 int id btnSubmitReport 0x0
 int id btnSuggestDelivery 0x0
 int id btnSuggestDirect 0x0
-int id btnTop 0x0
-int id btnTop2 0x0
 int id btnUploadTimetable 0x0
 int id btnWishlist 0x0
 int id btn_completed 0x0
@@ -203,6 +199,7 @@ int id btnmarket 0x0
 int id burgerbar 0x0
 int id buttonGroup 0x0
 int id categoryContainer 0x0
+int id categoryScrollView 0x0
 int id change_finish 0x0
 int id chatContentArea 0x0
 int id chatInputBar 0x0

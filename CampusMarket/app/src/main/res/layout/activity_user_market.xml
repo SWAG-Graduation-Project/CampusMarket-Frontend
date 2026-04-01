@@ -95,20 +95,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/ivStoreBanner"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="50dp"
-        android:background="#D9D9D9"
-        android:contentDescription="상점 대표 이미지"
-        android:scaleType="centerCrop"
-        android:src="@drawable/tableimg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/storeInfoCard" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerUserMarketPosts"
@@ -124,7 +110,7 @@
         app:layout_constraintBottom_toTopOf="@id/NavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivStoreBanner"
+        app:layout_constraintTop_toBottomOf="@id/storeInfoCard"
         tools:itemCount="4"
         tools:listitem="@layout/item_user_market_post" />
 

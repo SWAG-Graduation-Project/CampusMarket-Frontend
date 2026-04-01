@@ -3361,7 +3361,6 @@ int id boxTimetableImage 0x7f080074
 int id btnAiRemove 0x7f080075
 int id btnAll 0x7f080076
 int id btnBack 0x7f080077
-int id btnBag 0x7f080078
 int id btnBefore 0x7f080079
 int id btnCancel 0x7f08007a
 int id btnCategoryClothes 0x7f08007b
@@ -3386,7 +3385,6 @@ int id btnMove 0x7f08008d
 int id btnNext 0x7f08008e
 int id btnOfferAccept 0x7f08008f
 int id btnOfferReject 0x7f080090
-int id btnOuter 0x7f080091
 int id btnPriceDirect 0x7f080092
 int id btnPriceShare 0x7f080093
 int id btnRandom 0x7f080094
@@ -3398,8 +3396,6 @@ int id btnSort 0x7f080099
 int id btnSubmitReport 0x7f08009a
 int id btnSuggestDelivery 0x7f08009b
 int id btnSuggestDirect 0x7f08009c
-int id btnTop 0x7f08009d
-int id btnTop2 0x7f08009e
 int id btnUploadTimetable 0x7f08009f
 int id btnWishlist 0x7f0800a0
 int id btn_completed 0x7f0800a1
@@ -3416,6 +3412,7 @@ int id callMeasure 0x7f0800ab
 int id cancel_button 0x7f0800ac
 int id carryVelocity 0x7f0800ad
 int id categoryContainer 0x7f0800ae
+int id categoryScrollView 0x7f0802f1
 int id center 0x7f0800af
 int id centerCrop 0x7f0800b0
 int id centerInside 0x7f0800b1

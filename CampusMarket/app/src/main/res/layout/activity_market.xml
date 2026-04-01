@@ -129,20 +129,7 @@
                         android:textColor="#FFFFFF"
                         android:textSize="13sp" />
 
-                    <Button
-                        android:id="@+id/btnOuter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/bg_chip_white"
-                        android:minWidth="0dp"
-                        android:minHeight="0dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"
-                        android:text="아우터"
-                        android:textAllCaps="false"
-                        android:textColor="#666666"
-                        android:textSize="13sp" />
+
 
                 </LinearLayout>
             </HorizontalScrollView>

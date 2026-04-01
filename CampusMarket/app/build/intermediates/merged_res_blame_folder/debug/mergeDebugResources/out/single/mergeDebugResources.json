@@ -736,6 +736,10 @@
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_market_list.xml.flat",
+        "source": "com.example.campusmarket.app-main-53:/layout/activity_market_list.xml"
+    },
+    {
         "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
