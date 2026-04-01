@@ -9,6 +9,8 @@
         android:targetSdkVersion="36" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <permission
         android:name="com.example.campusmarket.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -42,7 +44,7 @@
             android:name="com.example.campusmarket.StartGetInfo"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.MyMarketActivity"
+            android:name="com.example.campusmarket.StartActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,13 +53,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.campusmarket.RewriteProductAcitivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.campusmarket.MarketListActivity"
+            android:name="com.example.campusmarket.RewriteProductActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.FinishSellActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.campusmarket.MarketListActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.MyMarketDetail"
@@ -69,7 +71,7 @@
             android:name="com.example.campusmarket.SellActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.campusmarket.StartActivity"
+            android:name="com.example.campusmarket.MyMarketActivity"
             android:exported="false" />
         <activity
             android:name="com.example.campusmarket.LockerMapActivity"

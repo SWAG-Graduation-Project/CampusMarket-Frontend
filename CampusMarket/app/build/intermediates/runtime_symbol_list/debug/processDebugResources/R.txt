@@ -3011,6 +3011,8 @@ int drawable bg_chat_me 0x7f070083
 int drawable bg_chat_other 0x7f070084
 int drawable bg_chip_gray 0x7f070085
 int drawable bg_chip_selected 0x7f070086
+int drawable bg_chip_selected_yellow 0x7f07016c
+int drawable bg_chip_unselected 0x7f07016d
 int drawable bg_chip_white 0x7f070087
 int drawable bg_dark_round_button 0x7f070088
 int drawable bg_edittext_box 0x7f070089
@@ -3222,6 +3224,7 @@ int drawable notification_template_icon_low_bg 0x7f070135
 int drawable notification_tile_bg 0x7f070136
 int drawable notify_panel_notification_icon_bg 0x7f070137
 int drawable pants 0x7f070164
+int drawable plus 0x7f07016b
 int drawable rounded_box 0x7f070138
 int drawable shoes 0x7f070165
 int drawable shoes2 0x7f070166
@@ -3368,6 +3371,7 @@ int id btnCheck 0x7f08007f
 int id btnCloseLounge 0x7f080080
 int id btnCloseSetting 0x7f080081
 int id btnConfirm 0x7f080082
+int id btnContact 0x7f0802e4
 int id btnDone 0x7f080083
 int id btnDown 0x7f080084
 int id btnEditTimetable 0x7f080085
@@ -3396,6 +3400,7 @@ int id btnSuggestDirect 0x7f08009b
 int id btnTop 0x7f08009c
 int id btnTop2 0x7f08009d
 int id btnUploadTimetable 0x7f08009e
+int id btnWishlist 0x7f0802e5
 int id btn_completed 0x7f08009f
 int id btn_sell 0x7f0800a0
 int id btn_selling 0x7f0800a1
@@ -3426,6 +3431,13 @@ int id chatSettingPanel 0x7f0800b8
 int id checkRemoveBg 0x7f0800b9
 int id checkbox 0x7f0800ba
 int id checked 0x7f0800bb
+int id chipCategoryMain 0x7f0802fa
+int id chipCategorySub 0x7f0802fb
+int id chipColor 0x7f0802fc
+int id chipCondition 0x7f0802fd
+int id chipGroupCategory 0x7f0802fe
+int id chipGroupColor 0x7f0802ff
+int id chipGroupCondition 0x7f080300
 int id chronometer 0x7f0800bc
 int id circle_center 0x7f0800bd
 int id clear_text 0x7f0800be
@@ -3567,6 +3579,7 @@ int id is_pooling_container_tag 0x7f080144
 int id italic 0x7f080145
 int id itemChatPost 0x7f080146
 int id item_touch_helper_previous_elevation 0x7f080147
+int id ivCameraIcon1 0x7f0802df
 int id ivChatBg 0x7f080148
 int id ivHeart 0x7f080149
 int id ivPhoto1 0x7f0802c3
@@ -3580,6 +3593,18 @@ int id ivProduct 0x7f08014b
 int id ivProductThumb 0x7f08014c
 int id ivProfile 0x7f08014d
 int id ivSearch 0x7f08014e
+int id ivShopItem1 0x7f0802ee
+int id ivShopItem10 0x7f0802ef
+int id ivShopItem11 0x7f0802f0
+int id ivShopItem12 0x7f0802f1
+int id ivShopItem2 0x7f0802f2
+int id ivShopItem3 0x7f0802f3
+int id ivShopItem4 0x7f0802f4
+int id ivShopItem5 0x7f0802f5
+int id ivShopItem6 0x7f0802f6
+int id ivShopItem7 0x7f0802f7
+int id ivShopItem8 0x7f0802f8
+int id ivShopItem9 0x7f0802f9
 int id ivStoreBanner 0x7f08014f
 int id ivThumbnail 0x7f080150
 int id jumpToEnd 0x7f080151
@@ -3588,6 +3613,7 @@ int id labeled 0x7f080153
 int id layout 0x7f080154
 int id layoutPhotoUpload1 0x7f0802d5
 int id layoutQuickActions 0x7f080155
+int id layoutUploadPlaceholder1 0x7f0802e0
 int id left 0x7f080156
 int id leftToRight 0x7f080157
 int id legacy 0x7f080158
@@ -3728,6 +3754,8 @@ int id postLayout 0x7f0801de
 int id pressed 0x7f0801df
 int id productInfoCard 0x7f0801e0
 int id profileCircle 0x7f0801e1
+int id profilename 0x7f0802e6
+int id profilephoto 0x7f0802e7
 int id progress_circular 0x7f0801e2
 int id progress_horizontal 0x7f0801e3
 int id radio 0x7f0801e4
@@ -3801,6 +3829,10 @@ int id sort_latest 0x7f080220
 int id sort_popular 0x7f080221
 int id sort_price_low 0x7f080222
 int id south 0x7f080223
+int id spColor 0x7f0802ea
+int id spCondition 0x7f0802eb
+int id spMajorCategory 0x7f0802ec
+int id spSubCategory 0x7f0802ed
 int id spacer 0x7f080224
 int id special_effects_controller_view_tag 0x7f080225
 int id spline 0x7f080226
