@@ -1,4 +1,6 @@
-package com.example.campusmarket.model
+package com.example.campusmarket.data.model
+
+import com.google.gson.JsonElement
 
 data class TimetableParseResponse(
     val code: String,
@@ -8,5 +10,5 @@ data class TimetableParseResponse(
 )
 
 data class TimetableParseResult(
-    val timetableData: String
+    val timetableData: JsonElement?
 )

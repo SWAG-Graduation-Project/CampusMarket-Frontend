@@ -2,16 +2,25 @@ package com.example.campusmarket
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.launch
 
 class ChatListActivity : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var tvSell: TextView
+    private lateinit var tvBuy: TextView
+    private var isSellTabActive = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,61 +31,86 @@ class ChatListActivity : AppCompatActivity() {
             insets
         }
 
-        val homebutton = findViewById<LinearLayout>(R.id.gohome)
-
-        homebutton.setOnClickListener {
-            val intent = Intent(this, MarketActivity::class.java)
-            startActivity(intent)
+        findViewById<LinearLayout>(R.id.gohome).setOnClickListener {
+            startActivity(Intent(this, MarketActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.goMymarket).setOnClickListener {
+            startActivity(Intent(this, MyMarketActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.gomypage).setOnClickListener {
+            startActivity(Intent(this, MypageActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.gochat).setOnClickListener {
+            startActivity(Intent(this, ChatListActivity::class.java))
         }
 
-        val goMymarket = findViewById<LinearLayout>(R.id.goMymarket)
-
-        goMymarket.setOnClickListener {
-            val intent = Intent(this, MyMarketActivity::class.java)
-            startActivity(intent)
-        }
-
-        val goMypage = findViewById<LinearLayout>(R.id.gomypage)
-
-        goMypage.setOnClickListener {
-            val intent = Intent(this, MypageActivity::class.java)
-            startActivity(intent)
-        }
-
-        val gochat = findViewById<LinearLayout>(R.id.gochat)
-
-        gochat.setOnClickListener {
-            val intent = Intent(this, ChatListActivity::class.java)
-            startActivity(intent)
-        }
-
-
-        val dummyList = listOf(
-            ChatPost(
-                "상품 이름 상품 이름상품 이름",
-                "파닥부단",
-                "07.21",
-                "안녕하세요~ 혹시 아직 판매 중인가요?",
-                R.drawable.chat_brawn
-            ),
-            ChatPost(
-                "상품 이름 상품 이름상품 이름",
-                "북북북단",
-                "07.21",
-                "조금만 깎아 주세요.",
-                R.drawable.chat_brawn
-            ),
-            ChatPost(
-                "상품 이름 상품 이름상품 이름",
-                "테스트 상품",
-                "07.20",
-                "거래 가능하신가요?",
-                R.drawable.chat_brawn
-            )
-        )
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerChat)
-
+        recyclerView = findViewById(R.id.recyclerChat)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ChatAdapter(dummyList)
+
+        tvSell = findViewById(R.id.tvSell)
+        tvBuy = findViewById(R.id.tvBuy)
+
+        tvSell.setOnClickListener {
+            if (!isSellTabActive) {
+                isSellTabActive = true
+                updateTabStyle()
+                loadChatRooms()
+            }
+        }
+
+        tvBuy.setOnClickListener {
+            if (isSellTabActive) {
+                isSellTabActive = false
+                updateTabStyle()
+                loadChatRooms()
+            }
+        }
+
+        updateTabStyle()
+        loadChatRooms()
+    }
+
+    private fun updateTabStyle() {
+        if (isSellTabActive) {
+            tvSell.setTextColor(android.graphics.Color.parseColor("#2B2B2B"))
+            tvBuy.setTextColor(android.graphics.Color.parseColor("#8A8A8A"))
+        } else {
+            tvSell.setTextColor(android.graphics.Color.parseColor("#8A8A8A"))
+            tvBuy.setTextColor(android.graphics.Color.parseColor("#2B2B2B"))
+        }
+    }
+
+    private fun loadChatRooms() {
+        val guestUuid = GuestManager.getGuestUuid(this)
+        if (guestUuid.isNullOrBlank()) {
+            recyclerView.adapter = SellingChatAdapter(emptyList()) {}
+            return
+        }
+
+        lifecycleScope.launch {
+            try {
+                val response = if (isSellTabActive) {
+                    RetrofitClient.apiService.getSellingChatRooms(guestUuid)
+                } else {
+                    RetrofitClient.apiService.getBuyingChatRooms(guestUuid)
+                }
+
+                if (response.isSuccessful) {
+                    val chatRooms = response.body()?.result?.chatRooms ?: emptyList()
+                    recyclerView.adapter = SellingChatAdapter(chatRooms) { chatRoomId ->
+                        val intent = Intent(this@ChatListActivity, ChattActivity::class.java)
+                        intent.putExtra("chatRoomId", chatRoomId)
+                        startActivity(intent)
+                    }
+                } else {
+                    Toast.makeText(this@ChatListActivity, "채팅 목록 불러오기 실패", Toast.LENGTH_SHORT).show()
+                    recyclerView.adapter = SellingChatAdapter(emptyList()) {}
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this@ChatListActivity, "네트워크 오류", Toast.LENGTH_SHORT).show()
+                recyclerView.adapter = SellingChatAdapter(emptyList()) {}
+            }
+        }
     }
 }

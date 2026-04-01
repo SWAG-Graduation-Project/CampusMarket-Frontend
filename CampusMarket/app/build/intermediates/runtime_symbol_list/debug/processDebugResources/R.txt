@@ -3356,6 +3356,7 @@ int id bounce 0x7f080070
 int id bounceBoth 0x7f080071
 int id bounceEnd 0x7f080072
 int id bounceStart 0x7f080073
+int id boxLockerImage 0x7f0802ec
 int id boxTimetableImage 0x7f080074
 int id btnAiRemove 0x7f080075
 int id btnAll 0x7f080076
@@ -3371,9 +3372,9 @@ int id btnCheck 0x7f08007f
 int id btnCloseLounge 0x7f080080
 int id btnCloseSetting 0x7f080081
 int id btnConfirm 0x7f080082
-int id btnContact 0x7f080083
 int id btnDone 0x7f080084
 int id btnDown 0x7f080085
+int id btnEditLocker 0x7f0802ed
 int id btnEditTimetable 0x7f080086
 int id btnFabMain 0x7f080087
 int id btnGoProduct 0x7f080088
@@ -3592,6 +3593,8 @@ int id ivPopupBg 0x7f08015c
 int id ivProduct 0x7f08015d
 int id ivProductThumb 0x7f08015e
 int id ivProfile 0x7f08015f
+int id ivProfileImage 0x7f0802f0
+int id ivProfilePhoto 0x7f0802ee
 int id ivSearch 0x7f080160
 int id ivShopItem1 0x7f080161
 int id ivShopItem10 0x7f080162
@@ -3755,7 +3758,6 @@ int id pressed 0x7f0801ff
 int id productInfoCard 0x7f080200
 int id profileCircle 0x7f080201
 int id profilename 0x7f080202
-int id profilephoto 0x7f080203
 int id progress_circular 0x7f080204
 int id progress_horizontal 0x7f080205
 int id radio 0x7f080206
@@ -3925,6 +3927,7 @@ int id tvLikeCount 0x7f0802a9
 int id tvLockerGuide 0x7f0802aa
 int id tvLockerLabel 0x7f0802ab
 int id tvLockerLocation 0x7f0802ac
+int id tvLockerName 0x7f0802ef
 int id tvLockerSelector 0x7f0802ad
 int id tvMapPlaceholder 0x7f0802ae
 int id tvMyMessage 0x7f0802af

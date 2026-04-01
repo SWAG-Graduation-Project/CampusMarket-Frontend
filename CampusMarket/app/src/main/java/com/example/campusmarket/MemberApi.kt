@@ -1,10 +1,12 @@
 package com.example.campusmarket.network
 
+import com.example.campusmarket.data.model.MyProfileResponse
+import com.example.campusmarket.data.model.TimetableParseResponse
+import com.example.campusmarket.data.model.TimetableResponse
 import com.example.campusmarket.model.NicknameCheckResponse
 import com.example.campusmarket.model.ProfileInitRequest
 import com.example.campusmarket.model.ProfileInitResponse
 import com.example.campusmarket.model.RandomNicknameResponse
-import com.example.campusmarket.model.TimetableParseResponse
 import com.example.campusmarket.network.dto.LockerGetResponse
 import com.example.campusmarket.network.dto.LockerSaveRequest
 import com.example.campusmarket.network.dto.LockerSaveResponse
@@ -43,9 +45,27 @@ interface MemberApi {
     @POST("members/profile")
     suspend fun saveProfile(
         @Header("guestUuid") guestUuid: String,
-        @Header("memberId") memberId: Long,
         @Body request: ProfileInitRequest
     ): Response<ProfileInitResponse>
+
+    @PATCH("members/profile")
+    suspend fun updateProfile(
+        @Header("guestUuid") guestUuid: String,
+        @Body request: ProfileInitRequest
+    ): Response<ProfileInitResponse>
+
+
+    @Multipart
+    @POST("/members/timetable")
+    suspend fun uploadTimetableImage(
+        @Header("guestUuid") guestUuid: String,
+        @Part file: MultipartBody.Part
+    ): Response<TimetableResponse>
+
+    @GET("members/timetable")
+    suspend fun getMyTimetable(
+        @Header("guestUuid") guestUuid: String
+    ): Response<TimetableResponse>
 
     @Multipart
     @POST("members/timetable/parse")
@@ -54,4 +74,8 @@ interface MemberApi {
         @Part file: MultipartBody.Part
     ): Response<TimetableParseResponse>
 
+    @GET("members/profile")
+    suspend fun getMyProfile(
+        @Header("guestUuid") guestUuid: String
+    ): Response<MyProfileResponse>
 }

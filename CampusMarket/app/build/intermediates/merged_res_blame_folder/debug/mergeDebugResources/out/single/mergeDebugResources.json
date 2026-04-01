@@ -1,754 +1,758 @@
 [
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_post.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_post.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_icmymarket.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/icmymarket.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_ic_myinfo.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\ic_myinfo.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cha_center3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cha_center3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_market_popup.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_market_popup.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_black_round_button_small.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_black_round_button_small.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_unselected.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_unselected.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_post.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_post.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_market_post.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_market_post.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_category_green.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_category_green.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_price_gray.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_price_gray.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_view_chat_setting_panel.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/view_chat_setting_panel.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_product_detail.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_product_detail.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chat_other.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chat_other.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_sell_detail.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_sell_detail.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_gray_round_small.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_gray_round_small.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes8.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes8.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cha_center3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cha_center3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_me.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_me.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_ichome.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\ichome.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_error.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/error.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_danger.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\danger.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_shoes4.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/shoes4.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_view_chat_setting_panel.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\view_chat_setting_panel.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_soldout_notice.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_soldout_notice.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_icchat.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\icchat.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_no_locker.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_no_locker.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_wood_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_wood_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_other.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_other.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_market.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_market.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_icback.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\icback.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_popup_btn_light.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_popup_btn_light.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_move_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_move_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_light_pill_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_light_pill_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes11.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes11.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_product_detail.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_product_detail.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_title_board.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_title_board.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_dialog_floor_select.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/dialog_floor_select.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_lockerback2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\lockerback2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_light_big_round.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_light_big_round.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes7.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes7.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_lockerfrontleft.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/lockerfrontleft.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_light_round_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_light_round_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_finish_sell.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_finish_sell.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cha_center2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cha_center2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_camera.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/camera.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_light_rounded_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_light_rounded_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_ticket.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/ticket.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_post.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_post.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_tag_green.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_tag_green.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_blackheart.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\blackheart.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_dark_round_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_dark_round_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_popup_image.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_popup_image.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bag2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bag2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_white.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_white.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_binheart.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/binheart.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_category_gray.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_category_gray.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes9.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes9.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_black_small_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_black_small_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_marketimg.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/marketimg.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_white_round_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_white_round_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_black_small_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_black_small_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_camera.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\camera.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_my_market.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_my_market.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cha_center4.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cha_center4.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_shoes.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/shoes.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_market_list.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_market_list.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_white_round_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_white_round_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_category_yellow.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_category_yellow.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_profile_circle.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_profile_circle.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_pants.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\pants.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cup.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cup.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_popup_header.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_popup_header.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_floor_dialog.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_floor_dialog.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_x.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/x.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_binheart.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\binheart.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_selected.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_selected.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bag.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bag.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_dialog_sell_complete.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/dialog_sell_complete.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_user_market.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_user_market.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_hamburger.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/hamburger.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes10.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes10.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_selected_yellow.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_selected_yellow.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_no_user.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_no_user.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_detailbackgruound.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/detailbackgruound.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_user_market_post.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_user_market_post.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_black_round_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_black_round_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_black_round_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_black_round_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_headphone.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/headphone.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_book.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\book.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_blackheart.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/blackheart.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_lockerback2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/lockerback2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_dialog_floor_select.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\dialog_floor_select.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes13.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes13.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_dialog_report.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\dialog_report.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_search_box.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_search_box.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_shoes.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\shoes.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_shoes3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/shoes3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_gray_placeholder.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_gray_placeholder.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_mypage.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_mypage.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_tag_brown.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_tag_brown.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_chat_brawn.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/chat_brawn.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_arrowup.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\arrowup.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_logo.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/logo.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_move_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_move_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_no_locker.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_no_locker.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_light_rounded_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_light_rounded_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_detailbackgruound.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\detailbackgruound.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_tag_brown.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_tag_brown.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_shoes4.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\shoes4.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_book2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/book2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_marketbackground.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\marketbackground.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_gotoup.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/gotoup.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_chatt.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_chatt.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_lockerback1.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\lockerback1.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_arrowup.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/arrowup.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_whiteheart.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\whiteheart.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_gray_map_placeholder.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_gray_map_placeholder.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\logo.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_white.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_white.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_edittext_box.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_edittext_box.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_gray_round_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_gray_round_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_lockerfrontleft.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\lockerfrontleft.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_product_card.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_product_card.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_hair.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/hair.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_quick_action.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_quick_action.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cosmetics.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cosmetics.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_chatt.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_chatt.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chat_me.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chat_me.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_light_round_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_light_round_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_edittext_box.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_edittext_box.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_locker_map.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_locker_map.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_check.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\check.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_product_card.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_product_card.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_shop_sign.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_shop_sign.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_whiteheart.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/whiteheart.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cha_center1.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cha_center1.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cap.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cap.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\menu_menu_sort.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\menu\\menu_sort.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_chat_list.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_chat_list.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_tag_gray.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_tag_gray.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_price_gray.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_price_gray.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chat_me.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chat_me.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_dialog_market_detail.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/dialog_market_detail.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_dialog_market_detail.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\dialog_market_detail.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bag.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bag.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_gotoright.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\gotoright.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_icback.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/icback.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_light_pill_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_light_pill_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_black_rounded_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_black_rounded_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_dark_round_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_dark_round_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_photo_upload_box.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_photo_upload_box.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_start.jpg.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\start.jpg"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_check.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/check.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_tag_green.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_tag_green.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_rounded_box.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/rounded_box.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes5.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes5.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cup2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cup2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_book2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\book2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_popup_btn_left.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_popup_btn_left.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_locker_one.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/locker_one.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_profile_circle.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_profile_circle.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_gray_post_image.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_gray_post_image.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_gotoup.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\gotoup.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_category_gray.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_category_gray.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_watch.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\watch.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_ichome.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/ichome.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_my_market.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_my_market.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_quick_action.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_quick_action.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes12.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes12.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_rewrite_product_acitivity.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_rewrite_product_acitivity.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_keyboard.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\keyboard.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_timetable.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_timetable.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_hair.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\hair.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cap4.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cap4.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_my_market_detail.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_my_market_detail.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_category_yellow.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_category_yellow.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_sell.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_sell.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes11.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes11.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes8.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes8.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_marketbackground.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/marketbackground.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_locker_map.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_locker_map.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_my_time_table.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_my_time_table.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_headphone3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\headphone3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_iccamera.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/iccamera.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_chat_list.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_chat_list.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_hamburgerbar.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/hamburgerbar.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_photo_upload_box.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_photo_upload_box.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_popup_bottom_right.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_popup_bottom_right.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_locker_one.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\locker_one.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_unselected.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_unselected.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_gray.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_gray.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_ic_myinfo.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/ic_myinfo.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_frontlocker.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\frontlocker.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chip_gray.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chip_gray.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_shoes2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\shoes2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_dialog_locker_group_popup.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/dialog_locker_group_popup.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_x.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\x.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_watch.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/watch.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes4.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes4.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_start.jpg.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/start.jpg"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes5.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes5.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_gray_round_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_gray_round_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_keyboard.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/keyboard.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_headphone.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\headphone.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_sell.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_sell.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_mypage.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_mypage.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_sell_detail.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_sell_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_icdown.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\icdown.png"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_popup_btn_light.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_popup_btn_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_popup_bottom_right.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_popup_bottom_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_timetable.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_timetable.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_rounded_box.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\rounded_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_start_get_info.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_start_get_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_gotoleft.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\gotoleft.png"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_hamburger.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_tableimg.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\tableimg.png"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cap.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cap.png"
+    },
+    {
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "com.example.campusmarket.app-debug-51:/layout_activity_user_market.xml.flat",
         "source": "com.example.campusmarket.app-main-53:/layout/activity_user_market.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_white_round_dialog.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_white_round_dialog.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_iccamera.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\iccamera.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cap3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cap3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cup2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cup2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cap4.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cap4.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_start_get_info.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_start_get_info.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_hamburgerbar.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\hamburgerbar.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/menu_menu_sort.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/menu/menu_sort.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_icmymarket.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\icmymarket.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_popup_image.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_popup_image.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_gray_post_image.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_gray_post_image.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_headphone2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\headphone2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cap3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cap3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_market_popup.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_market_popup.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_dialog_locker_group_popup.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\dialog_locker_group_popup.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_gotoright.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/gotoright.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_search_box.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_search_box.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_shop_sign.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_shop_sign.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_shoes3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\shoes3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_soldout_notice.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_soldout_notice.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_popup_btn_left.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_popup_btn_left.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_marketimg.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\marketimg.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes10.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes10.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes13.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes13.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_market.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_market.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_white_round_dialog.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_white_round_dialog.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_item_thumb.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_item_thumb.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_chat_brawn.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\chat_brawn.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_offer_notice.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_offer_notice.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_ticket.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\ticket.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_book3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/book3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_light_big_round.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_light_big_round.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_frontlocker.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/frontlocker.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cup3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cup3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_other.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_other.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_price_black.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_price_black.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_stair.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\stair.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_floor_dialog.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_floor_dialog.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_popup_header.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_popup_header.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_store_info_card.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_store_info_card.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_chat_no_user.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_chat_no_user.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cap2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cap2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes6.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes6.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_item_thumb.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_item_thumb.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_headphone2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/headphone2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_book3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\book3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cap2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cap2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_my_time_table.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_my_time_table.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_black_rounded_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_black_rounded_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_danger.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/danger.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_start.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_start.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_title_board.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_title_board.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_rewrite_product_acitivity.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_rewrite_product_acitivity.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cha_center1.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cha_center1.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes6.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes6.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_store_info_card.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_store_info_card.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/xml_backup_rules.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_send_circle.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_send_circle.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cosmetics.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cosmetics.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_brown_circle.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_brown_circle.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_book.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/book.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_price_black.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_price_black.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes12.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes12.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_selected_yellow.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_selected_yellow.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_post.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_post.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_gotodwon.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\gotodwon.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_shoes2.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/shoes2.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_plus.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/plus.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes9.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes9.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_start.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_start.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_view_common_header.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/view_common_header.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_me.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_me.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_lockerfrontright.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/lockerfrontright.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_black_round_button_small.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_black_round_button_small.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_icchat.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/icchat.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_activity_mypage_list.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\activity_mypage_list.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_headphone3.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/headphone3.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_burger.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\burger.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_gotoleft.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/gotoleft.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cup.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cup.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_gotodwon.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/gotodwon.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_error.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\error.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_gray_round_small.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_gray_round_small.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_sort_button.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_sort_button.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_homegray.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/homegray.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_gray_map_placeholder.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_gray_map_placeholder.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_mypage_list.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_mypage_list.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_lockerfrontright.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\lockerfrontright.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_wood_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_wood_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_item_chat_offer_notice.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\item_chat_offer_notice.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_gray_placeholder.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_gray_placeholder.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_view_common_header.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\view_common_header.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_chat_other.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_chat_other.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cup3.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cup3.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_lockerback1.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/lockerback1.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_homegray.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\homegray.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_burger.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/burger.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_category_green.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_category_green.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes7.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes7.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\layout_dialog_sell_complete.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\layout\\dialog_sell_complete.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_user_market_post.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_user_market_post.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_cha_center2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\cha_center2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_sort_button.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_sort_button.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_stair.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/stair.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_icdown.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/icdown.png"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_plus.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\plus.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_dialog_report.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/dialog_report.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bag2.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bag2.png"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_send_circle.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_send_circle.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_bg_chip_selected.xml.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\bg_chip_selected.xml"
     },
     {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_brown_circle.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_brown_circle.xml"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_pants.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/pants.png"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_bg_tag_gray.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/bg_tag_gray.xml"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-mdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_market_list.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_market_list.xml"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_cha_center4.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/cha_center4.png"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_my_market_detail.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_my_market_detail.xml"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.campusmarket.app-main-53:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_clothes4.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/clothes4.png"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_item_market_post.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/item_market_post.xml"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/drawable_tableimg.png.flat",
-        "source": "com.example.campusmarket.app-main-53:/drawable/tableimg.png"
-    },
-    {
-        "merged": "com.example.campusmarket.app-debug-51:/layout_activity_finish_sell.xml.flat",
-        "source": "com.example.campusmarket.app-main-53:/layout/activity_finish_sell.xml"
+        "merged": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-debug-51:\\drawable_clothes.png.flat",
+        "source": "C:\\Users\\DS\\.gradle\\daemon\\9.3.1\\com.example.campusmarket.app-main-53:\\drawable\\clothes.png"
     }
 ]

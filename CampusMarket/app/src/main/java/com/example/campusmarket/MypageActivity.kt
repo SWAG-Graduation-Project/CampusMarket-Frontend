@@ -1,37 +1,63 @@
 package com.example.campusmarket
 
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
+import android.provider.OpenableColumns
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.campusmarket.data.model.ParsedTimetable
+import com.example.campusmarket.data.model.TimetableClass
+import com.example.campusmarket.model.ProfileInitRequest
+import com.example.campusmarket.network.MemberApi
+import com.example.campusmarket.ui.view.WeeklyTimetableView
+import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 import java.io.FileOutputStream
 
 class MypageActivity : AppCompatActivity() {
 
     private lateinit var btnEditTimetable: Button
-    private lateinit var boxTimetableImage: FrameLayout
+    private lateinit var btnEditLocker: Button
+    private lateinit var profileNameButton: Button
+    private lateinit var tvLockerName: TextView
+    private lateinit var ivProfilePhoto: ImageView
+    private lateinit var timetableContainer: FrameLayout
+    private lateinit var weeklyTimetableView: WeeklyTimetableView
 
-    private var selectedTimetableUri: Uri? = null
+    private var currentNickname: String = ""
+    private var currentProfileImageUrl: String = ""
+    private var currentLockerName: String = ""
+    private var currentTimetableData: String = ""
 
-    private val pickImageLauncher =
-        registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-            if (uri != null) {
-                selectedTimetableUri = uri
-                showSelectedImage(uri)
-                uploadTimetableImage(uri)
-            } else {
-                Toast.makeText(this, "이미지 선택이 취소되었습니다", Toast.LENGTH_SHORT).show()
+    private val memberApi: MemberApi by lazy { RetrofitClient.memberApi }
+
+    private val pickTimetableImageLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val uri = result.data?.data
+                if (uri != null) {
+                    uploadTimetableImage(uri)
+                } else {
+                    Toast.makeText(this, "이미지를 선택하지 않았습니다.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -39,116 +65,251 @@ class MypageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mypage)
 
-        btnEditTimetable = findViewById(R.id.btnEditTimetable)
-        boxTimetableImage = findViewById(R.id.boxTimetableImage)
-
-        btnEditTimetable.setOnClickListener {
-            pickImageLauncher.launch("image/*")
-        }
+        bindViews()
+        setupTimetableContainer()
+        setupListeners()
+        fetchMyProfile()
     }
 
-    private fun showSelectedImage(uri: Uri) {
-        boxTimetableImage.removeAllViews()
+    private fun bindViews() {
+        btnEditTimetable = findViewById(R.id.btnEditTimetable)
+        btnEditLocker = findViewById(R.id.btnEditLocker)
+        profileNameButton = findViewById(R.id.profilename)
+        tvLockerName = findViewById(R.id.tvLockerName)
+        ivProfilePhoto = findViewById(R.id.ivProfilePhoto)
+        timetableContainer = findViewById(R.id.boxTimetableImage)
+    }
 
-        val imageView = ImageView(this).apply {
+    private fun setupTimetableContainer() {
+        timetableContainer.removeAllViews()
+        weeklyTimetableView = WeeklyTimetableView(this).apply {
             layoutParams = FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.MATCH_PARENT
             )
-            scaleType = ImageView.ScaleType.CENTER_CROP
-            setImageURI(uri)
         }
-
-        boxTimetableImage.addView(imageView)
+        timetableContainer.addView(weeklyTimetableView)
     }
 
-    private fun uploadTimetableImage(uri: Uri) {
-        val guestUuid = GuestManager.getGuestUuid(this)
+    private fun setupListeners() {
+        btnEditTimetable.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK).apply { type = "image/*" }
+            pickTimetableImageLauncher.launch(intent)
+        }
 
+        btnEditLocker.setOnClickListener {
+            startActivity(Intent(this, StartGetInfo::class.java))
+        }
+
+        profileNameButton.setOnClickListener {
+            showNicknameEditDialog()
+        }
+
+        findViewById<LinearLayout>(R.id.gohome)?.setOnClickListener {
+            startActivity(Intent(this, MarketActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.goMymarket)?.setOnClickListener {
+            startActivity(Intent(this, MyMarketActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.gochat)?.setOnClickListener {
+            startActivity(Intent(this, ChatListActivity::class.java))
+        }
+    }
+
+    private fun showNicknameEditDialog() {
+        val editText = EditText(this).apply {
+            setText(currentNickname)
+            setSingleLine()
+        }
+        AlertDialog.Builder(this)
+            .setTitle("닉네임 수정")
+            .setView(editText)
+            .setPositiveButton("저장") { _, _ ->
+                val newNickname = editText.text.toString().trim()
+                if (newNickname.isNotBlank()) {
+                    saveProfile(nickname = newNickname)
+                } else {
+                    Toast.makeText(this, "닉네임을 입력하세요", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton("취소", null)
+            .show()
+    }
+
+    private fun fetchMyProfile() {
+        val guestUuid = GuestManager.getGuestUuid(this)
         if (guestUuid.isNullOrBlank()) {
-            Toast.makeText(this, "guestUuid가 없습니다", Toast.LENGTH_SHORT).show()
+            showEmptyTimetable()
             return
         }
 
         lifecycleScope.launch {
             try {
-                val file = uriToFile(uri)
+                val response = memberApi.getMyProfile(guestUuid)
+                if (!response.isSuccessful || response.body()?.result == null) {
+                    showEmptyTimetable()
+                    return@launch
+                }
 
-                val requestBody = file.readBytes()
-                    .toRequestBody("image/*".toMediaTypeOrNull())
+                val data = response.body()!!.result!!
+                currentNickname = data.nickname ?: ""
+                currentProfileImageUrl = data.profileImageUrl ?: ""
+                currentLockerName = data.lockerName ?: ""
+                currentTimetableData = data.timetableData ?: ""
 
-                val multipartFile = MultipartBody.Part.createFormData(
-                    "file",
-                    file.name,
-                    requestBody
-                )
+                profileNameButton.text = currentNickname.ifBlank { "닉네임 없음" }
+                tvLockerName.text = if (currentLockerName.isBlank()) "• 등록된 사물함이 없습니다." else "• $currentLockerName"
 
-                Log.d("TIMETABLE_API", "guestUuid=$guestUuid")
-                Log.d("TIMETABLE_API", "fileName=${file.name}")
-
-                val response = RetrofitClient.memberApi.parseTimetableImage(
-                    guestUuid = guestUuid,
-                    file = multipartFile
-                )
-
-                Log.d("TIMETABLE_API", "code=${response.code()}")
-                Log.d("TIMETABLE_API", "body=${response.body()}")
-                Log.d("TIMETABLE_API", "errorBody=${response.errorBody()?.string()}")
-
-                if (response.isSuccessful) {
-                    val body = response.body()
-
-                    if (body != null && body.success && body.result != null) {
-                        val timetableData = body.result.timetableData
-
-                        getSharedPreferences("app_prefs", MODE_PRIVATE)
-                            .edit()
-                            .putString("timetableData", timetableData)
-                            .apply()
-
-                        Toast.makeText(
-                            this@MypageActivity,
-                            "시간표 업로드 및 파싱 성공",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    } else {
-                        Toast.makeText(
-                            this@MypageActivity,
-                            body?.message ?: "시간표 파싱 실패",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
+                if (currentTimetableData.isNotBlank()) {
+                    renderTimetableFromJson(currentTimetableData)
                 } else {
-                    Toast.makeText(
-                        this@MypageActivity,
-                        "실패: ${response.code()}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    showEmptyTimetable()
                 }
 
             } catch (e: Exception) {
-                Log.e("TIMETABLE_API", "업로드 예외", e)
-                Toast.makeText(
-                    this@MypageActivity,
-                    "시간표 업로드 중 오류가 발생했습니다",
-                    Toast.LENGTH_SHORT
-                ).show()
+                e.printStackTrace()
+                showEmptyTimetable()
             }
         }
     }
 
-    private fun uriToFile(uri: Uri): File {
-        val inputStream = contentResolver.openInputStream(uri)
-            ?: throw IllegalArgumentException("파일을 열 수 없습니다.")
+    private fun saveProfile(
+        nickname: String = currentNickname,
+        profileImageUrl: String = currentProfileImageUrl,
+        lockerName: String = currentLockerName,
+        timetableData: String = currentTimetableData
+    ) {
+        val guestUuid = GuestManager.getGuestUuid(this)
+        if (guestUuid.isNullOrBlank()) {
+            Toast.makeText(this, "로그인 정보가 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        val file = File(cacheDir, "timetable_upload_${System.currentTimeMillis()}.jpg")
-        val outputStream = FileOutputStream(file)
+        val request = ProfileInitRequest(
+            nickname = nickname,
+            profileImageUrl = profileImageUrl,
+            lockerName = lockerName,
+            timetableData = timetableData
+        )
 
-        inputStream.copyTo(outputStream)
+        lifecycleScope.launch {
+            try {
+                val response = memberApi.updateProfile(guestUuid, request)
+                if (response.isSuccessful && response.body()?.success == true) {
+                    val result = response.body()!!.result
+                    if (result != null) {
+                        currentNickname = result.nickname
+                        currentProfileImageUrl = result.profileImageUrl
+                        currentLockerName = result.lockerName
+                        currentTimetableData = result.timetableData
 
-        inputStream.close()
-        outputStream.close()
+                        profileNameButton.text = currentNickname.ifBlank { "닉네임 없음" }
+                        tvLockerName.text = if (currentLockerName.isBlank()) "• 등록된 사물함이 없습니다." else "• $currentLockerName"
+                    }
+                    Toast.makeText(this@MypageActivity, "프로필이 저장되었습니다.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this@MypageActivity, "저장 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this@MypageActivity, "저장 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 
-        return file
+    private fun renderTimetableFromJson(json: String) {
+        try {
+            val parsedTimetable = Gson().fromJson(json, ParsedTimetable::class.java)
+            val classList = parsedTimetable.classes.filter { !it.name.isNullOrBlank() }
+            if (classList.isEmpty()) showEmptyTimetable() else showTimetable(classList)
+        } catch (e: Exception) {
+            showEmptyTimetable()
+        }
+    }
+
+    private fun uploadTimetableImage(uri: Uri) {
+        val guestUuid = GuestManager.getGuestUuid(this)
+        if (guestUuid.isNullOrBlank()) {
+            Toast.makeText(this, "로그인 정보가 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        lifecycleScope.launch {
+            try {
+                val imageFile = withContext(Dispatchers.IO) { uriToFile(uri) }
+                if (imageFile == null || !imageFile.exists()) {
+                    Toast.makeText(this@MypageActivity, "이미지 파일 변환에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                    return@launch
+                }
+
+                val requestFile = imageFile.asRequestBody(contentResolver.getType(uri)?.toMediaTypeOrNull())
+                val imagePart = MultipartBody.Part.createFormData("file", imageFile.name, requestFile)
+
+                val response = memberApi.parseTimetableImage(guestUuid, imagePart)
+                if (!response.isSuccessful) {
+                    Toast.makeText(this@MypageActivity, "업로드 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
+                    return@launch
+                }
+
+                val rawElement = response.body()?.result?.timetableData
+                val newTimetableData = when {
+                    rawElement == null -> null
+                    rawElement.isJsonPrimitive && rawElement.asJsonPrimitive.isString -> rawElement.asString
+                    else -> rawElement.toString()
+                }
+                if (!newTimetableData.isNullOrBlank()) {
+                    renderTimetableFromJson(newTimetableData)
+                    saveProfile(timetableData = newTimetableData)
+                } else {
+                    Toast.makeText(this@MypageActivity, "시간표 파싱 결과가 없습니다.", Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this@MypageActivity, "시간표 업로드 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun showTimetable(classList: List<TimetableClass>) {
+        timetableContainer.visibility = View.VISIBLE
+        weeklyTimetableView.visibility = View.VISIBLE
+        weeklyTimetableView.setTimetable(classList)
+    }
+
+    private fun showEmptyTimetable() {
+        timetableContainer.visibility = View.VISIBLE
+        weeklyTimetableView.visibility = View.VISIBLE
+        weeklyTimetableView.setTimetable(emptyList())
+    }
+
+    private fun uriToFile(uri: Uri): File? {
+        return try {
+            val fileName = getFileName(uri) ?: "timetable_image.jpg"
+            val tempFile = File(cacheDir, fileName)
+            contentResolver.openInputStream(uri)?.use { inputStream ->
+                FileOutputStream(tempFile).use { outputStream ->
+                    inputStream.copyTo(outputStream)
+                }
+            }
+            tempFile
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    private fun getFileName(uri: Uri): String? {
+        var name: String? = null
+        if (uri.scheme == "content") {
+            contentResolver.query(uri, null, null, null, null)?.use { cursor ->
+                val index = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+                if (cursor.moveToFirst() && index >= 0) {
+                    name = cursor.getString(index)
+                }
+            }
+        }
+        if (name == null) name = uri.lastPathSegment
+        return name
     }
 }
