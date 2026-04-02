@@ -153,7 +153,6 @@ int id boxTimetableImage 0x0
 int id btnAiRemove 0x0
 int id btnAll 0x0
 int id btnBack 0x0
-int id btnBag 0x0
 int id btnBefore 0x0
 int id btnCancel 0x0
 int id btnCategoryClothes 0x0
@@ -178,7 +177,6 @@ int id btnMove 0x0
 int id btnNext 0x0
 int id btnOfferAccept 0x0
 int id btnOfferReject 0x0
-int id btnOuter 0x0
 int id btnPriceDirect 0x0
 int id btnPriceShare 0x0
 int id btnRandom 0x0
@@ -190,10 +188,9 @@ int id btnSort 0x0
 int id btnSubmitReport 0x0
 int id btnSuggestDelivery 0x0
 int id btnSuggestDirect 0x0
-int id btnTop 0x0
-int id btnTop2 0x0
 int id btnUploadTimetable 0x0
 int id btnWishlist 0x0
+int id btnWithdraw 0x0
 int id btn_completed 0x0
 int id btn_sell 0x0
 int id btn_selling 0x0
@@ -203,6 +200,7 @@ int id btnmarket 0x0
 int id burgerbar 0x0
 int id buttonGroup 0x0
 int id categoryContainer 0x0
+int id categoryScrollView 0x0
 int id change_finish 0x0
 int id chatContentArea 0x0
 int id chatInputBar 0x0
@@ -237,6 +235,9 @@ int id itemChatPost 0x0
 int id ivCameraIcon1 0x0
 int id ivChatBg 0x0
 int id ivHeart 0x0
+int id ivMyImage 0x0
+int id ivOtherImage 0x0
+int id ivOtherProfile 0x0
 int id ivPhoto1 0x0
 int id ivPhoto2 0x0
 int id ivPhoto3 0x0
@@ -264,6 +265,7 @@ int id ivShopItem8 0x0
 int id ivShopItem9 0x0
 int id ivStoreBanner 0x0
 int id ivThumbnail 0x0
+int id ivWishlistThumb 0x0
 int id layoutPhotoUpload1 0x0
 int id layoutQuickActions 0x0
 int id layoutUploadPlaceholder1 0x0
@@ -296,6 +298,7 @@ int id recyclerChatMessages 0x0
 int id recyclerMarketList 0x0
 int id recyclerUserMarketPosts 0x0
 int id recyclerView 0x0
+int id recyclerWishlist 0x0
 int id rootFrame 0x0
 int id scrollView 0x0
 int id scrollViewPosts 0x0
@@ -328,6 +331,7 @@ int id tvDate 0x0
 int id tvDateDivider 0x0
 int id tvDescription 0x0
 int id tvDialogTitle 0x0
+int id tvEmpty 0x0
 int id tvHeaderTitle 0x0
 int id tvHeart 0x0
 int id tvLikeCount 0x0
@@ -337,6 +341,7 @@ int id tvLockerLocation 0x0
 int id tvLockerName 0x0
 int id tvLockerSelector 0x0
 int id tvMapPlaceholder 0x0
+int id tvMyImageTime 0x0
 int id tvMyMessage 0x0
 int id tvMyTime 0x0
 int id tvNicknameLabel 0x0
@@ -345,6 +350,8 @@ int id tvNoUserNotice 0x0
 int id tvNotice 0x0
 int id tvOfferNotice 0x0
 int id tvOpenDate 0x0
+int id tvOtherImageSender 0x0
+int id tvOtherImageTime 0x0
 int id tvOtherMessage 0x0
 int id tvOtherTime 0x0
 int id tvPhotoCount1 0x0
@@ -368,9 +375,13 @@ int id tvShopSign9 0x0
 int id tvSkip 0x0
 int id tvSoldOutNotice 0x0
 int id tvStoreTitle 0x0
+int id tvSystemMessage 0x0
 int id tvTitle 0x0
 int id tvTitleTop 0x0
 int id tvTradeCount 0x0
+int id tvWishlistName 0x0
+int id tvWishlistPrice 0x0
+int id tvWishlistStatus 0x0
 int id webViewMap 0x0
 int layout activity_chat_list 0x0
 int layout activity_chatt 0x0
@@ -391,11 +402,14 @@ int layout activity_start 0x0
 int layout activity_start_get_info 0x0
 int layout activity_timetable 0x0
 int layout activity_user_market 0x0
+int layout activity_wishlist 0x0
 int layout dialog_floor_select 0x0
 int layout dialog_locker_group_popup 0x0
 int layout dialog_market_detail 0x0
 int layout dialog_report 0x0
 int layout dialog_sell_complete 0x0
+int layout item_chat_image_me 0x0
+int layout item_chat_image_other 0x0
 int layout item_chat_me 0x0
 int layout item_chat_no_locker 0x0
 int layout item_chat_no_user 0x0
@@ -403,9 +417,11 @@ int layout item_chat_offer_notice 0x0
 int layout item_chat_other 0x0
 int layout item_chat_post 0x0
 int layout item_chat_soldout_notice 0x0
+int layout item_chat_system 0x0
 int layout item_market_post 0x0
 int layout item_post 0x0
 int layout item_user_market_post 0x0
+int layout item_wishlist_product 0x0
 int layout view_chat_setting_panel 0x0
 int layout view_common_header 0x0
 int menu menu_sort 0x0

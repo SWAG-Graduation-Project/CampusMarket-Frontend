@@ -78,6 +78,9 @@
         <activity
             android:name=".MarketActivity"
             android:exported="false" />
+        <activity
+            android:name=".WishlistActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

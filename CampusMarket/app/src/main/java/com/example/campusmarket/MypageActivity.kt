@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.bumptech.glide.Glide
 import com.example.campusmarket.data.model.ParsedTimetable
 import com.example.campusmarket.data.model.TimetableClass
 import com.example.campusmarket.model.ProfileInitRequest
@@ -28,7 +29,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.File
 import java.io.FileOutputStream
 
@@ -49,15 +50,12 @@ class MypageActivity : AppCompatActivity() {
 
     private val memberApi: MemberApi by lazy { RetrofitClient.memberApi }
 
-    private val pickTimetableImageLauncher =
+    private val pickProfileImageLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val uri = result.data?.data
-                if (uri != null) {
-                    uploadTimetableImage(uri)
-                } else {
-                    Toast.makeText(this, "이미지를 선택하지 않았습니다.", Toast.LENGTH_SHORT).show()
-                }
+                if (uri != null) uploadProfileImage(uri)
+                else Toast.makeText(this, "이미지를 선택하지 않았습니다.", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -93,8 +91,7 @@ class MypageActivity : AppCompatActivity() {
 
     private fun setupListeners() {
         btnEditTimetable.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK).apply { type = "image/*" }
-            pickTimetableImageLauncher.launch(intent)
+            startActivity(Intent(this, MyTimeTableActivity::class.java))
         }
 
         btnEditLocker.setOnClickListener {
@@ -105,14 +102,50 @@ class MypageActivity : AppCompatActivity() {
             showNicknameEditDialog()
         }
 
-        findViewById<LinearLayout>(R.id.gohome)?.setOnClickListener {
-            startActivity(Intent(this, MarketActivity::class.java))
+        // 프로필 사진 클릭 → 이미지 선택
+        ivProfilePhoto.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK).apply { type = "image/*" }
+            pickProfileImageLauncher.launch(intent)
         }
-        findViewById<LinearLayout>(R.id.goMymarket)?.setOnClickListener {
-            startActivity(Intent(this, MyMarketActivity::class.java))
+
+        // 찜 목록
+        val btnWishlist = findViewById<Button>(R.id.btnWishlist)
+        btnWishlist.setOnClickListener {
+            startActivity(Intent(this, WishlistActivity::class.java))
         }
-        findViewById<LinearLayout>(R.id.gochat)?.setOnClickListener {
-            startActivity(Intent(this, ChatListActivity::class.java))
+
+        // 하단 네비게이션
+        setupBottomNavigation()
+
+        // 회원탈퇴
+        setupWithdrawalButton()
+    }
+
+    private fun setupBottomNavigation() {
+        // 네비게이션 바 LinearLayout 안의 자식 뷰로 클릭 처리
+        // (activity_mypage.xml NavBar 내 id가 없어서 tag 또는 position 기반으로 처리)
+        val navBar = findViewById<LinearLayout>(R.id.NavBar)
+        if (navBar != null && navBar.childCount >= 4) {
+            navBar.getChildAt(0).setOnClickListener {
+                startActivity(Intent(this, MarketActivity::class.java))
+            }
+            navBar.getChildAt(1).setOnClickListener {
+                startActivity(Intent(this, MyMarketActivity::class.java))
+            }
+            navBar.getChildAt(2).setOnClickListener {
+                startActivity(Intent(this, ChatListActivity::class.java))
+            }
+            navBar.getChildAt(3).setOnClickListener {
+                // 현재 페이지
+            }
+        }
+    }
+
+    private fun setupWithdrawalButton() {
+        // 회원탈퇴 버튼이 레이아웃에 있으면 연결, 없으면 ProfileName 옆에 작은 텍스트로 추가
+        val btnWithdraw = findViewById<View>(R.id.btnWithdraw)
+        btnWithdraw?.setOnClickListener {
+            showWithdrawalDialog()
         }
     }
 
@@ -134,6 +167,44 @@ class MypageActivity : AppCompatActivity() {
             }
             .setNegativeButton("취소", null)
             .show()
+    }
+
+    private fun showWithdrawalDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("회원 탈퇴")
+            .setMessage("정말 탈퇴하시겠습니까?\n탈퇴 후에는 되돌릴 수 없습니다.")
+            .setPositiveButton("탈퇴") { _, _ ->
+                withdrawMember()
+            }
+            .setNegativeButton("취소", null)
+            .show()
+    }
+
+    private fun withdrawMember() {
+        val guestUuid = GuestManager.getGuestUuid(this)
+        if (guestUuid.isNullOrBlank()) {
+            Toast.makeText(this, "로그인 정보가 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        lifecycleScope.launch {
+            try {
+                val response = memberApi.withdrawMember(guestUuid)
+                if (response.isSuccessful) {
+                    // 로컬 UUID 삭제
+                    GuestManager.clearGuestData(this@MypageActivity)
+                    Toast.makeText(this@MypageActivity, "탈퇴가 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@MypageActivity, StartActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    })
+                } else {
+                    Toast.makeText(this@MypageActivity, "탈퇴 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this@MypageActivity, "탈퇴 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun fetchMyProfile() {
@@ -159,6 +230,15 @@ class MypageActivity : AppCompatActivity() {
 
                 profileNameButton.text = currentNickname.ifBlank { "닉네임 없음" }
                 tvLockerName.text = if (currentLockerName.isBlank()) "• 등록된 사물함이 없습니다." else "• $currentLockerName"
+
+                // 프로필 이미지 로드
+                if (currentProfileImageUrl.isNotBlank()) {
+                    Glide.with(this@MypageActivity)
+                        .load(currentProfileImageUrl)
+                        .circleCrop()
+                        .placeholder(R.drawable.ic_myinfo)
+                        .into(ivProfilePhoto)
+                }
 
                 if (currentTimetableData.isNotBlank()) {
                     renderTimetableFromJson(currentTimetableData)
@@ -217,17 +297,9 @@ class MypageActivity : AppCompatActivity() {
         }
     }
 
-    private fun renderTimetableFromJson(json: String) {
-        try {
-            val parsedTimetable = Gson().fromJson(json, ParsedTimetable::class.java)
-            val classList = parsedTimetable.classes.filter { !it.name.isNullOrBlank() }
-            if (classList.isEmpty()) showEmptyTimetable() else showTimetable(classList)
-        } catch (e: Exception) {
-            showEmptyTimetable()
-        }
-    }
+    // ─── 프로필 이미지 업로드 ────────────────────────────────────────────────
 
-    private fun uploadTimetableImage(uri: Uri) {
+    private fun uploadProfileImage(uri: Uri) {
         val guestUuid = GuestManager.getGuestUuid(this)
         if (guestUuid.isNullOrBlank()) {
             Toast.makeText(this, "로그인 정보가 없습니다.", Toast.LENGTH_SHORT).show()
@@ -242,32 +314,39 @@ class MypageActivity : AppCompatActivity() {
                     return@launch
                 }
 
-                val requestFile = imageFile.asRequestBody(contentResolver.getType(uri)?.toMediaTypeOrNull())
-                val imagePart = MultipartBody.Part.createFormData("file", imageFile.name, requestFile)
+                val mimeType = contentResolver.getType(uri) ?: "image/jpeg"
+                val requestBody = imageFile.readBytes().toRequestBody(mimeType.toMediaTypeOrNull())
+                val imagePart = MultipartBody.Part.createFormData("file", imageFile.name, requestBody)
 
-                val response = memberApi.parseTimetableImage(guestUuid, imagePart)
-                if (!response.isSuccessful) {
-                    Toast.makeText(this@MypageActivity, "업로드 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
-                    return@launch
-                }
-
-                val rawElement = response.body()?.result?.timetableData
-                val newTimetableData = when {
-                    rawElement == null -> null
-                    rawElement.isJsonPrimitive && rawElement.asJsonPrimitive.isString -> rawElement.asString
-                    else -> rawElement.toString()
-                }
-                if (!newTimetableData.isNullOrBlank()) {
-                    renderTimetableFromJson(newTimetableData)
-                    saveProfile(timetableData = newTimetableData)
+                val response = RetrofitClient.apiService.uploadProfileImage(guestUuid, imagePart)
+                if (response.isSuccessful) {
+                    val imageUrl = response.body()?.result?.imageUrl ?: return@launch
+                    currentProfileImageUrl = imageUrl
+                    // S3 버킷 비공개로 Glide URL 로딩이 403 → 로컬 URI로 즉시 표시
+                    Glide.with(this@MypageActivity)
+                        .load(uri)
+                        .circleCrop()
+                        .into(ivProfilePhoto)
+                    saveProfile(profileImageUrl = imageUrl)
                 } else {
-                    Toast.makeText(this@MypageActivity, "시간표 파싱 결과가 없습니다.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MypageActivity, "프로필 이미지 업로드 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
                 }
-
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(this@MypageActivity, "시간표 업로드 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MypageActivity, "프로필 이미지 업로드 오류", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+
+    // ─── 시간표 이미지 업로드 ────────────────────────────────────────────────
+
+    private fun renderTimetableFromJson(json: String) {
+        try {
+            val parsedTimetable = Gson().fromJson(json, ParsedTimetable::class.java)
+            val classList = parsedTimetable.classes.filter { !it.name.isNullOrBlank() }
+            if (classList.isEmpty()) showEmptyTimetable() else showTimetable(classList)
+        } catch (e: Exception) {
+            showEmptyTimetable()
         }
     }
 
@@ -285,7 +364,7 @@ class MypageActivity : AppCompatActivity() {
 
     private fun uriToFile(uri: Uri): File? {
         return try {
-            val fileName = getFileName(uri) ?: "timetable_image.jpg"
+            val fileName = getFileName(uri) ?: "image_${System.currentTimeMillis()}.jpg"
             val tempFile = File(cacheDir, fileName)
             contentResolver.openInputStream(uri)?.use { inputStream ->
                 FileOutputStream(tempFile).use { outputStream ->
@@ -313,3 +392,4 @@ class MypageActivity : AppCompatActivity() {
         return name
     }
 }
+

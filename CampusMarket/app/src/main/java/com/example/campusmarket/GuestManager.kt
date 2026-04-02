@@ -22,4 +22,12 @@ object GuestManager {
     fun isGuestReady(context: Context): Boolean {
         return getGuestUuid(context) != null
     }
+
+    fun clearGuestData(context: Context) {
+        context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+            .edit()
+            .remove(KEY_GUEST_UUID)
+            .remove(KEY_MEMBER_ID)
+            .apply()
+    }
 }

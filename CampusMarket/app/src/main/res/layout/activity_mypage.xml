@@ -203,6 +203,18 @@
                 android:layout_marginEnd="60dp"
                 android:background="@drawable/bg_gray_placeholder" />
 
+            <TextView
+                android:id="@+id/btnWithdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="60dp"
+                android:text="회원탈퇴"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
         </LinearLayout>
     </ScrollView>
 

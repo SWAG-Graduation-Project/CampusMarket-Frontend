@@ -155,7 +155,6 @@ id boxTimetableImage
 id btnAiRemove
 id btnAll
 id btnBack
-id btnBag
 id btnBefore
 id btnCancel
 id btnCategoryClothes
@@ -180,7 +179,6 @@ id btnMove
 id btnNext
 id btnOfferAccept
 id btnOfferReject
-id btnOuter
 id btnPriceDirect
 id btnPriceShare
 id btnRandom
@@ -192,10 +190,9 @@ id btnSort
 id btnSubmitReport
 id btnSuggestDelivery
 id btnSuggestDirect
-id btnTop
-id btnTop2
 id btnUploadTimetable
 id btnWishlist
+id btnWithdraw
 id btn_completed
 id btn_sell
 id btn_selling
@@ -205,6 +202,7 @@ id btnmarket
 id burgerbar
 id buttonGroup
 id categoryContainer
+id categoryScrollView
 id change_finish
 id chatContentArea
 id chatInputBar
@@ -239,6 +237,9 @@ id itemChatPost
 id ivCameraIcon1
 id ivChatBg
 id ivHeart
+id ivMyImage
+id ivOtherImage
+id ivOtherProfile
 id ivPhoto1
 id ivPhoto2
 id ivPhoto3
@@ -266,6 +267,7 @@ id ivShopItem8
 id ivShopItem9
 id ivStoreBanner
 id ivThumbnail
+id ivWishlistThumb
 id layoutPhotoUpload1
 id layoutQuickActions
 id layoutUploadPlaceholder1
@@ -298,6 +300,7 @@ id recyclerChatMessages
 id recyclerMarketList
 id recyclerUserMarketPosts
 id recyclerView
+id recyclerWishlist
 id rootFrame
 id scrollView
 id scrollViewPosts
@@ -330,6 +333,7 @@ id tvDate
 id tvDateDivider
 id tvDescription
 id tvDialogTitle
+id tvEmpty
 id tvHeaderTitle
 id tvHeart
 id tvLikeCount
@@ -339,6 +343,7 @@ id tvLockerLocation
 id tvLockerName
 id tvLockerSelector
 id tvMapPlaceholder
+id tvMyImageTime
 id tvMyMessage
 id tvMyTime
 id tvNicknameLabel
@@ -347,6 +352,8 @@ id tvNoUserNotice
 id tvNotice
 id tvOfferNotice
 id tvOpenDate
+id tvOtherImageSender
+id tvOtherImageTime
 id tvOtherMessage
 id tvOtherTime
 id tvPhotoCount1
@@ -370,9 +377,13 @@ id tvShopSign9
 id tvSkip
 id tvSoldOutNotice
 id tvStoreTitle
+id tvSystemMessage
 id tvTitle
 id tvTitleTop
 id tvTradeCount
+id tvWishlistName
+id tvWishlistPrice
+id tvWishlistStatus
 id webViewMap
 layout activity_chat_list
 layout activity_chatt
@@ -393,11 +404,14 @@ layout activity_start
 layout activity_start_get_info
 layout activity_timetable
 layout activity_user_market
+layout activity_wishlist
 layout dialog_floor_select
 layout dialog_locker_group_popup
 layout dialog_market_detail
 layout dialog_report
 layout dialog_sell_complete
+layout item_chat_image_me
+layout item_chat_image_other
 layout item_chat_me
 layout item_chat_no_locker
 layout item_chat_no_user
@@ -405,9 +419,11 @@ layout item_chat_offer_notice
 layout item_chat_other
 layout item_chat_post
 layout item_chat_soldout_notice
+layout item_chat_system
 layout item_market_post
 layout item_post
 layout item_user_market_post
+layout item_wishlist_product
 layout view_chat_setting_panel
 layout view_common_header
 menu menu_sort
