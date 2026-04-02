@@ -98,6 +98,9 @@
             android:name="com.example.campusmarket.MarketActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.campusmarket.WishlistActivity"
+            android:exported="false" />
+        <activity
             android:name="androidx.activity.ComponentActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Material.Light.NoActionBar" />

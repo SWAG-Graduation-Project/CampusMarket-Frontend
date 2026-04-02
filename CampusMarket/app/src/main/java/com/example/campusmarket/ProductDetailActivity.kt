@@ -6,7 +6,9 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -41,6 +43,10 @@ class ProductDetailActivity : AppCompatActivity() {
     private val apiService by lazy { RetrofitClient.apiService }
     private val apiBaseUrl = "http://3.36.120.78:8080"
 
+    private var currentProductId: Long = -1L
+    private var isWished: Boolean = false
+    private var wishCount: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -53,19 +59,46 @@ class ProductDetailActivity : AppCompatActivity() {
         }
 
         bindViews()
+        setupNavigation()
 
-        val productId = intent.getLongExtra("productId", -1L)
+        currentProductId = intent.getLongExtra("productId", -1L)
 
-        if (productId == -1L) {
+        if (currentProductId == -1L) {
             Toast.makeText(this, "상품 정보를 불러올 수 없습니다.", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
 
-        loadProductDetail(productId)
+        // 조회수 기록
+        recordView(currentProductId)
+
+        loadProductDetail(currentProductId)
 
         btnChat.setOnClickListener {
-            createOrEnterChatRoom(productId)
+            createOrEnterChatRoom(currentProductId)
+        }
+
+        btnLike.setOnClickListener {
+            toggleWishlist(currentProductId)
+        }
+    }
+
+    private fun setupNavigation() {
+        // 뒤로가기
+        findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
+
+        // 하단 네비게이션
+        findViewById<LinearLayout>(R.id.gohome).setOnClickListener {
+            startActivity(Intent(this, MarketActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.goMymarket).setOnClickListener {
+            startActivity(Intent(this, MyMarketActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.gochat).setOnClickListener {
+            startActivity(Intent(this, ChatListActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.gomypage).setOnClickListener {
+            startActivity(Intent(this, MypageActivity::class.java))
         }
     }
 
@@ -81,6 +114,17 @@ class ProductDetailActivity : AppCompatActivity() {
         tvDescription = findViewById(R.id.tvDescription)
         btnChat = findViewById(R.id.btnChat)
         btnLike = findViewById(R.id.btnLike)
+    }
+
+    private fun recordView(productId: Long) {
+        lifecycleScope.launch {
+            try {
+                apiService.recordProductView(productId)
+            } catch (e: Exception) {
+                // 조회수 실패는 사용자에게 노출하지 않음
+                Log.w("PRODUCT_VIEW", "조회수 기록 실패: ${e.message}")
+            }
+        }
     }
 
     private fun loadProductDetail(productId: Long) {
@@ -101,7 +145,10 @@ class ProductDetailActivity : AppCompatActivity() {
                 tagColor.text = formatColor(result.color)
 
                 tvDescription.text = result.description?.takeIf { it.isNotBlank() } ?: "상품 설명이 없습니다."
-                btnLike.text = "관심 ${result.wishCount}"
+
+                isWished = result.isWished
+                wishCount = result.wishCount
+                updateWishButton()
 
                 val selectedImageUrl = pickProductImageUrl(
                     images = result.images,
@@ -118,12 +165,46 @@ class ProductDetailActivity : AppCompatActivity() {
                     ivProduct.setImageResource(R.drawable.clothes12)
                 }
 
-                Log.d("PRODUCT_DETAIL", "상품 상세 조회 성공 productId=$productId, imageUrl=$selectedImageUrl")
+                Log.d("PRODUCT_DETAIL", "상품 상세 조회 성공 productId=$productId")
             } catch (e: Exception) {
                 Log.e("PRODUCT_DETAIL", "상품 상세 조회 실패: ${e.message}", e)
                 Toast.makeText(this@ProductDetailActivity, "상품 정보를 불러오지 못했습니다.", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun toggleWishlist(productId: Long) {
+        val guestUuid = GuestManager.getGuestUuid(this)
+        if (guestUuid.isNullOrBlank()) {
+            Toast.makeText(this, "로그인 정보가 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        lifecycleScope.launch {
+            try {
+                val response = apiService.toggleWishlist(guestUuid, productId)
+                if (response.isSuccessful) {
+                    val result = response.body()?.result
+                    if (result != null) {
+                        isWished = result.wished
+                        wishCount = result.wishCount
+                        updateWishButton()
+                        val msg = if (isWished) "찜 목록에 추가되었습니다." else "찜 목록에서 제거되었습니다."
+                        Toast.makeText(this@ProductDetailActivity, msg, Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(this@ProductDetailActivity, "찜 처리 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this@ProductDetailActivity, "네트워크 오류", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun updateWishButton() {
+        val heart = if (isWished) "♥" else "♡"
+        btnLike.text = "$heart 관심 $wishCount"
     }
 
     private fun pickProductImageUrl(
@@ -132,18 +213,11 @@ class ProductDetailActivity : AppCompatActivity() {
     ): String? {
         if (!images.isNullOrEmpty()) {
             val firstImage = images.sortedBy { it.displayOrder }.firstOrNull()
-
             val originalImageUrl = normalizeImageUrl(firstImage?.originalImageUrl)
-            if (!originalImageUrl.isNullOrBlank()) {
-                return originalImageUrl
-            }
-
+            if (!originalImageUrl.isNullOrBlank()) return originalImageUrl
             val removedImageUrl = normalizeImageUrl(firstImage?.imageUrl)
-            if (!removedImageUrl.isNullOrBlank()) {
-                return removedImageUrl
-            }
+            if (!removedImageUrl.isNullOrBlank()) return removedImageUrl
         }
-
         return normalizeImageUrl(fallbackDisplayAssetImageUrl)
     }
 
@@ -166,6 +240,7 @@ class ProductDetailActivity : AppCompatActivity() {
                     if (chatRoomId != null) {
                         val intent = Intent(this@ProductDetailActivity, ChattActivity::class.java)
                         intent.putExtra("chatRoomId", chatRoomId)
+                        intent.putExtra("productId", productId)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this@ProductDetailActivity, "채팅방 생성 실패", Toast.LENGTH_SHORT).show()
@@ -186,7 +261,6 @@ class ProductDetailActivity : AppCompatActivity() {
 
     private fun formatDate(rawDate: String?): String {
         if (rawDate.isNullOrBlank()) return "-"
-
         return try {
             val datePart = rawDate.substring(0, 10)
             val split = datePart.split("-")
@@ -229,7 +303,6 @@ class ProductDetailActivity : AppCompatActivity() {
 
     private fun normalizeImageUrl(rawPath: String?): String? {
         if (rawPath.isNullOrBlank()) return null
-
         return when {
             rawPath.startsWith("http://") || rawPath.startsWith("https://") -> rawPath
             rawPath.startsWith("/") -> "$apiBaseUrl$rawPath"
@@ -247,15 +320,11 @@ class ProductDetailActivity : AppCompatActivity() {
                 doInput = true
                 connect()
             }
-
             val responseCode = connection.responseCode
-            Log.d("PRODUCT_DETAIL_IMAGE", "url=$imageUrl, responseCode=$responseCode")
-
             if (responseCode !in 200..299) {
                 connection.disconnect()
                 return null
             }
-
             val stream = connection.inputStream
             val bitmap = BitmapFactory.decodeStream(stream)
             stream.close()

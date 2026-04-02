@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-83:12
+ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-86:12
+INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-86:12
+INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-86:12
+INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:2:1-86:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\DS\.gradle\caches\9.3.1\transforms\2ec6f74b8c8ff90c78406c8a9eb06ec6\workspace\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DS\.gradle\caches\9.3.1\transforms\8fdc7a378b9dce9f4ec3f0dd104c5ffc\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\DS\.gradle\caches\9.3.1\transforms\e12d2460063b214abbc856aca18ce3e3\workspace\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -109,8 +109,8 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:10:5-81:19
-INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:10:5-81:19
+ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:10:5-84:19
+INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:10:5-84:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\DS\.gradle\caches\9.3.1\transforms\2ec6f74b8c8ff90c78406c8a9eb06ec6\workspace\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\DS\.gradle\caches\9.3.1\transforms\2ec6f74b8c8ff90c78406c8a9eb06ec6\workspace\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DS\.gradle\caches\9.3.1\transforms\8fdc7a378b9dce9f4ec3f0dd104c5ffc\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -273,6 +273,12 @@ ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidMa
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:80:13-37
 	android:name
 		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:79:13-43
+activity#com.example.campusmarket.WishlistActivity
+ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:81:9-83:40
+	android:exported
+		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:83:13-37
+	android:name
+		ADDED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml:82:13-45
 uses-sdk
 INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\DS\AndroidStudioProjects\CampusMarket\app\src\main\AndroidManifest.xml
